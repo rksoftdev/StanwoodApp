@@ -19,8 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func setUITabBarItemBehaviour() {
         let fontName = "HelveticaNeue-Light"
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: fontName, size: 12)!, NSAttributedString.Key.foregroundColor: UIColor.gray], for: .normal)
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: fontName, size: 12)!, NSAttributedString.Key.foregroundColor: UIColor.black], for: .selected)
+        let fontSize = UIDevice.current.userInterfaceIdiom == .pad ? 16 : 12
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: fontName, size: CGFloat(fontSize))!, NSAttributedString.Key.foregroundColor: UIColor.gray], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: fontName, size: CGFloat(fontSize))!, NSAttributedString.Key.foregroundColor: UIColor.black], for: .selected)
     }
 
     // MARK: UISceneSession Lifecycle

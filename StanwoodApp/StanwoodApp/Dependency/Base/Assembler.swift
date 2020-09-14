@@ -12,7 +12,8 @@ class Assembler {
     lazy var assembler: Swinject.Assembler = {
         return Swinject.Assembler([
             AssemblerAssembly(),
-            RepositoriesAssembly()
+            RepositoriesAssembly(),
+            FavouritesAssembly()
         ])
     }()
 

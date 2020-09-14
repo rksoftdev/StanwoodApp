@@ -28,6 +28,8 @@
 		F6F8D06C250F6EC100B6EBCD /* RepositoriesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D06B250F6EC100B6EBCD /* RepositoriesAssembly.swift */; };
 		F6F8D06E250F721F00B6EBCD /* FavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D06D250F721F00B6EBCD /* FavouritesViewModel.swift */; };
 		F6F8D071250F725900B6EBCD /* FavouritesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D070250F725900B6EBCD /* FavouritesAssembly.swift */; };
+		F6F8D075250F747F00B6EBCD /* RepositoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6F8D074250F747F00B6EBCD /* RepositoriesViewController.xib */; };
+		F6F8D077250F752200B6EBCD /* FavouritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6F8D076250F752200B6EBCD /* FavouritesViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		F6F8D06B250F6EC100B6EBCD /* RepositoriesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesAssembly.swift; sourceTree = "<group>"; };
 		F6F8D06D250F721F00B6EBCD /* FavouritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewModel.swift; sourceTree = "<group>"; };
 		F6F8D070250F725900B6EBCD /* FavouritesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesAssembly.swift; sourceTree = "<group>"; };
+		F6F8D074250F747F00B6EBCD /* RepositoriesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoriesViewController.xib; sourceTree = "<group>"; };
+		F6F8D076250F752200B6EBCD /* FavouritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouritesViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,11 +171,11 @@
 		F6E281E9250F512200F43B54 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F6F8D05D250F69E100B6EBCD /* Cells */,
-				F6F8D05C250F689F00B6EBCD /* FavouritesViewController */,
 				F6F8D058250F5D9E00B6EBCD /* Main */,
+				F6F8D05D250F69E100B6EBCD /* Cells */,
 				F6F8D053250F564000B6EBCD /* SplashScreen */,
 				F6F8D052250F55AC00B6EBCD /* RepositoriesViewController */,
+				F6F8D05C250F689F00B6EBCD /* FavouritesViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -232,6 +236,7 @@
 			children = (
 				F6E281C7250F501000F43B54 /* RepositoriesViewController.swift */,
 				F6F8D069250F6E8C00B6EBCD /* RepositoriesViewModel.swift */,
+				F6F8D074250F747F00B6EBCD /* RepositoriesViewController.xib */,
 			);
 			path = RepositoriesViewController;
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 			children = (
 				F6E281C9250F501000F43B54 /* FavouritesViewController.swift */,
 				F6F8D06D250F721F00B6EBCD /* FavouritesViewModel.swift */,
+				F6F8D076250F752200B6EBCD /* FavouritesViewController.xib */,
 			);
 			path = FavouritesViewController;
 			sourceTree = "<group>";
@@ -373,6 +379,8 @@
 			files = (
 				F6E281D2250F501200F43B54 /* LaunchScreen.storyboard in Resources */,
 				F6E281CF250F501200F43B54 /* Assets.xcassets in Resources */,
+				F6F8D077250F752200B6EBCD /* FavouritesViewController.xib in Resources */,
+				F6F8D075250F747F00B6EBCD /* RepositoriesViewController.xib in Resources */,
 				F6E281CD250F501000F43B54 /* Main.storyboard in Resources */,
 				F6F8D068250F6C3400B6EBCD /* RepositoryTableViewCell.xib in Resources */,
 			);

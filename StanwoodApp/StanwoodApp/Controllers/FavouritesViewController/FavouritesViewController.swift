@@ -11,6 +11,7 @@ import UIKit
 class FavouritesViewController: BaseViewController {
     //MARK: Outlets
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var favouritesTableView: UITableView!
     
     //MARK: Properties
     private let viewModel: FavouritesViewModelable
