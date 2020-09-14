@@ -11,7 +11,7 @@
 		D140D7A106F07CB442F77E29 /* Pods_StanwoodAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF89703982B18030A1206ADC /* Pods_StanwoodAppTests.framework */; };
 		F6E281C4250F501000F43B54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281C3250F501000F43B54 /* AppDelegate.swift */; };
 		F6E281C6250F501000F43B54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281C5250F501000F43B54 /* SceneDelegate.swift */; };
-		F6E281C8250F501000F43B54 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281C7250F501000F43B54 /* FirstViewController.swift */; };
+		F6E281C8250F501000F43B54 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281C7250F501000F43B54 /* RepositoriesViewController.swift */; };
 		F6E281CA250F501000F43B54 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281C9250F501000F43B54 /* SecondViewController.swift */; };
 		F6E281CD250F501000F43B54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E281CB250F501000F43B54 /* Main.storyboard */; };
 		F6E281CF250F501200F43B54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6E281CE250F501200F43B54 /* Assets.xcassets */; };
@@ -20,6 +20,7 @@
 		F6F8D04C250F527300B6EBCD /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D04B250F527300B6EBCD /* Assembler.swift */; };
 		F6F8D04E250F52BF00B6EBCD /* AssemblerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D04D250F52BF00B6EBCD /* AssemblerAssembly.swift */; };
 		F6F8D050250F532100B6EBCD /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D04F250F532100B6EBCD /* BaseRouter.swift */; };
+		F6F8D056250F5B2A00B6EBCD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D055250F5B2A00B6EBCD /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +43,7 @@
 		F6E281C0250F501000F43B54 /* StanwoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StanwoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E281C3250F501000F43B54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6E281C5250F501000F43B54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F6E281C7250F501000F43B54 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		F6E281C7250F501000F43B54 /* RepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
 		F6E281C9250F501000F43B54 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		F6E281CC250F501000F43B54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F6E281CE250F501200F43B54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 		F6F8D04B250F527300B6EBCD /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
 		F6F8D04D250F52BF00B6EBCD /* AssemblerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblerAssembly.swift; sourceTree = "<group>"; };
 		F6F8D04F250F532100B6EBCD /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		F6F8D055250F5B2A00B6EBCD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,13 +127,8 @@
 				F6E281EA250F512A00F43B54 /* Dependency */,
 				F6E281E9250F512200F43B54 /* Controllers */,
 				F6E281E8250F509200F43B54 /* SupportingFiles */,
-				F6E281C3250F501000F43B54 /* AppDelegate.swift */,
-				F6E281C5250F501000F43B54 /* SceneDelegate.swift */,
-				F6E281C7250F501000F43B54 /* FirstViewController.swift */,
 				F6E281C9250F501000F43B54 /* SecondViewController.swift */,
-				F6E281CB250F501000F43B54 /* Main.storyboard */,
 				F6E281CE250F501200F43B54 /* Assets.xcassets */,
-				F6E281D0250F501200F43B54 /* LaunchScreen.storyboard */,
 				F6E281D3250F501200F43B54 /* Info.plist */,
 			);
 			path = StanwoodApp;
@@ -149,6 +146,7 @@
 		F6E281E8250F509200F43B54 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				F6F8D051250F53A000B6EBCD /* Delegates */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -156,6 +154,9 @@
 		F6E281E9250F512200F43B54 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F6E281CB250F501000F43B54 /* Main.storyboard */,
+				F6F8D053250F564000B6EBCD /* SplashScreen */,
+				F6F8D052250F55AC00B6EBCD /* RepositoriesViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -186,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				F6F8D04F250F532100B6EBCD /* BaseRouter.swift */,
+				F6F8D055250F5B2A00B6EBCD /* BaseViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -197,6 +199,31 @@
 				F6F8D04D250F52BF00B6EBCD /* AssemblerAssembly.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		F6F8D051250F53A000B6EBCD /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				F6E281C3250F501000F43B54 /* AppDelegate.swift */,
+				F6E281C5250F501000F43B54 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		F6F8D052250F55AC00B6EBCD /* RepositoriesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F6E281C7250F501000F43B54 /* RepositoriesViewController.swift */,
+			);
+			path = RepositoriesViewController;
+			sourceTree = "<group>";
+		};
+		F6F8D053250F564000B6EBCD /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F6E281D0250F501200F43B54 /* LaunchScreen.storyboard */,
+			);
+			path = SplashScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,10 +395,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6E281CA250F501000F43B54 /* SecondViewController.swift in Sources */,
-				F6E281C8250F501000F43B54 /* FirstViewController.swift in Sources */,
+				F6E281C8250F501000F43B54 /* RepositoriesViewController.swift in Sources */,
 				F6F8D050250F532100B6EBCD /* BaseRouter.swift in Sources */,
 				F6F8D04C250F527300B6EBCD /* Assembler.swift in Sources */,
 				F6E281C4250F501000F43B54 /* AppDelegate.swift in Sources */,
+				F6F8D056250F5B2A00B6EBCD /* BaseViewController.swift in Sources */,
 				F6F8D04E250F52BF00B6EBCD /* AssemblerAssembly.swift in Sources */,
 				F6E281C6250F501000F43B54 /* SceneDelegate.swift in Sources */,
 			);
