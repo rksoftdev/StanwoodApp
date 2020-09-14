@@ -22,6 +22,12 @@
 		F6F8D050250F532100B6EBCD /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D04F250F532100B6EBCD /* BaseRouter.swift */; };
 		F6F8D056250F5B2A00B6EBCD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D055250F5B2A00B6EBCD /* BaseViewController.swift */; };
 		F6F8D05B250F5DD000B6EBCD /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D05A250F5DD000B6EBCD /* MainTabBarController.swift */; };
+		F6F8D067250F6C3400B6EBCD /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D065250F6C3400B6EBCD /* RepositoryTableViewCell.swift */; };
+		F6F8D068250F6C3400B6EBCD /* RepositoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6F8D066250F6C3400B6EBCD /* RepositoryTableViewCell.xib */; };
+		F6F8D06A250F6E8C00B6EBCD /* RepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D069250F6E8C00B6EBCD /* RepositoriesViewModel.swift */; };
+		F6F8D06C250F6EC100B6EBCD /* RepositoriesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D06B250F6EC100B6EBCD /* RepositoriesAssembly.swift */; };
+		F6F8D06E250F721F00B6EBCD /* FavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D06D250F721F00B6EBCD /* FavouritesViewModel.swift */; };
+		F6F8D071250F725900B6EBCD /* FavouritesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D070250F725900B6EBCD /* FavouritesAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +64,12 @@
 		F6F8D04F250F532100B6EBCD /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		F6F8D055250F5B2A00B6EBCD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F6F8D05A250F5DD000B6EBCD /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		F6F8D065250F6C3400B6EBCD /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
+		F6F8D066250F6C3400B6EBCD /* RepositoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryTableViewCell.xib; sourceTree = "<group>"; };
+		F6F8D069250F6E8C00B6EBCD /* RepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModel.swift; sourceTree = "<group>"; };
+		F6F8D06B250F6EC100B6EBCD /* RepositoriesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesAssembly.swift; sourceTree = "<group>"; };
+		F6F8D06D250F721F00B6EBCD /* FavouritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewModel.swift; sourceTree = "<group>"; };
+		F6F8D070250F725900B6EBCD /* FavouritesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +167,7 @@
 		F6E281E9250F512200F43B54 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F6F8D05D250F69E100B6EBCD /* Cells */,
 				F6F8D05C250F689F00B6EBCD /* FavouritesViewController */,
 				F6F8D058250F5D9E00B6EBCD /* Main */,
 				F6F8D053250F564000B6EBCD /* SplashScreen */,
@@ -167,6 +180,8 @@
 			isa = PBXGroup;
 			children = (
 				F6F8D04A250F526200B6EBCD /* Base */,
+				F6F8D06B250F6EC100B6EBCD /* RepositoriesAssembly.swift */,
+				F6F8D070250F725900B6EBCD /* FavouritesAssembly.swift */,
 			);
 			path = Dependency;
 			sourceTree = "<group>";
@@ -216,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				F6E281C7250F501000F43B54 /* RepositoriesViewController.swift */,
+				F6F8D069250F6E8C00B6EBCD /* RepositoriesViewModel.swift */,
 			);
 			path = RepositoriesViewController;
 			sourceTree = "<group>";
@@ -249,8 +265,26 @@
 			isa = PBXGroup;
 			children = (
 				F6E281C9250F501000F43B54 /* FavouritesViewController.swift */,
+				F6F8D06D250F721F00B6EBCD /* FavouritesViewModel.swift */,
 			);
 			path = FavouritesViewController;
+			sourceTree = "<group>";
+		};
+		F6F8D05D250F69E100B6EBCD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F6F8D064250F6C1800B6EBCD /* RepositoryTableViewCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F6F8D064250F6C1800B6EBCD /* RepositoryTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F6F8D065250F6C3400B6EBCD /* RepositoryTableViewCell.swift */,
+				F6F8D066250F6C3400B6EBCD /* RepositoryTableViewCell.xib */,
+			);
+			path = RepositoryTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +374,7 @@
 				F6E281D2250F501200F43B54 /* LaunchScreen.storyboard in Resources */,
 				F6E281CF250F501200F43B54 /* Assets.xcassets in Resources */,
 				F6E281CD250F501000F43B54 /* Main.storyboard in Resources */,
+				F6F8D068250F6C3400B6EBCD /* RepositoryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,10 +457,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6E281CA250F501000F43B54 /* FavouritesViewController.swift in Sources */,
+				F6F8D06C250F6EC100B6EBCD /* RepositoriesAssembly.swift in Sources */,
 				F6E281C8250F501000F43B54 /* RepositoriesViewController.swift in Sources */,
 				F6F8D05B250F5DD000B6EBCD /* MainTabBarController.swift in Sources */,
+				F6F8D06A250F6E8C00B6EBCD /* RepositoriesViewModel.swift in Sources */,
+				F6F8D071250F725900B6EBCD /* FavouritesAssembly.swift in Sources */,
+				F6F8D067250F6C3400B6EBCD /* RepositoryTableViewCell.swift in Sources */,
 				F6F8D050250F532100B6EBCD /* BaseRouter.swift in Sources */,
 				F6F8D04C250F527300B6EBCD /* Assembler.swift in Sources */,
+				F6F8D06E250F721F00B6EBCD /* FavouritesViewModel.swift in Sources */,
 				F6E281C4250F501000F43B54 /* AppDelegate.swift in Sources */,
 				F6F8D056250F5B2A00B6EBCD /* BaseViewController.swift in Sources */,
 				F6F8D04E250F52BF00B6EBCD /* AssemblerAssembly.swift in Sources */,

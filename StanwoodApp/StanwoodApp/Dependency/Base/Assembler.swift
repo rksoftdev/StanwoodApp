@@ -11,7 +11,8 @@ import Swinject
 class Assembler {
     lazy var assembler: Swinject.Assembler = {
         return Swinject.Assembler([
-            //AssemblerAssembly()
+            AssemblerAssembly(),
+            RepositoriesAssembly()
         ])
     }()
 

@@ -9,17 +9,15 @@
 import UIKit
 
 class MainTabBarController: UITabBarController {
-
+    private let assembler = Assembler().assembler
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-    private func setControllsBehaviour() {
-        setTabBarItemBehaviour()
-    }
     
-    private func setTabBarItemBehaviour() {
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "HelveticaNeue", size: 12)!, NSAttributedString.Key.foregroundColor: UIColor.gray], for: .normal)
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "HelveticaNeue", size: 12)!, NSAttributedString.Key.foregroundColor: UIColor.black], for: .normal)
+    private func prepareTabBarController() {
+        let repositoriesViewController = assembler.resolver.resolve(RepositoriesViewController.self)!
+        let favouritesViewController = assembler.resolver.resolve(FavouritesViewController.self)!
+        viewControllers = [repositoriesViewController, favouritesViewController]
     }
 }
