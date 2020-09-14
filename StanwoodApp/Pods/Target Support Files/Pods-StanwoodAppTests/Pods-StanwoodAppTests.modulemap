@@ -1,0 +1,6 @@
+framework module Pods_StanwoodAppTests {
+  umbrella header "Pods-StanwoodAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
