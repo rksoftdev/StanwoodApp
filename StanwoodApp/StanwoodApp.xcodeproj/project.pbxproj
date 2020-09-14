@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,9 @@
 		F6E281CF250F501200F43B54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6E281CE250F501200F43B54 /* Assets.xcassets */; };
 		F6E281D2250F501200F43B54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E281D0250F501200F43B54 /* LaunchScreen.storyboard */; };
 		F6E281DD250F501200F43B54 /* StanwoodAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281DC250F501200F43B54 /* StanwoodAppTests.swift */; };
+		F6F8D04C250F527300B6EBCD /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D04B250F527300B6EBCD /* Assembler.swift */; };
+		F6F8D04E250F52BF00B6EBCD /* AssemblerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D04D250F52BF00B6EBCD /* AssemblerAssembly.swift */; };
+		F6F8D050250F532100B6EBCD /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D04F250F532100B6EBCD /* BaseRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		F6E281D8250F501200F43B54 /* StanwoodAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StanwoodAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E281DC250F501200F43B54 /* StanwoodAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StanwoodAppTests.swift; sourceTree = "<group>"; };
 		F6E281DE250F501200F43B54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6F8D04B250F527300B6EBCD /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
+		F6F8D04D250F52BF00B6EBCD /* AssemblerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblerAssembly.swift; sourceTree = "<group>"; };
+		F6F8D04F250F532100B6EBCD /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +93,6 @@
 				759477D245257C2B146BB4D8 /* Pods-StanwoodAppTests.debug.xcconfig */,
 				C26953DF407DD58BFF069FD3 /* Pods-StanwoodAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -158,6 +163,7 @@
 		F6E281EA250F512A00F43B54 /* Dependency */ = {
 			isa = PBXGroup;
 			children = (
+				F6F8D04A250F526200B6EBCD /* Base */,
 			);
 			path = Dependency;
 			sourceTree = "<group>";
@@ -179,6 +185,16 @@
 		F6E281ED250F514700F43B54 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				F6F8D04F250F532100B6EBCD /* BaseRouter.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F6F8D04A250F526200B6EBCD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F6F8D04B250F527300B6EBCD /* Assembler.swift */,
+				F6F8D04D250F52BF00B6EBCD /* AssemblerAssembly.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -353,7 +369,10 @@
 			files = (
 				F6E281CA250F501000F43B54 /* SecondViewController.swift in Sources */,
 				F6E281C8250F501000F43B54 /* FirstViewController.swift in Sources */,
+				F6F8D050250F532100B6EBCD /* BaseRouter.swift in Sources */,
+				F6F8D04C250F527300B6EBCD /* Assembler.swift in Sources */,
 				F6E281C4250F501000F43B54 /* AppDelegate.swift in Sources */,
+				F6F8D04E250F52BF00B6EBCD /* AssemblerAssembly.swift in Sources */,
 				F6E281C6250F501000F43B54 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
