@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  FavouritesViewController.swift
 //  StanwoodApp
 //
 //  Created by Robert  Kuraj on 14/09/2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class FavouritesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

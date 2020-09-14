@@ -10,12 +10,17 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        setUITabBarItemBehaviour()
+        
         return true
+    }
+    
+    private func setUITabBarItemBehaviour() {
+        let fontName = "HelveticaNeue-Light"
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: fontName, size: 12)!, NSAttributedString.Key.foregroundColor: UIColor.gray], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: fontName, size: 12)!, NSAttributedString.Key.foregroundColor: UIColor.black], for: .selected)
     }
 
     // MARK: UISceneSession Lifecycle

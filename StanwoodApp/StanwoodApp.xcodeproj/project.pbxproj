@@ -12,7 +12,7 @@
 		F6E281C4250F501000F43B54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281C3250F501000F43B54 /* AppDelegate.swift */; };
 		F6E281C6250F501000F43B54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281C5250F501000F43B54 /* SceneDelegate.swift */; };
 		F6E281C8250F501000F43B54 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281C7250F501000F43B54 /* RepositoriesViewController.swift */; };
-		F6E281CA250F501000F43B54 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281C9250F501000F43B54 /* SecondViewController.swift */; };
+		F6E281CA250F501000F43B54 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281C9250F501000F43B54 /* FavouritesViewController.swift */; };
 		F6E281CD250F501000F43B54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E281CB250F501000F43B54 /* Main.storyboard */; };
 		F6E281CF250F501200F43B54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6E281CE250F501200F43B54 /* Assets.xcassets */; };
 		F6E281D2250F501200F43B54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E281D0250F501200F43B54 /* LaunchScreen.storyboard */; };
@@ -21,6 +21,7 @@
 		F6F8D04E250F52BF00B6EBCD /* AssemblerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D04D250F52BF00B6EBCD /* AssemblerAssembly.swift */; };
 		F6F8D050250F532100B6EBCD /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D04F250F532100B6EBCD /* BaseRouter.swift */; };
 		F6F8D056250F5B2A00B6EBCD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D055250F5B2A00B6EBCD /* BaseViewController.swift */; };
+		F6F8D05B250F5DD000B6EBCD /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D05A250F5DD000B6EBCD /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +45,7 @@
 		F6E281C3250F501000F43B54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6E281C5250F501000F43B54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F6E281C7250F501000F43B54 /* RepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
-		F6E281C9250F501000F43B54 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		F6E281C9250F501000F43B54 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		F6E281CC250F501000F43B54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F6E281CE250F501200F43B54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6E281D1250F501200F43B54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +57,7 @@
 		F6F8D04D250F52BF00B6EBCD /* AssemblerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblerAssembly.swift; sourceTree = "<group>"; };
 		F6F8D04F250F532100B6EBCD /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		F6F8D055250F5B2A00B6EBCD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		F6F8D05A250F5DD000B6EBCD /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +129,6 @@
 				F6E281EA250F512A00F43B54 /* Dependency */,
 				F6E281E9250F512200F43B54 /* Controllers */,
 				F6E281E8250F509200F43B54 /* SupportingFiles */,
-				F6E281C9250F501000F43B54 /* SecondViewController.swift */,
 				F6E281CE250F501200F43B54 /* Assets.xcassets */,
 				F6E281D3250F501200F43B54 /* Info.plist */,
 			);
@@ -154,7 +155,8 @@
 		F6E281E9250F512200F43B54 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F6E281CB250F501000F43B54 /* Main.storyboard */,
+				F6F8D05C250F689F00B6EBCD /* FavouritesViewController */,
+				F6F8D058250F5D9E00B6EBCD /* Main */,
 				F6F8D053250F564000B6EBCD /* SplashScreen */,
 				F6F8D052250F55AC00B6EBCD /* RepositoriesViewController */,
 			);
@@ -224,6 +226,31 @@
 				F6E281D0250F501200F43B54 /* LaunchScreen.storyboard */,
 			);
 			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		F6F8D058250F5D9E00B6EBCD /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F6F8D059250F5DAF00B6EBCD /* MainTabBarController */,
+				F6E281CB250F501000F43B54 /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F6F8D059250F5DAF00B6EBCD /* MainTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				F6F8D05A250F5DD000B6EBCD /* MainTabBarController.swift */,
+			);
+			path = MainTabBarController;
+			sourceTree = "<group>";
+		};
+		F6F8D05C250F689F00B6EBCD /* FavouritesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F6E281C9250F501000F43B54 /* FavouritesViewController.swift */,
+			);
+			path = FavouritesViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,8 +421,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6E281CA250F501000F43B54 /* SecondViewController.swift in Sources */,
+				F6E281CA250F501000F43B54 /* FavouritesViewController.swift in Sources */,
 				F6E281C8250F501000F43B54 /* RepositoriesViewController.swift in Sources */,
+				F6F8D05B250F5DD000B6EBCD /* MainTabBarController.swift in Sources */,
 				F6F8D050250F532100B6EBCD /* BaseRouter.swift in Sources */,
 				F6F8D04C250F527300B6EBCD /* Assembler.swift in Sources */,
 				F6E281C4250F501000F43B54 /* AppDelegate.swift in Sources */,
