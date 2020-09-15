@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RepositoriesViewController" customModule="StanwoodApp" customModuleProvider="target">
             <connections>
-                <outlet property="repositoriesTableView" destination="CZ2-cF-PAk" id="iE0-eg-YkB"/>
+                <outlet property="repositoriesCollectionView" destination="pdc-Fj-mZ2" id="Oxa-Op-xLQ"/>
                 <outlet property="titleLabel" destination="Wlr-3f-TUf" id="9Wx-Uh-dtm"/>
                 <outlet property="view" destination="iN0-l3-epB" id="D2h-Uj-o6S"/>
             </connections>
@@ -28,11 +28,6 @@
                         <segment title="Year"/>
                     </segments>
                 </segmentedControl>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CZ2-cF-PAk">
-                    <rect key="frame" x="0.0" y="216" width="414" height="646"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
-                </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A4l-NM-OOl">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
                     <subviews>
@@ -53,19 +48,29 @@
                         <constraint firstItem="Wlr-3f-TUf" firstAttribute="leading" secondItem="A4l-NM-OOl" secondAttribute="leading" constant="20" id="mIh-An-x3l"/>
                     </constraints>
                 </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="pdc-Fj-mZ2">
+                    <rect key="frame" x="0.0" y="216" width="414" height="646"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lpH-sn-Ohu">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="CZ2-cF-PAk" firstAttribute="top" secondItem="kiM-tH-Mr1" secondAttribute="bottom" constant="30" id="0yy-rc-HQr"/>
-                <constraint firstItem="CZ2-cF-PAk" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="2ZZ-7B-wYW"/>
+                <constraint firstItem="pdc-Fj-mZ2" firstAttribute="top" secondItem="kiM-tH-Mr1" secondAttribute="bottom" constant="30" id="4BT-ss-8XR"/>
                 <constraint firstItem="kiM-tH-Mr1" firstAttribute="top" secondItem="A4l-NM-OOl" secondAttribute="bottom" constant="30" id="ENB-uU-Not"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="pdc-Fj-mZ2" secondAttribute="bottom" id="Fh2-cp-fOF"/>
                 <constraint firstItem="A4l-NM-OOl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="HUD-RM-58S"/>
                 <constraint firstItem="kiM-tH-Mr1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="Ona-SQ-qXS"/>
-                <constraint firstItem="CZ2-cF-PAk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Ri6-Uf-g2E"/>
                 <constraint firstItem="A4l-NM-OOl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="UoH-rM-hwa"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="kiM-tH-Mr1" secondAttribute="trailing" constant="30" id="WE4-Jv-rkX"/>
-                <constraint firstItem="CZ2-cF-PAk" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="dQy-jm-KL5"/>
+                <constraint firstItem="pdc-Fj-mZ2" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="as8-0I-spr"/>
                 <constraint firstItem="A4l-NM-OOl" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="rVn-Rd-2Ne"/>
+                <constraint firstItem="pdc-Fj-mZ2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="vcz-yn-GDi"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="140.57971014492756" y="153.34821428571428"/>

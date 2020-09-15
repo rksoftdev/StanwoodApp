@@ -18,7 +18,6 @@ class RepositoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var isFavouriteImageView: UIImageView!
     
     //MARK: Properties
-    //private var disposeBag: DisposeBag = DisposeBag()
     
     //MARK: Initializers
     override func awakeFromNib() {
@@ -26,7 +25,6 @@ class RepositoryCollectionViewCell: UICollectionViewCell {
     }
 
     private func setControlsBehaviour() {
-        avatarImageView.roundBorder()
     }
     
     func setup(_ repository: GitHubRepository) {

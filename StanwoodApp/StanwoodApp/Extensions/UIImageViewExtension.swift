@@ -15,16 +15,5 @@ extension UIImageView {
             return
         }
         self.kf.setImage(with: imageUrl)
-        self.roundBorder()
-    }
-    
-    func roundBorder() {
-        let radius = self.frame.width / 2
-        self.contentMode = .scaleAspectFill
-        self.layer.cornerRadius = radius
-        self.clipsToBounds = true
-        self.layer.masksToBounds = true
-        self.sizeToFit()
-        self.layoutIfNeeded()
     }
 }

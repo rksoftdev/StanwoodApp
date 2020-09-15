@@ -12,20 +12,20 @@ import RxCocoa
 
 class RepositoriesViewController: BaseViewController {
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var repositoriesTableView: UITableView!
+    @IBOutlet weak var repositoriesCollectionView: UICollectionView!
     
     private let viewModel: RepositoriesViewModelable
     private let disposeBag: DisposeBag = DisposeBag()
 
     override func setControlsBehaviour() {
         titleLabel.text = "Repositories"
-        prepareTableView()
+        prepareCollectionView()
     }
     
     override func createBindingSet() {
         disposeBag.insert(
-            viewModel.repositoriesDataSource.bind(to: self.repositoriesTableView.rx.items(cellIdentifier: "RepositoryTableViewCell")) { [weak self] row, model, cell in
-                guard let repositoryCell = cell as? RepositoryTableViewCell else {
+            viewModel.repositoriesDataSource.bind(to: self.repositoriesCollectionView.rx.items(cellIdentifier: "RepositoryCollectionViewCell")) { [weak self] row, model, cell in
+                guard let repositoryCell = cell as? RepositoryCollectionViewCell else {
                     return 
                 }
                 
@@ -43,14 +43,9 @@ class RepositoriesViewController: BaseViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func prepareTableView() {
-        let cellView = UINib(nibName: "RepositoryTableViewCell", bundle: nil)
-        repositoriesTableView.register(cellView, forCellReuseIdentifier: "RepositoryTableViewCell")
-        switch UIScreen.main.traitCollection.userInterfaceIdiom {
-        case .pad:
-            repositoriesTableView.rowHeight = 120
-        default:
-            repositoriesTableView.rowHeight = 80
-        }
+    private func prepareCollectionView() {
+        let cellView = UINib(nibName: "RepositoryCollectionViewCell", bundle: nil)
+        repositoriesCollectionView.register(cellView, forCellWithReuseIdentifier: "RepositoryCollectionViewCell")
+        repositoriesCollectionView.prepareItemSize(120, 80)
     }
 }

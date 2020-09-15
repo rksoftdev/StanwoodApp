@@ -48,11 +48,6 @@ class FavouritesViewController: BaseViewController {
     private func prepareCollectioView() {
         let cellView = UINib(nibName: "RepositoryCollectionViewCell", bundle: nil)
         favouritesCollectionView.register(cellView, forCellWithReuseIdentifier: "RepositoryCollectionViewCell")
-        guard let layout = favouritesCollectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
-            return
-        }
-        
-        let itemSize = CGSize(width: UIScreen.main.bounds.width, height: UIDevice.current.userInterfaceIdiom == .pad ? 120 : 80)
-        layout.itemSize = itemSize
+        favouritesCollectionView.prepareItemSize(120, 80)
     }
 }
