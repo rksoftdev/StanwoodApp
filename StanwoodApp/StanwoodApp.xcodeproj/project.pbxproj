@@ -15,6 +15,9 @@
 		F62270032510863A0083B400 /* RepositoryDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62270022510863A0083B400 /* RepositoryDetailsViewModel.swift */; };
 		F6227005251086710083B400 /* RepositoryDetailsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6227004251086710083B400 /* RepositoryDetailsAssembly.swift */; };
 		F6227007251087B70083B400 /* RepositoriesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6227006251087B70083B400 /* RepositoriesRouter.swift */; };
+		F622700A251091390083B400 /* FavouritesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6227009251091390083B400 /* FavouritesRouter.swift */; };
+		F622700C251091700083B400 /* RepositoryDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F622700B251091700083B400 /* RepositoryDetailsRouter.swift */; };
+		F622700E251094170083B400 /* BaseDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F622700D251094170083B400 /* BaseDetailsRouter.swift */; };
 		F6E281C4250F501000F43B54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281C3250F501000F43B54 /* AppDelegate.swift */; };
 		F6E281C6250F501000F43B54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281C5250F501000F43B54 /* SceneDelegate.swift */; };
 		F6E281C8250F501000F43B54 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281C7250F501000F43B54 /* RepositoriesViewController.swift */; };
@@ -63,6 +66,9 @@
 		F62270022510863A0083B400 /* RepositoryDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsViewModel.swift; sourceTree = "<group>"; };
 		F6227004251086710083B400 /* RepositoryDetailsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsAssembly.swift; sourceTree = "<group>"; };
 		F6227006251087B70083B400 /* RepositoriesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesRouter.swift; sourceTree = "<group>"; };
+		F6227009251091390083B400 /* FavouritesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesRouter.swift; sourceTree = "<group>"; };
+		F622700B251091700083B400 /* RepositoryDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsRouter.swift; sourceTree = "<group>"; };
+		F622700D251094170083B400 /* BaseDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDetailsRouter.swift; sourceTree = "<group>"; };
 		F6E281C0250F501000F43B54 /* StanwoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StanwoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E281C3250F501000F43B54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6E281C5250F501000F43B54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +144,7 @@
 				F6226FFE251086230083B400 /* RepositoryDetailsViewController.swift */,
 				F6226FFF251086230083B400 /* RepositoryDetailsViewController.xib */,
 				F62270022510863A0083B400 /* RepositoryDetailsViewModel.swift */,
+				F622700B251091700083B400 /* RepositoryDetailsRouter.swift */,
 			);
 			path = RepositoryDetailsViewController;
 			sourceTree = "<group>";
@@ -239,6 +246,7 @@
 			children = (
 				F6F8D04F250F532100B6EBCD /* BaseRouter.swift */,
 				F6F8D055250F5B2A00B6EBCD /* BaseViewController.swift */,
+				F622700D251094170083B400 /* BaseDetailsRouter.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -303,6 +311,7 @@
 				F6E281C9250F501000F43B54 /* FavouritesViewController.swift */,
 				F6F8D06D250F721F00B6EBCD /* FavouritesViewModel.swift */,
 				F6F8D076250F752200B6EBCD /* FavouritesViewController.xib */,
+				F6227009251091390083B400 /* FavouritesRouter.swift */,
 			);
 			path = FavouritesViewController;
 			sourceTree = "<group>";
@@ -525,12 +534,15 @@
 				F6F8D071250F725900B6EBCD /* FavouritesAssembly.swift in Sources */,
 				F6226FFC251084640083B400 /* UICollectionViewExtension.swift in Sources */,
 				F6F8D050250F532100B6EBCD /* BaseRouter.swift in Sources */,
+				F622700A251091390083B400 /* FavouritesRouter.swift in Sources */,
+				F622700C251091700083B400 /* RepositoryDetailsRouter.swift in Sources */,
 				F6F8D04C250F527300B6EBCD /* Assembler.swift in Sources */,
 				F6227005251086710083B400 /* RepositoryDetailsAssembly.swift in Sources */,
 				F6227000251086230083B400 /* RepositoryDetailsViewController.swift in Sources */,
 				F6F8D06E250F721F00B6EBCD /* FavouritesViewModel.swift in Sources */,
 				F6E281C4250F501000F43B54 /* AppDelegate.swift in Sources */,
 				F6F8D056250F5B2A00B6EBCD /* BaseViewController.swift in Sources */,
+				F622700E251094170083B400 /* BaseDetailsRouter.swift in Sources */,
 				F6F8D04E250F52BF00B6EBCD /* AssemblerAssembly.swift in Sources */,
 				F6F8D080250F8ADB00B6EBCD /* UIImageViewExtension.swift in Sources */,
 				F6E281C6250F501000F43B54 /* SceneDelegate.swift in Sources */,

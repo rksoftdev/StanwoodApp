@@ -10,13 +10,18 @@ import Swinject
 
 class RepositoryDetailsAssembly: Assembly {
     func assemble(container: Container) {
-        container.register(RepositoryDetailsViewModelable.self) { resolver in
-            return RepositoryDetailsViewModel()
+        container.register(RepositoryDetailsViewModelable.self) { (resolver, model: GitHubRepository) in
+            return RepositoryDetailsViewModel(model)
         }
         
-        container.register(RepositoryDetailsViewController.self) { resolver in
-            let viewModel = resolver.resolve(RepositoryDetailsViewModelable.self)!
-            return RepositoryDetailsViewController(viewModel)
+        container.register(RepositoryDetailsRoutable.self) { resolver in
+            return RepositoryDetailsRouter(resolver.resolve(Assembler.self)!)
+        }
+        
+        container.register(RepositoryDetailsViewController.self) { (resolver, model: GitHubRepository)  in
+            let viewModel = resolver.resolve(RepositoryDetailsViewModelable.self, argument: model)!
+            let router = resolver.resolve(RepositoryDetailsRoutable.self)!
+            return RepositoryDetailsViewController(viewModel, router)
         }
     }
 }

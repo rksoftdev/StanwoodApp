@@ -11,5 +11,11 @@ protocol RepositoryDetailsViewModelable {
 }
 
 class RepositoryDetailsViewModel: RepositoryDetailsViewModelable {
+    init(_ model: GitHubRepository) {
+        handleModel(model)
+    }
     
+    private func handleModel(_ model: GitHubRepository) {
+        
+    }
 }

@@ -17,6 +17,8 @@ class RepositoriesViewController: BaseViewController {
     private let viewModel: RepositoriesViewModelable
     private let router: RepositoriesRoutable
     private let disposeBag: DisposeBag = DisposeBag()
+    
+    private let collectionViewCellIdentifier = "RepositoryCollectionViewCell"
 
     override func setControlsBehaviour() {
         titleLabel.text = "Repositories"
@@ -25,7 +27,7 @@ class RepositoriesViewController: BaseViewController {
     
     override func createBindingSet() {
         disposeBag.insert(
-            viewModel.repositoriesDataSource.bind(to: self.repositoriesCollectionView.rx.items(cellIdentifier: "RepositoryCollectionViewCell")) { row, model, cell in
+            viewModel.repositoriesDataSource.bind(to: self.repositoriesCollectionView.rx.items(cellIdentifier: collectionViewCellIdentifier)) { row, model, cell in
                 guard let repositoryCell = cell as? RepositoryCollectionViewCell else {
                     return 
                 }
@@ -52,8 +54,7 @@ class RepositoriesViewController: BaseViewController {
     }
     
     private func prepareCollectionView() {
-        let cellView = UINib(nibName: "RepositoryCollectionViewCell", bundle: nil)
-        repositoriesCollectionView.register(cellView, forCellWithReuseIdentifier: "RepositoryCollectionViewCell")
+        repositoriesCollectionView.registerCell(collectionViewCellIdentifier)
         repositoriesCollectionView.prepareItemSize(120, 80)
     }
 }

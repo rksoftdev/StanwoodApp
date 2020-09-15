@@ -17,11 +17,16 @@ class FavouritesViewController: BaseViewController {
     
     //MARK: Properties
     private let viewModel: FavouritesViewModelable
+    private let router: FavouritesRoutable
     private let disposeBag: DisposeBag = DisposeBag()
     
+    private let collectionViewCellIdentifier = "RepositoryCollectionViewCell"
+    
     //MARK: Initializers
-    init(_ viewModel: FavouritesViewModelable) {
+    init(_ viewModel: FavouritesViewModelable, _ router: FavouritesRoutable) {
         self.viewModel = viewModel
+        self.router = router
+        
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -31,13 +36,20 @@ class FavouritesViewController: BaseViewController {
     
     override func createBindingSet() {
         disposeBag.insert(
-            viewModel.repositoriesDataSource.bind(to: favouritesCollectionView.rx.items(cellIdentifier: "RepositoryCollectionViewCell")) { [weak self] row, model, cell in
+            viewModel.repositoriesDataSource.bind(to: favouritesCollectionView.rx.items(cellIdentifier: collectionViewCellIdentifier)) { row, model, cell in
                 guard let repositoryCell = cell as? RepositoryCollectionViewCell else {
                     return
                 }
                 
                 repositoryCell.setup(model)
-        })
+            },
+            favouritesCollectionView.rx.modelSelected(GitHubRepository.self).subscribe { [weak self] model in
+                guard let repositoryModel = model.element else {
+                    return
+                }
+                self?.router.showDetailsViewController(from: self, with: repositoryModel)
+            }
+        )
     }
     
     override func setControlsBehaviour() {
@@ -46,8 +58,7 @@ class FavouritesViewController: BaseViewController {
     }
     
     private func prepareCollectioView() {
-        let cellView = UINib(nibName: "RepositoryCollectionViewCell", bundle: nil)
-        favouritesCollectionView.register(cellView, forCellWithReuseIdentifier: "RepositoryCollectionViewCell")
+        favouritesCollectionView.registerCell(collectionViewCellIdentifier)
         favouritesCollectionView.prepareItemSize(120, 80)
     }
 }

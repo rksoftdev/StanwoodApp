@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PanModal
 
 class BaseViewController: UIViewController {
     func createBindingSet() {}
@@ -16,5 +17,16 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
         createBindingSet()
         setControlsBehaviour()
+    }
+    
+    override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
+        if let presentableController = viewControllerToPresent as? PanModalPresentable, let controller = presentableController as? UIViewController {
+            controller.modalPresentationStyle = .custom
+            controller.modalPresentationCapturesStatusBarAppearance = true
+            controller.transitioningDelegate = PanModalPresentationDelegate.default
+            super.present(controller, animated: flag, completion: completion)
+            return
+        }
+        super.present(viewControllerToPresent, animated: flag, completion: completion)
     }
 }

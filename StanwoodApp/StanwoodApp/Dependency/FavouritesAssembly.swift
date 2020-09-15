@@ -14,9 +14,14 @@ class FavouritesAssembly: Assembly {
             return FavouritesViewModel()
         }
         
+        container.register(FavouritesRoutable.self) { resolver in
+            return FavouritesRouter(resolver.resolve(Assembler.self)!)
+        }
+        
         container.register(FavouritesViewController.self) { resolver in
             let viewModel = resolver.resolve(FavouritesViewModelable.self)!
-            return FavouritesViewController(viewModel)
+            let router = resolver.resolve(FavouritesRoutable.self)!
+            return FavouritesViewController(viewModel, router)
         }
     }
 }

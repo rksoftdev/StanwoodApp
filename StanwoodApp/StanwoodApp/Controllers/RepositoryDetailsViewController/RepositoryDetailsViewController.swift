@@ -14,10 +14,12 @@ class RepositoryDetailsViewController: BaseViewController, PanModalPresentable {
     
     //MARK: Properties
     private let viewModel: RepositoryDetailsViewModelable
+    private let router: RepositoryDetailsRoutable
     
     //MARK: Initializers
-    init(_ viewModel: RepositoryDetailsViewModelable) {
+    init(_ viewModel: RepositoryDetailsViewModelable, _ router: RepositoryDetailsRoutable) {
         self.viewModel = viewModel
+        self.router = router
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -29,4 +31,6 @@ class RepositoryDetailsViewController: BaseViewController, PanModalPresentable {
     var panScrollable: UIScrollView? {
         return nil
     }
+    
+    
 }

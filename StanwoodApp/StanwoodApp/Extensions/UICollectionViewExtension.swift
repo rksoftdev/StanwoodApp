@@ -18,4 +18,9 @@ extension UICollectionView {
         layout.itemSize = itemSize
         self.layoutIfNeeded()
     }
+    
+    func registerCell(_ cellIdentifier: String) {
+        let cellView = UINib(nibName: cellIdentifier, bundle: nil)
+        self.register(cellView, forCellWithReuseIdentifier: cellIdentifier)
+    }
 }
