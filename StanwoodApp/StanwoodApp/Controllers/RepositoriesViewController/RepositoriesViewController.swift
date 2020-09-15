@@ -28,6 +28,8 @@ class RepositoriesViewController: BaseViewController {
                 guard let repositoryCell = cell as? RepositoryTableViewCell else {
                     return 
                 }
+                
+                repositoryCell.setup(model)
             }
         )
     }

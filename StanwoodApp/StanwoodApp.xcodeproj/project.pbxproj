@@ -30,6 +30,10 @@
 		F6F8D071250F725900B6EBCD /* FavouritesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D070250F725900B6EBCD /* FavouritesAssembly.swift */; };
 		F6F8D075250F747F00B6EBCD /* RepositoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6F8D074250F747F00B6EBCD /* RepositoriesViewController.xib */; };
 		F6F8D077250F752200B6EBCD /* FavouritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6F8D076250F752200B6EBCD /* FavouritesViewController.xib */; };
+		F6F8D07D250F871F00B6EBCD /* GitHubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D07C250F871F00B6EBCD /* GitHubRepository.swift */; };
+		F6F8D080250F8ADB00B6EBCD /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D07F250F8ADB00B6EBCD /* UIImageViewExtension.swift */; };
+		F6F8D083250F8F3900B6EBCD /* RepositoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D081250F8F3900B6EBCD /* RepositoryCollectionViewCell.swift */; };
+		F6F8D084250F8F3900B6EBCD /* RepositoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6F8D082250F8F3900B6EBCD /* RepositoryCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +78,10 @@
 		F6F8D070250F725900B6EBCD /* FavouritesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesAssembly.swift; sourceTree = "<group>"; };
 		F6F8D074250F747F00B6EBCD /* RepositoriesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoriesViewController.xib; sourceTree = "<group>"; };
 		F6F8D076250F752200B6EBCD /* FavouritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouritesViewController.xib; sourceTree = "<group>"; };
+		F6F8D07C250F871F00B6EBCD /* GitHubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepository.swift; sourceTree = "<group>"; };
+		F6F8D07F250F8ADB00B6EBCD /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		F6F8D081250F8F3900B6EBCD /* RepositoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		F6F8D082250F8F3900B6EBCD /* RepositoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +147,8 @@
 		F6E281C2250F501000F43B54 /* StanwoodApp */ = {
 			isa = PBXGroup;
 			children = (
+				F6F8D07E250F8ACA00B6EBCD /* Extensions */,
+				F6F8D078250F835300B6EBCD /* Models */,
 				F6E281ED250F514700F43B54 /* Base */,
 				F6E281EC250F513700F43B54 /* Repositories */,
 				F6E281EB250F513200F43B54 /* UseCases */,
@@ -280,6 +290,8 @@
 			isa = PBXGroup;
 			children = (
 				F6F8D064250F6C1800B6EBCD /* RepositoryTableViewCell */,
+				F6F8D081250F8F3900B6EBCD /* RepositoryCollectionViewCell.swift */,
+				F6F8D082250F8F3900B6EBCD /* RepositoryCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -291,6 +303,22 @@
 				F6F8D066250F6C3400B6EBCD /* RepositoryTableViewCell.xib */,
 			);
 			path = RepositoryTableViewCell;
+			sourceTree = "<group>";
+		};
+		F6F8D078250F835300B6EBCD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F6F8D07C250F871F00B6EBCD /* GitHubRepository.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F6F8D07E250F8ACA00B6EBCD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F6F8D07F250F8ADB00B6EBCD /* UIImageViewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,6 +405,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6F8D084250F8F3900B6EBCD /* RepositoryCollectionViewCell.xib in Resources */,
 				F6E281D2250F501200F43B54 /* LaunchScreen.storyboard in Resources */,
 				F6E281CF250F501200F43B54 /* Assets.xcassets in Resources */,
 				F6F8D077250F752200B6EBCD /* FavouritesViewController.xib in Resources */,
@@ -467,8 +496,10 @@
 				F6E281CA250F501000F43B54 /* FavouritesViewController.swift in Sources */,
 				F6F8D06C250F6EC100B6EBCD /* RepositoriesAssembly.swift in Sources */,
 				F6E281C8250F501000F43B54 /* RepositoriesViewController.swift in Sources */,
+				F6F8D07D250F871F00B6EBCD /* GitHubRepository.swift in Sources */,
 				F6F8D05B250F5DD000B6EBCD /* MainTabBarController.swift in Sources */,
 				F6F8D06A250F6E8C00B6EBCD /* RepositoriesViewModel.swift in Sources */,
+				F6F8D083250F8F3900B6EBCD /* RepositoryCollectionViewCell.swift in Sources */,
 				F6F8D071250F725900B6EBCD /* FavouritesAssembly.swift in Sources */,
 				F6F8D067250F6C3400B6EBCD /* RepositoryTableViewCell.swift in Sources */,
 				F6F8D050250F532100B6EBCD /* BaseRouter.swift in Sources */,
@@ -477,6 +508,7 @@
 				F6E281C4250F501000F43B54 /* AppDelegate.swift in Sources */,
 				F6F8D056250F5B2A00B6EBCD /* BaseViewController.swift in Sources */,
 				F6F8D04E250F52BF00B6EBCD /* AssemblerAssembly.swift in Sources */,
+				F6F8D080250F8ADB00B6EBCD /* UIImageViewExtension.swift in Sources */,
 				F6E281C6250F501000F43B54 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

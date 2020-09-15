@@ -67,6 +67,9 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="avatarImageView" destination="LV6-tP-OCv" id="5va-e0-EST"/>
+                <outlet property="isFavouriteImageView" destination="klb-Kt-opE" id="Pff-be-ZoO"/>
+                <outlet property="repositoryDescriptionLabel" destination="NB2-In-wrO" id="zK7-ZV-Dqn"/>
+                <outlet property="repositoryNameLabel" destination="IPL-Zg-8yJ" id="KSi-bj-1Hq"/>
             </connections>
             <point key="canvasLocation" x="140.57971014492756" y="167.41071428571428"/>
         </tableViewCell>

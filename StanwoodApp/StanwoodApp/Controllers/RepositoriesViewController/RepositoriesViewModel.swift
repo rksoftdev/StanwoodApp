@@ -9,9 +9,16 @@
 import RxCocoa
 
 protocol RepositoriesViewModelable {
-    var repositoriesDataSource: BehaviorRelay<[String]> { get }
+    var repositoriesDataSource: BehaviorRelay<[GitHubRepository]> { get }
 }
 
 class RepositoriesViewModel: RepositoriesViewModelable {
-    var repositoriesDataSource: BehaviorRelay<[String]> = .init(value: ["A","B","C"])
+    var repositoriesDataSource: BehaviorRelay<[GitHubRepository]> = .init(value: mockDataSource())
+    
+    private static func mockDataSource() -> [GitHubRepository] {
+        let one = GitHubRepository(name: "Repo First", description: "Repo First description")
+        let two = GitHubRepository(name: "Repo Second", description: "Repo Second description")
+        let three = GitHubRepository(name: "Repo Third", description: "Repo Third description")
+        return [one, two, three]
+    }
 }

@@ -7,9 +7,24 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class RepositoryTableViewCell: UITableViewCell {
+    //MARK: Outlets
     @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var isFavouriteImageView: UIImageView!
+    @IBOutlet weak var repositoryNameLabel: UILabel!
+    @IBOutlet weak var repositoryDescriptionLabel: UILabel!
+    
+    //MARK: Properties
+    
+    //MARK: Initializers
+    func setup(_ repo: GitHubRepository) {
+        repositoryNameLabel.text = repo.name
+        repositoryDescriptionLabel.text = repo.description
+        avatarImageView.loadImageOrDefault(from: repo.avatarUrl)
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,9 +36,6 @@ class RepositoryTableViewCell: UITableViewCell {
     }
     
     private func setControlsBehaviour() {
-        let radius = avatarImageView.frame.width / 2
-        avatarImageView.sizeToFit()
-        avatarImageView.layer.cornerRadius = radius
-        accessoryType = .disclosureIndicator
+        //avatarImageView.roundBorder()
     }
 }
