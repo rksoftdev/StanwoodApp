@@ -30,7 +30,7 @@ class RepositoryCollectionViewCell: UICollectionViewCell {
     func setup(_ repository: GitHubRepository) {
         repositoryNameLabel.text = repository.name
         repositoryDescriptionLabel.text = repository.description
-        avatarImageView.loadImageOrDefault(from: repository.avatarUrl)
+        avatarImageView.loadAvatarImageOrDefault(from: repository.avatarUrl)
         isFavouriteImageView.image = UIImage(systemName: repository.isFavourite ?? false
             ? "bookmark.fill"
             : "bookmark")

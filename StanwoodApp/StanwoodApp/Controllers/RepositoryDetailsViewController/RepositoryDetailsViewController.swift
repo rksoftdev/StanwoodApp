@@ -8,13 +8,22 @@
 
 import UIKit
 import PanModal
+import RxSwift
 
 class RepositoryDetailsViewController: BaseViewController, PanModalPresentable {
     //MARK: Outlets
+    @IBOutlet weak var repositoryNameLabel: UILabel!
+    @IBOutlet weak var repositoryDescriptionLabel: UILabel!
+    @IBOutlet weak var repositoryLanguageView: LabeledImageView!
+    @IBOutlet weak var repositoryForksView: LabeledImageView!
+    @IBOutlet weak var repositoryStarsView: LabeledImageView!
+    @IBOutlet weak var repositoryCreationDateView: LabeledImageView!
+    
     
     //MARK: Properties
     private let viewModel: RepositoryDetailsViewModelable
     private let router: RepositoryDetailsRoutable
+    private let disposeBag: DisposeBag = DisposeBag()
     
     //MARK: Initializers
     init(_ viewModel: RepositoryDetailsViewModelable, _ router: RepositoryDetailsRoutable) {
@@ -32,5 +41,13 @@ class RepositoryDetailsViewController: BaseViewController, PanModalPresentable {
         return nil
     }
     
-    
+    override func createBindingSet() {
+        disposeBag.insert(
+            viewModel.repositoryName.bind(to: repositoryNameLabel.rx.text),
+            viewModel.repositoryDescription.bind(to: repositoryDescriptionLabel.rx.text),
+            viewModel.forksCountDescription.bind(to: repositoryForksView.label.rx.text),
+            viewModel.starsCountDescription.bind(to: repositoryStarsView.label.rx.text),
+            viewModel.createdDateDescription.bind(to: repositoryCreationDateView.label.rx.text)
+        )
+    }
 }

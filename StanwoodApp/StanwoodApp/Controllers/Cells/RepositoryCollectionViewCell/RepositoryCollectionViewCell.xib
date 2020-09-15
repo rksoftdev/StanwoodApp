@@ -51,7 +51,7 @@
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="swp-xc-I35">
                         <rect key="frame" x="15" y="118.5" width="558" height="0.5"/>
-                        <color key="backgroundColor" red="0.37629741430000002" green="0.37571913000000001" blue="0.41715139150000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="0.29999999999999999" id="SQk-aL-lkg"/>
                         </constraints>

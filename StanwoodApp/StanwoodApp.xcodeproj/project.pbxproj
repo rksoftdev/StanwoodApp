@@ -18,6 +18,8 @@
 		F622700A251091390083B400 /* FavouritesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6227009251091390083B400 /* FavouritesRouter.swift */; };
 		F622700C251091700083B400 /* RepositoryDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F622700B251091700083B400 /* RepositoryDetailsRouter.swift */; };
 		F622700E251094170083B400 /* BaseDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F622700D251094170083B400 /* BaseDetailsRouter.swift */; };
+		F6227013251097550083B400 /* LabeledImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6227012251097550083B400 /* LabeledImageView.xib */; };
+		F6227015251099640083B400 /* LabeledImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6227014251099640083B400 /* LabeledImageView.swift */; };
 		F6E281C4250F501000F43B54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281C3250F501000F43B54 /* AppDelegate.swift */; };
 		F6E281C6250F501000F43B54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281C5250F501000F43B54 /* SceneDelegate.swift */; };
 		F6E281C8250F501000F43B54 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281C7250F501000F43B54 /* RepositoriesViewController.swift */; };
@@ -69,6 +71,8 @@
 		F6227009251091390083B400 /* FavouritesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesRouter.swift; sourceTree = "<group>"; };
 		F622700B251091700083B400 /* RepositoryDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsRouter.swift; sourceTree = "<group>"; };
 		F622700D251094170083B400 /* BaseDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDetailsRouter.swift; sourceTree = "<group>"; };
+		F6227012251097550083B400 /* LabeledImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabeledImageView.xib; sourceTree = "<group>"; };
+		F6227014251099640083B400 /* LabeledImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledImageView.swift; sourceTree = "<group>"; };
 		F6E281C0250F501000F43B54 /* StanwoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StanwoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E281C3250F501000F43B54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6E281C5250F501000F43B54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +153,15 @@
 			path = RepositoryDetailsViewController;
 			sourceTree = "<group>";
 		};
+		F62270112510973E0083B400 /* CustomControls */ = {
+			isa = PBXGroup;
+			children = (
+				F6227012251097550083B400 /* LabeledImageView.xib */,
+				F6227014251099640083B400 /* LabeledImageView.swift */,
+			);
+			path = CustomControls;
+			sourceTree = "<group>";
+		};
 		F6E281B7250F501000F43B54 = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +219,7 @@
 		F6E281E9250F512200F43B54 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F62270112510973E0083B400 /* CustomControls */,
 				F6226FFD251085FB0083B400 /* RepositoryDetailsViewController */,
 				F6F8D058250F5D9E00B6EBCD /* Main */,
 				F6F8D05D250F69E100B6EBCD /* Cells */,
@@ -438,6 +452,7 @@
 				F6E281D2250F501200F43B54 /* LaunchScreen.storyboard in Resources */,
 				F6E281CF250F501200F43B54 /* Assets.xcassets in Resources */,
 				F6227001251086230083B400 /* RepositoryDetailsViewController.xib in Resources */,
+				F6227013251097550083B400 /* LabeledImageView.xib in Resources */,
 				F6F8D077250F752200B6EBCD /* FavouritesViewController.xib in Resources */,
 				F6F8D075250F747F00B6EBCD /* RepositoriesViewController.xib in Resources */,
 				F6E281CD250F501000F43B54 /* Main.storyboard in Resources */,
@@ -539,6 +554,7 @@
 				F6F8D04C250F527300B6EBCD /* Assembler.swift in Sources */,
 				F6227005251086710083B400 /* RepositoryDetailsAssembly.swift in Sources */,
 				F6227000251086230083B400 /* RepositoryDetailsViewController.swift in Sources */,
+				F6227015251099640083B400 /* LabeledImageView.swift in Sources */,
 				F6F8D06E250F721F00B6EBCD /* FavouritesViewModel.swift in Sources */,
 				F6E281C4250F501000F43B54 /* AppDelegate.swift in Sources */,
 				F6F8D056250F5B2A00B6EBCD /* BaseViewController.swift in Sources */,

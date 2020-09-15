@@ -28,13 +28,15 @@
                             <color key="textColor" red="0.1567038" green="0.15604722500000001" blue="0.19748634100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="heightClass=regular-widthClass=regular">
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
                             </variation>
                         </label>
                     </subviews>
                     <color key="backgroundColor" red="0.96852236989999996" green="0.96868795159999999" blue="0.96851199870000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="125" id="9ws-hK-ZMP"/>
+                        <constraint firstAttribute="height" constant="125" id="9ws-hK-ZMP">
+                            <variation key="heightClass=regular-widthClass=regular" constant="145"/>
+                        </constraint>
                         <constraint firstItem="hLf-e3-QPe" firstAttribute="leading" secondItem="anG-tu-6W0" secondAttribute="leading" constant="20" id="CLL-8T-8mf"/>
                         <constraint firstAttribute="bottom" secondItem="hLf-e3-QPe" secondAttribute="bottom" constant="20" id="NJL-0L-vjH"/>
                     </constraints>

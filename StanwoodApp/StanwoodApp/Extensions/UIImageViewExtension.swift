@@ -10,8 +10,9 @@ import UIKit
 import Kingfisher
 
 extension UIImageView {
-    func loadImageOrDefault(from urlString: String?) {
+    func loadAvatarImageOrDefault(from urlString: String?, _ defaultImage: UIImage? = UIImage(systemName: "person.fill")) {
         guard let url = urlString, !url.isEmpty, let imageUrl = URL(string: url) else {
+            self.image = defaultImage
             return
         }
         self.kf.setImage(with: imageUrl)
