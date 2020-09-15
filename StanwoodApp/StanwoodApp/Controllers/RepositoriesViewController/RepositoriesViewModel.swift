@@ -16,9 +16,9 @@ class RepositoriesViewModel: RepositoriesViewModelable {
     var repositoriesDataSource: BehaviorRelay<[GitHubRepository]> = .init(value: mockDataSource())
     
     private static func mockDataSource() -> [GitHubRepository] {
-        let one = GitHubRepository(name: "Repo First", description: "Repo First description")
+        let one = GitHubRepository(name: "Repo First", description: "Repo First description", avatarUrl: "https://avatars3.githubusercontent.com/u/241138?v=4", isFavourite: true)
         let two = GitHubRepository(name: "Repo Second", description: "Repo Second description")
         let three = GitHubRepository(name: "Repo Third", description: "Repo Third description")
-        return [one, two, three]
+        return [one, two, three, one]
     }
 }

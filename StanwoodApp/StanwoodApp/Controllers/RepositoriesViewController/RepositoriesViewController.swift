@@ -15,6 +15,7 @@ class RepositoriesViewController: BaseViewController {
     @IBOutlet weak var repositoriesCollectionView: UICollectionView!
     
     private let viewModel: RepositoriesViewModelable
+    private let router: RepositoriesRoutable
     private let disposeBag: DisposeBag = DisposeBag()
 
     override func setControlsBehaviour() {
@@ -24,18 +25,25 @@ class RepositoriesViewController: BaseViewController {
     
     override func createBindingSet() {
         disposeBag.insert(
-            viewModel.repositoriesDataSource.bind(to: self.repositoriesCollectionView.rx.items(cellIdentifier: "RepositoryCollectionViewCell")) { [weak self] row, model, cell in
+            viewModel.repositoriesDataSource.bind(to: self.repositoriesCollectionView.rx.items(cellIdentifier: "RepositoryCollectionViewCell")) { row, model, cell in
                 guard let repositoryCell = cell as? RepositoryCollectionViewCell else {
                     return 
                 }
                 
                 repositoryCell.setup(model)
+            },
+            repositoriesCollectionView.rx.modelSelected(GitHubRepository.self).subscribe { [weak self] model in
+                guard let repositoryModel = model.element else {
+                    return
+                }
+                self?.router.showDetailsViewController(from: self, with: repositoryModel)
             }
         )
     }
     
-    init(_ viewModel: RepositoriesViewModelable) {
+    init(_ viewModel: RepositoriesViewModelable, _ router: RepositoriesRoutable) {
         self.viewModel = viewModel
+        self.router = router
         super.init(nibName: nil, bundle: nil)
     }
     

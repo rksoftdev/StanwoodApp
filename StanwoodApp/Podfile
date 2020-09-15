@@ -11,6 +11,7 @@ target 'StanwoodApp' do
   	pod 'RxCocoa'
 	pod 'Alamofire'
 	pod 'Kingfisher', '~> 5.0'
+	pod 'PanModal'
 
   target 'StanwoodAppTests' do
     inherit! :search_paths

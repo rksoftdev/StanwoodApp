@@ -14,9 +14,14 @@ class RepositoriesAssembly: Assembly {
             return RepositoriesViewModel()
         }
         
+        container.register(RepositoriesRoutable.self) { resolver in
+            return RepositoriesRouter(resolver.resolve(Assembler.self)!)
+        }
+        
         container.register(RepositoriesViewController.self) { resolver in
             let viewModel = resolver.resolve(RepositoriesViewModelable.self)!
-            return RepositoriesViewController(viewModel)
+            let router = resolver.resolve(RepositoriesRoutable.self)!
+            return RepositoriesViewController(viewModel, router)
         }
     }
 }

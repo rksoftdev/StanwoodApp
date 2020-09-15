@@ -13,7 +13,8 @@ class Assembler {
         return Swinject.Assembler([
             AssemblerAssembly(),
             RepositoriesAssembly(),
-            FavouritesAssembly()
+            FavouritesAssembly(),
+            RepositoryDetailsAssembly()
         ])
     }()
 

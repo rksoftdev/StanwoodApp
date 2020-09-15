@@ -10,6 +10,11 @@
 		9B17BDBE2D4757E6B904D1F2 /* Pods_StanwoodApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E67952801CABBDBA1755517 /* Pods_StanwoodApp.framework */; };
 		D140D7A106F07CB442F77E29 /* Pods_StanwoodAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF89703982B18030A1206ADC /* Pods_StanwoodAppTests.framework */; };
 		F6226FFC251084640083B400 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6226FFB251084640083B400 /* UICollectionViewExtension.swift */; };
+		F6227000251086230083B400 /* RepositoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6226FFE251086230083B400 /* RepositoryDetailsViewController.swift */; };
+		F6227001251086230083B400 /* RepositoryDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6226FFF251086230083B400 /* RepositoryDetailsViewController.xib */; };
+		F62270032510863A0083B400 /* RepositoryDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62270022510863A0083B400 /* RepositoryDetailsViewModel.swift */; };
+		F6227005251086710083B400 /* RepositoryDetailsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6227004251086710083B400 /* RepositoryDetailsAssembly.swift */; };
+		F6227007251087B70083B400 /* RepositoriesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6227006251087B70083B400 /* RepositoriesRouter.swift */; };
 		F6E281C4250F501000F43B54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281C3250F501000F43B54 /* AppDelegate.swift */; };
 		F6E281C6250F501000F43B54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281C5250F501000F43B54 /* SceneDelegate.swift */; };
 		F6E281C8250F501000F43B54 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281C7250F501000F43B54 /* RepositoriesViewController.swift */; };
@@ -53,6 +58,11 @@
 		BF89703982B18030A1206ADC /* Pods_StanwoodAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StanwoodAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C26953DF407DD58BFF069FD3 /* Pods-StanwoodAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StanwoodAppTests.release.xcconfig"; path = "Target Support Files/Pods-StanwoodAppTests/Pods-StanwoodAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		F6226FFB251084640083B400 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
+		F6226FFE251086230083B400 /* RepositoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsViewController.swift; sourceTree = "<group>"; };
+		F6226FFF251086230083B400 /* RepositoryDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryDetailsViewController.xib; sourceTree = "<group>"; };
+		F62270022510863A0083B400 /* RepositoryDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsViewModel.swift; sourceTree = "<group>"; };
+		F6227004251086710083B400 /* RepositoryDetailsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsAssembly.swift; sourceTree = "<group>"; };
+		F6227006251087B70083B400 /* RepositoriesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesRouter.swift; sourceTree = "<group>"; };
 		F6E281C0250F501000F43B54 /* StanwoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StanwoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E281C3250F501000F43B54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6E281C5250F501000F43B54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +132,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F6226FFD251085FB0083B400 /* RepositoryDetailsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F6226FFE251086230083B400 /* RepositoryDetailsViewController.swift */,
+				F6226FFF251086230083B400 /* RepositoryDetailsViewController.xib */,
+				F62270022510863A0083B400 /* RepositoryDetailsViewModel.swift */,
+			);
+			path = RepositoryDetailsViewController;
+			sourceTree = "<group>";
+		};
 		F6E281B7250F501000F43B54 = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +199,7 @@
 		F6E281E9250F512200F43B54 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F6226FFD251085FB0083B400 /* RepositoryDetailsViewController */,
 				F6F8D058250F5D9E00B6EBCD /* Main */,
 				F6F8D05D250F69E100B6EBCD /* Cells */,
 				F6F8D053250F564000B6EBCD /* SplashScreen */,
@@ -194,6 +215,7 @@
 				F6F8D04A250F526200B6EBCD /* Base */,
 				F6F8D06B250F6EC100B6EBCD /* RepositoriesAssembly.swift */,
 				F6F8D070250F725900B6EBCD /* FavouritesAssembly.swift */,
+				F6227004251086710083B400 /* RepositoryDetailsAssembly.swift */,
 			);
 			path = Dependency;
 			sourceTree = "<group>";
@@ -245,6 +267,7 @@
 				F6E281C7250F501000F43B54 /* RepositoriesViewController.swift */,
 				F6F8D069250F6E8C00B6EBCD /* RepositoriesViewModel.swift */,
 				F6F8D074250F747F00B6EBCD /* RepositoriesViewController.xib */,
+				F6227006251087B70083B400 /* RepositoriesRouter.swift */,
 			);
 			path = RepositoriesViewController;
 			sourceTree = "<group>";
@@ -405,6 +428,7 @@
 				F6F8D084250F8F3900B6EBCD /* RepositoryCollectionViewCell.xib in Resources */,
 				F6E281D2250F501200F43B54 /* LaunchScreen.storyboard in Resources */,
 				F6E281CF250F501200F43B54 /* Assets.xcassets in Resources */,
+				F6227001251086230083B400 /* RepositoryDetailsViewController.xib in Resources */,
 				F6F8D077250F752200B6EBCD /* FavouritesViewController.xib in Resources */,
 				F6F8D075250F747F00B6EBCD /* RepositoriesViewController.xib in Resources */,
 				F6E281CD250F501000F43B54 /* Main.storyboard in Resources */,
@@ -491,8 +515,10 @@
 			files = (
 				F6E281CA250F501000F43B54 /* FavouritesViewController.swift in Sources */,
 				F6F8D06C250F6EC100B6EBCD /* RepositoriesAssembly.swift in Sources */,
+				F6227007251087B70083B400 /* RepositoriesRouter.swift in Sources */,
 				F6E281C8250F501000F43B54 /* RepositoriesViewController.swift in Sources */,
 				F6F8D07D250F871F00B6EBCD /* GitHubRepository.swift in Sources */,
+				F62270032510863A0083B400 /* RepositoryDetailsViewModel.swift in Sources */,
 				F6F8D05B250F5DD000B6EBCD /* MainTabBarController.swift in Sources */,
 				F6F8D06A250F6E8C00B6EBCD /* RepositoriesViewModel.swift in Sources */,
 				F6F8D083250F8F3900B6EBCD /* RepositoryCollectionViewCell.swift in Sources */,
@@ -500,6 +526,8 @@
 				F6226FFC251084640083B400 /* UICollectionViewExtension.swift in Sources */,
 				F6F8D050250F532100B6EBCD /* BaseRouter.swift in Sources */,
 				F6F8D04C250F527300B6EBCD /* Assembler.swift in Sources */,
+				F6227005251086710083B400 /* RepositoryDetailsAssembly.swift in Sources */,
+				F6227000251086230083B400 /* RepositoryDetailsViewController.swift in Sources */,
 				F6F8D06E250F721F00B6EBCD /* FavouritesViewModel.swift in Sources */,
 				F6E281C4250F501000F43B54 /* AppDelegate.swift in Sources */,
 				F6F8D056250F5B2A00B6EBCD /* BaseViewController.swift in Sources */,
