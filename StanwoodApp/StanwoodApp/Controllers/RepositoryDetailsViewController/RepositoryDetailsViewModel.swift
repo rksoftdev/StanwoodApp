@@ -30,8 +30,8 @@ class RepositoryDetailsViewModel: RepositoryDetailsViewModelable {
     }
     
     private func handleModel(_ model: GitHubRepository) {
-        repositoryName.accept(model.name ?? "")
-        repositoryDescription.accept(model.description ?? "")
+        repositoryName.accept(model.name )
+        repositoryDescription.accept(model.description )
         languageDescription.accept("Swift")
         starsCountDescription.accept("5 Stars")
         forksCountDescription.accept("8 Forks")

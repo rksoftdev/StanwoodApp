@@ -15,8 +15,24 @@ protocol GitHubRepositoriesRepositoryProtocol {
 }
 
 class GitHubRepositoriesRepository: GitHubRepositoriesRepositoryProtocol {
+    private let networkService: NetworkServiceable
+    
+    init(_ networkService: NetworkServiceable) {
+        self.networkService = networkService
+    }
+    
     func getFromLastDay() -> Single<[GitHubRepository]> {
-        .just([])
+        return self.getFromLastDayRequest().flatMap { response in
+            if let result = response {
+                return .just(result.toGitHubRepositories())
+            }
+            return .just([])
+        }
+    }
+    
+    private func getFromLastDayRequest() -> Single<GitHubRepositoriesResponse?> {
+        let request = GetRepositoriesRequest(.createdLastDay)
+        return networkService.executeRequest(url: request.url, method: request.httpMethod, parameters: request.parameters, headers: request.headers)
     }
     
     func getFromLastWeek() -> Single<[GitHubRepository]> {

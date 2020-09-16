@@ -31,7 +31,7 @@ class RepositoryCollectionViewCell: UICollectionViewCell {
         repositoryNameLabel.text = repository.name
         repositoryDescriptionLabel.text = repository.description
         avatarImageView.loadAvatarImageOrDefault(from: repository.avatarUrl)
-        isFavouriteImageView.image = UIImage(systemName: repository.isFavourite ?? false
+        isFavouriteImageView.image = UIImage(systemName: repository.isFavourite 
             ? "bookmark.fill"
             : "bookmark")
         setControlsBehaviour()

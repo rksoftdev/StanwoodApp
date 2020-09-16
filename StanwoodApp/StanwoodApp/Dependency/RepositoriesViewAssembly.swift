@@ -11,7 +11,10 @@ import Swinject
 class RepositoriesViewAssembly: Assembly {
     func assemble(container: Container) {
         container.register(RepositoriesViewModelable.self) { resolver in
-            return RepositoriesViewModel()
+            let getRepositoriesFromLastDayUseCase = resolver.resolve(GetRepositoriesFromLastDayUseCaseable.self)!
+            let getRepositoriesFromLastWeekUseCase = resolver.resolve(GetRepositoriesFromLastWeekUseCaseable.self)!
+            let getRepositoriesFromLastMonthUseCase = resolver.resolve(GetRepositoriesFromLastMonthUseCaseable.self)!
+            return RepositoriesViewModel(getRepositoriesFromLastDayUseCase, getRepositoriesFromLastWeekUseCase, getRepositoriesFromLastMonthUseCase)
         }
         
         container.register(RepositoriesRoutable.self) { resolver in

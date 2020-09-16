@@ -40,7 +40,7 @@ class GetRepositoriesRequest {
         return [:]
     }
     
-    var path: URL {
+    var url: URL {
         return NetworkConfiguration.apiURL
     }
     

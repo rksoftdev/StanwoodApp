@@ -10,6 +10,8 @@ import Swinject
 
 class ServicesAssembly: Assembly {
     func assemble(container: Container) {
-        
+        container.register(NetworkServiceable.self) { resolver in
+            return NetworkService()
+        }
     }
 }

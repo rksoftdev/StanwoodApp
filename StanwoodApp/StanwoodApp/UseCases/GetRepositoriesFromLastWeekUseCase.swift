@@ -1,5 +1,5 @@
 //
-//  GetRepositoriesFromLastDayUseCase.swift
+//  GetRepositoriesFromLastWeekUseCase.swift
 //  StanwoodApp
 //
 //  Created by Robert  Kuraj on 16/09/2020.
@@ -8,11 +8,11 @@
 
 import RxSwift
 
-protocol GetRepositoriesFromLastDayUseCaseable {
+protocol GetRepositoriesFromLastWeekUseCaseable {
     func execute() -> Single<[GitHubRepository]>
 }
 
-class GetRepositoriesFromLastDayUseCase: GetRepositoriesFromLastDayUseCaseable {
+class GetRepositoriesFromLastWeekUseCase: GetRepositoriesFromLastWeekUseCaseable {
     private let repositoriesRepository: GitHubRepositoriesRepositoryProtocol
     
     init(_ repositoriesRepository: GitHubRepositoriesRepositoryProtocol) {
@@ -20,6 +20,6 @@ class GetRepositoriesFromLastDayUseCase: GetRepositoriesFromLastDayUseCaseable {
     }
     
     func execute() -> Single<[GitHubRepository]> {
-        self.repositoriesRepository.getFromLastDay()
+        self.repositoriesRepository.getFromLastWeek()
     }
 }

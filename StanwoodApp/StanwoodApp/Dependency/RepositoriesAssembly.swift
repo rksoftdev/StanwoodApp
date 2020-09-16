@@ -10,6 +10,9 @@ import Swinject
 
 class RepositoriesAssembly: Assembly {
     func assemble(container: Container) {
-        
+        container.register(GitHubRepositoriesRepositoryProtocol.self) { resolver in
+            let networkService = resolver.resolve(NetworkServiceable.self)!
+            return GitHubRepositoriesRepository(networkService)
+        }
     }
 }

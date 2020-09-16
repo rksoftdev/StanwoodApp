@@ -26,6 +26,10 @@
 		F6BB362F25124CBD00C278B4 /* UseCasesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB362E25124CBD00C278B4 /* UseCasesAssembly.swift */; };
 		F6BB363125124D3100C278B4 /* RepositoriesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB363025124D3100C278B4 /* RepositoriesAssembly.swift */; };
 		F6BB363325124E0500C278B4 /* GitHubRepositoriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB363225124E0500C278B4 /* GitHubRepositoriesRepository.swift */; };
+		F6BB363525124FB300C278B4 /* GetRepositoriesFromLastWeekUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB363425124FB300C278B4 /* GetRepositoriesFromLastWeekUseCase.swift */; };
+		F6BB363725124FD500C278B4 /* GetRepositoriesFromLastMonthUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB363625124FD500C278B4 /* GetRepositoriesFromLastMonthUseCase.swift */; };
+		F6BB3639251267D100C278B4 /* GitHubRepositoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB3638251267D100C278B4 /* GitHubRepositoriesResponse.swift */; };
+		F6BB363B2512680600C278B4 /* GitHubRepositoriesResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB363A2512680600C278B4 /* GitHubRepositoriesResponseMapper.swift */; };
 		F6E281C4250F501000F43B54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281C3250F501000F43B54 /* AppDelegate.swift */; };
 		F6E281C6250F501000F43B54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281C5250F501000F43B54 /* SceneDelegate.swift */; };
 		F6E281C8250F501000F43B54 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281C7250F501000F43B54 /* RepositoriesViewController.swift */; };
@@ -88,6 +92,10 @@
 		F6BB362E25124CBD00C278B4 /* UseCasesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesAssembly.swift; sourceTree = "<group>"; };
 		F6BB363025124D3100C278B4 /* RepositoriesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesAssembly.swift; sourceTree = "<group>"; };
 		F6BB363225124E0500C278B4 /* GitHubRepositoriesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoriesRepository.swift; sourceTree = "<group>"; };
+		F6BB363425124FB300C278B4 /* GetRepositoriesFromLastWeekUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRepositoriesFromLastWeekUseCase.swift; sourceTree = "<group>"; };
+		F6BB363625124FD500C278B4 /* GetRepositoriesFromLastMonthUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRepositoriesFromLastMonthUseCase.swift; sourceTree = "<group>"; };
+		F6BB3638251267D100C278B4 /* GitHubRepositoriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoriesResponse.swift; sourceTree = "<group>"; };
+		F6BB363A2512680600C278B4 /* GitHubRepositoriesResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoriesResponseMapper.swift; sourceTree = "<group>"; };
 		F6E281C0250F501000F43B54 /* StanwoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StanwoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E281C3250F501000F43B54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6E281C5250F501000F43B54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -269,6 +277,8 @@
 			isa = PBXGroup;
 			children = (
 				F6BB362C25124C8300C278B4 /* GetRepositoriesFromLastDayUseCase.swift */,
+				F6BB363425124FB300C278B4 /* GetRepositoriesFromLastWeekUseCase.swift */,
+				F6BB363625124FD500C278B4 /* GetRepositoriesFromLastMonthUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -313,6 +323,7 @@
 		F6F4C7B325123A5A00D3C5C0 /* Resoponses */ = {
 			isa = PBXGroup;
 			children = (
+				F6BB3638251267D100C278B4 /* GitHubRepositoriesResponse.swift */,
 			);
 			path = Resoponses;
 			sourceTree = "<group>";
@@ -320,6 +331,7 @@
 		F6F4C7B425123A6600D3C5C0 /* Mappers */ = {
 			isa = PBXGroup;
 			children = (
+				F6BB363A2512680600C278B4 /* GitHubRepositoriesResponseMapper.swift */,
 			);
 			path = Mappers;
 			sourceTree = "<group>";
@@ -596,7 +608,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6BB3639251267D100C278B4 /* GitHubRepositoriesResponse.swift in Sources */,
 				F6E281CA250F501000F43B54 /* FavouritesViewController.swift in Sources */,
+				F6BB363B2512680600C278B4 /* GitHubRepositoriesResponseMapper.swift in Sources */,
 				F6F8D06C250F6EC100B6EBCD /* RepositoriesViewAssembly.swift in Sources */,
 				F6227007251087B70083B400 /* RepositoriesRouter.swift in Sources */,
 				F6E281C8250F501000F43B54 /* RepositoriesViewController.swift in Sources */,
@@ -616,8 +630,10 @@
 				F6BB362A2512489A00C278B4 /* DateHelper.swift in Sources */,
 				F6BB363325124E0500C278B4 /* GitHubRepositoriesRepository.swift in Sources */,
 				F6F4C7B125123A4100D3C5C0 /* NetworkService.swift in Sources */,
+				F6BB363525124FB300C278B4 /* GetRepositoriesFromLastWeekUseCase.swift in Sources */,
 				F622700A251091390083B400 /* FavouritesRouter.swift in Sources */,
 				F622700C251091700083B400 /* RepositoryDetailsRouter.swift in Sources */,
+				F6BB363725124FD500C278B4 /* GetRepositoriesFromLastMonthUseCase.swift in Sources */,
 				F6F8D04C250F527300B6EBCD /* Assembler.swift in Sources */,
 				F6227005251086710083B400 /* RepositoryDetailsViewAssembly.swift in Sources */,
 				F6227000251086230083B400 /* RepositoryDetailsViewController.swift in Sources */,

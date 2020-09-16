@@ -47,6 +47,8 @@ class RepositoriesViewController: BaseViewController {
         self.viewModel = viewModel
         self.router = router
         super.init(nibName: nil, bundle: nil)
+        
+        viewModel.reloadData(with: .createdLastDay)
     }
     
     required init?(coder: NSCoder) {
