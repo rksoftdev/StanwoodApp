@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RepositoriesViewController" customModule="StanwoodApp" customModuleProvider="target">
             <connections>
                 <outlet property="repositoriesCollectionView" destination="pdc-Fj-mZ2" id="Oxa-Op-xLQ"/>
+                <outlet property="repositoriesFilterSegmentedControl" destination="kiM-tH-Mr1" id="jjM-xS-8je"/>
                 <outlet property="titleLabel" destination="Wlr-3f-TUf" id="9Wx-Uh-dtm"/>
                 <outlet property="view" destination="iN0-l3-epB" id="D2h-Uj-o6S"/>
             </connections>
@@ -20,8 +21,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kiM-tH-Mr1">
-                    <rect key="frame" x="30" y="155" width="354" height="32"/>
+                    <rect key="frame" x="30" y="155" width="354" height="31"/>
                     <color key="backgroundColor" red="0.97279256579999995" green="0.97293192149999996" blue="0.97276204820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="cwx-iI-N23">
+                            <variation key="heightClass=regular-widthClass=regular" constant="45"/>
+                        </constraint>
+                    </constraints>
                     <segments>
                         <segment title="Day"/>
                         <segment title="Month"/>
@@ -51,7 +57,7 @@
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="pdc-Fj-mZ2">
-                    <rect key="frame" x="0.0" y="216" width="414" height="646"/>
+                    <rect key="frame" x="0.0" y="215" width="414" height="647"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lpH-sn-Ohu">
                         <size key="itemSize" width="128" height="128"/>

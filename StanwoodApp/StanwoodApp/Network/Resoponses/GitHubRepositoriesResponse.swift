@@ -21,12 +21,15 @@ struct GitHubRepositoryResponse: Codable {
     var url: String?
     var forks: Int?
     var stars: Int?
+    var createdAt: String?
+    var language: String?
     
     enum CodingKeys: String, CodingKey {
-        case owner, url, description
+        case owner, url, description, language
         case name = "full_name"
         case forks = "forks_count"
         case stars = "stargazers_count"
+        case createdAt = "created_at"
     }
 }
 

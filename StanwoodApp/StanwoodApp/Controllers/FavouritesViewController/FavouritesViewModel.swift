@@ -13,12 +13,5 @@ protocol FavouritesViewModelable {
 }
 
 class FavouritesViewModel: FavouritesViewModelable {
-    var repositoriesDataSource: BehaviorRelay<[GitHubRepository]> = .init(value: mockDataSource())
-    
-    private static func mockDataSource() -> [GitHubRepository] {
-        let one = GitHubRepository("Repo First", "Repo First description", "https://avatars3.githubusercontent.com/u/241138?v=4", false)
-        let two = GitHubRepository("Repo Second", "Repo Second description", "https://avatars3.githubusercontent.com/u/4329421?v=4", true)
-        let three = GitHubRepository("Repo Third", "Repo Third description", "https://avatars3.githubusercontent.com/u/241138?v=4", false)
-        return [one, two, three, one, two, three, one, two, three]
-    }
+    var repositoriesDataSource: BehaviorRelay<[GitHubRepository]> = .init(value: [])
 }

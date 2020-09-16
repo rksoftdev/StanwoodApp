@@ -8,10 +8,10 @@
 
 import Alamofire
 
-enum FilterPeriod {
-    case createdLastMonth
-    case createdLastWeek
+enum FilterPeriod: Int {
     case createdLastDay
+    case createdLastWeek
+    case createdLastMonth
 }
 
 class GetRepositoriesRequest {
@@ -28,11 +28,11 @@ class GetRepositoriesRequest {
     private func getFilterQuery() -> String {
         switch filterPeriod {
         case .createdLastDay:
-            return DateHelper().getYesterdaysDate()
+            return DateHelper().getYesterdaysDate(.yyyyMMdd)
         case .createdLastWeek:
-            return DateHelper().getLastWeeksDate()
+            return DateHelper().getLastWeeksDate(.yyyyMMdd)
         case .createdLastMonth:
-            return DateHelper().getLastMonthsDate()
+            return DateHelper().getLastMonthsDate(.yyyyMMdd)
         }
     }
     

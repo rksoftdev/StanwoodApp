@@ -32,9 +32,9 @@ class RepositoryDetailsViewModel: RepositoryDetailsViewModelable {
     private func handleModel(_ model: GitHubRepository) {
         repositoryName.accept(model.name )
         repositoryDescription.accept(model.description )
-        languageDescription.accept("Swift")
-        starsCountDescription.accept("5 Stars")
-        forksCountDescription.accept("8 Forks")
-        createdDateDescription.accept("Created 4 years ago at 12/05/2014")
+        languageDescription.accept(model.language)
+        starsCountDescription.accept("\(model.starsCount) Stars")
+        forksCountDescription.accept("\(model.forksCount) Forks")
+        createdDateDescription.accept("Created at \(DateHelper().getDateStringFrom(model.createdAt, .yyyyMMddTHHmmssZ))")
     }
 }

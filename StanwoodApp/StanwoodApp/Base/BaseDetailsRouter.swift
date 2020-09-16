@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol BaseDetailsRoutable {
+protocol BaseDetailsRoutable: BaseRoutable {
     func showDetailsViewController(from context: UIViewController?, with model: GitHubRepository)
 }
 

@@ -188,6 +188,14 @@
 			path = CustomControls;
 			sourceTree = "<group>";
 		};
+		F6C3462525129DD8009C618E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F6BB36292512489A00C278B4 /* DateHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		F6E281B7250F501000F43B54 = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +219,7 @@
 		F6E281C2250F501000F43B54 /* StanwoodApp */ = {
 			isa = PBXGroup;
 			children = (
+				F6C3462525129DD8009C618E /* Helpers */,
 				F6F4C7B425123A6600D3C5C0 /* Mappers */,
 				F6F4C7AF25123A3600D3C5C0 /* Network */,
 				F6F8D07E250F8ACA00B6EBCD /* Extensions */,
@@ -223,7 +232,6 @@
 				F6E281E8250F509200F43B54 /* SupportingFiles */,
 				F6E281CE250F501200F43B54 /* Assets.xcassets */,
 				F6E281D3250F501200F43B54 /* Info.plist */,
-				F6BB36292512489A00C278B4 /* DateHelper.swift */,
 			);
 			path = StanwoodApp;
 			sourceTree = "<group>";

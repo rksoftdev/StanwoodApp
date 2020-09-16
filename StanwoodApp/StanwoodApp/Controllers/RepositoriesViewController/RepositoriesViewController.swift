@@ -13,6 +13,7 @@ import RxCocoa
 class RepositoriesViewController: BaseViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var repositoriesCollectionView: UICollectionView!
+    @IBOutlet weak var repositoriesFilterSegmentedControl: UISegmentedControl!
     
     private let viewModel: RepositoriesViewModelable
     private let router: RepositoriesRoutable
@@ -39,6 +40,12 @@ class RepositoriesViewController: BaseViewController {
                     return
                 }
                 self?.router.showDetailsViewController(from: self, with: repositoryModel)
+            },
+            repositoriesFilterSegmentedControl.rx.selectedSegmentIndex.bind { [weak self] index in
+                self?.viewModel.reloadData(with: FilterPeriod(rawValue: index) ?? .createdLastDay)
+            },
+            viewModel.errorHandler.bind { [weak self] error in
+                self?.router.showErrorDialog(from: self, with: error.localizedDescription)
             }
         )
     }

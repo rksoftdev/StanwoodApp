@@ -12,13 +12,12 @@ import RxSwift
 protocol RepositoriesViewModelable {
     var repositoriesDataSource: BehaviorRelay<[GitHubRepository]> { get }
     func reloadData(with filterPeriod: FilterPeriod)
-    var errorHandler: BehaviorRelay<Error?> { get }
-    var isLoading: BehaviorRelay<Bool> { get }
+    var errorHandler: PublishSubject<Error> { get }
 }
 
 class RepositoriesViewModel: RepositoriesViewModelable {
     var repositoriesDataSource: BehaviorRelay<[GitHubRepository]> = .init(value: [])
-    var errorHandler: BehaviorRelay<Error?> = .init(value: nil)
+    var errorHandler: PublishSubject<Error> = .init()
     var isLoading: BehaviorRelay<Bool> = .init(value: false)
     
     private let disposeBag: DisposeBag
@@ -46,29 +45,25 @@ class RepositoriesViewModel: RepositoriesViewModelable {
     }
     
     private func getRepositoriesFromLastDay() {
-        self.getRepositoriesFromLastDayUseCase.execute()
-            .subscribe(onSuccess: { [weak self] result in
-                self?.repositoriesDataSource.accept(result)
-            }, onError: { error in
-                print("ERROR: \(error.localizedDescription)")
-            }).disposed(by: self.disposeBag)
+        self.handleResponse(self.getRepositoriesFromLastDayUseCase.execute())
+            .disposed(by: self.disposeBag)
     }
     
     private func getRepositoriesFromLastWeek() {
-        self.getRepositoriesFromLastWeekUseCase.execute()
-            .subscribe(onSuccess: { results in
-                
-            }, onError: { error in
-                
-            }).disposed(by: self.disposeBag)
+        self.handleResponse(self.getRepositoriesFromLastWeekUseCase.execute())
+            .disposed(by: self.disposeBag)
     }
     
     private func getRepositoriesFromLastMonth() {
-        self.getRepositoriesFromLastMonthUseCase.execute()
-            .subscribe(onSuccess: { results in
-                
-            }, onError: { error in
-                
-            }).disposed(by: self.disposeBag)
+        self.handleResponse(self.getRepositoriesFromLastMonthUseCase.execute())
+            .disposed(by: self.disposeBag)
+    }
+    
+    func handleResponse(_ response: PrimitiveSequence<SingleTrait, [GitHubRepository]>) -> Disposable {
+        return response.subscribe(onSuccess: { [weak self] result in
+            self?.repositoriesDataSource.accept(result)
+        }, onError: { error in
+            self.errorHandler.onNext(error)
+        })
     }
 }

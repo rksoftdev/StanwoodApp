@@ -47,7 +47,8 @@ class RepositoryDetailsViewController: BaseViewController, PanModalPresentable {
             viewModel.repositoryDescription.bind(to: repositoryDescriptionLabel.rx.text),
             viewModel.forksCountDescription.bind(to: repositoryForksView.label.rx.text),
             viewModel.starsCountDescription.bind(to: repositoryStarsView.label.rx.text),
-            viewModel.createdDateDescription.bind(to: repositoryCreationDateView.label.rx.text)
+            viewModel.createdDateDescription.bind(to: repositoryCreationDateView.label.rx.text),
+            viewModel.languageDescription.bind(to: repositoryLanguageView.label.rx.text)
         )
     }
 }

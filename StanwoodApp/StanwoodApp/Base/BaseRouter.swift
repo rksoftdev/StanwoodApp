@@ -7,8 +7,20 @@
 //
 
 import Swinject
+import UIKit
 
-class BaseRouter {
+protocol BaseRoutable{
+    func showErrorDialog(from context: UIViewController?, with message: String?)
+}
+
+class BaseRouter: BaseRoutable {
+    func showErrorDialog(from context: UIViewController?, with message: String?) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert )
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(action)
+        context?.show(alert, sender: nil)
+    }
+    
     var assembler: Assembler
     
     init(_ assembler: Assembler) {
