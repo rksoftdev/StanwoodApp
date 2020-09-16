@@ -1,5 +1,5 @@
 //
-//  RepositoryDetailsAssembly.swift
+//  RepositoryDetailsViewAssembly.swift
 //  StanwoodApp
 //
 //  Created by Robert  Kuraj on 15/09/2020.
@@ -8,7 +8,7 @@
 
 import Swinject
 
-class RepositoryDetailsAssembly: Assembly {
+class RepositoryDetailsViewAssembly: Assembly {
     func assemble(container: Container) {
         container.register(RepositoryDetailsViewModelable.self) { (resolver, model: GitHubRepository) in
             return RepositoryDetailsViewModel(model)

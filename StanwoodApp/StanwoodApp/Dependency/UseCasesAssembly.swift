@@ -1,5 +1,5 @@
 //
-//  RepositoriesAssembly.swift
+//  UseCasesAssembly.swift
 //  StanwoodApp
 //
 //  Created by Robert  Kuraj on 16/09/2020.
@@ -8,7 +8,7 @@
 
 import Swinject
 
-class RepositoriesAssembly: Assembly {
+class UseCasesAssembly: Assembly {
     func assemble(container: Container) {
         
     }

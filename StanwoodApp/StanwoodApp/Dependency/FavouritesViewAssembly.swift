@@ -1,5 +1,5 @@
 //
-//  FavouritesAssembly.swift
+//  FavouritesViewAssembly.swift
 //  StanwoodApp
 //
 //  Created by Robert  Kuraj on 14/09/2020.
@@ -8,7 +8,7 @@
 
 import Swinject
 
-class FavouritesAssembly: Assembly {
+class FavouritesViewAssembly: Assembly {
     func assemble(container: Container) {
         container.register(FavouritesViewModelable.self) { resolver in
             return FavouritesViewModel()

@@ -13,13 +13,19 @@
 		F6227000251086230083B400 /* RepositoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6226FFE251086230083B400 /* RepositoryDetailsViewController.swift */; };
 		F6227001251086230083B400 /* RepositoryDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6226FFF251086230083B400 /* RepositoryDetailsViewController.xib */; };
 		F62270032510863A0083B400 /* RepositoryDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62270022510863A0083B400 /* RepositoryDetailsViewModel.swift */; };
-		F6227005251086710083B400 /* RepositoryDetailsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6227004251086710083B400 /* RepositoryDetailsAssembly.swift */; };
+		F6227005251086710083B400 /* RepositoryDetailsViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6227004251086710083B400 /* RepositoryDetailsViewAssembly.swift */; };
 		F6227007251087B70083B400 /* RepositoriesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6227006251087B70083B400 /* RepositoriesRouter.swift */; };
 		F622700A251091390083B400 /* FavouritesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6227009251091390083B400 /* FavouritesRouter.swift */; };
 		F622700C251091700083B400 /* RepositoryDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F622700B251091700083B400 /* RepositoryDetailsRouter.swift */; };
 		F622700E251094170083B400 /* BaseDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F622700D251094170083B400 /* BaseDetailsRouter.swift */; };
 		F6227013251097550083B400 /* LabeledImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6227012251097550083B400 /* LabeledImageView.xib */; };
 		F6227015251099640083B400 /* LabeledImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6227014251099640083B400 /* LabeledImageView.swift */; };
+		F6BB36282512470700C278B4 /* GetRepositoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB36272512470700C278B4 /* GetRepositoriesRequest.swift */; };
+		F6BB362A2512489A00C278B4 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB36292512489A00C278B4 /* DateHelper.swift */; };
+		F6BB362D25124C8300C278B4 /* GetRepositoriesFromLastDayUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB362C25124C8300C278B4 /* GetRepositoriesFromLastDayUseCase.swift */; };
+		F6BB362F25124CBD00C278B4 /* UseCasesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB362E25124CBD00C278B4 /* UseCasesAssembly.swift */; };
+		F6BB363125124D3100C278B4 /* RepositoriesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB363025124D3100C278B4 /* RepositoriesAssembly.swift */; };
+		F6BB363325124E0500C278B4 /* GitHubRepositoriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB363225124E0500C278B4 /* GitHubRepositoriesRepository.swift */; };
 		F6E281C4250F501000F43B54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281C3250F501000F43B54 /* AppDelegate.swift */; };
 		F6E281C6250F501000F43B54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281C5250F501000F43B54 /* SceneDelegate.swift */; };
 		F6E281C8250F501000F43B54 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281C7250F501000F43B54 /* RepositoriesViewController.swift */; };
@@ -28,15 +34,18 @@
 		F6E281CF250F501200F43B54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6E281CE250F501200F43B54 /* Assets.xcassets */; };
 		F6E281D2250F501200F43B54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E281D0250F501200F43B54 /* LaunchScreen.storyboard */; };
 		F6E281DD250F501200F43B54 /* StanwoodAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281DC250F501200F43B54 /* StanwoodAppTests.swift */; };
+		F6F4C7AB2512394800D3C5C0 /* ServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F4C7AA2512394800D3C5C0 /* ServicesAssembly.swift */; };
+		F6F4C7B125123A4100D3C5C0 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F4C7B025123A4100D3C5C0 /* NetworkService.swift */; };
+		F6F4C7B62512465600D3C5C0 /* NetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F4C7B52512465600D3C5C0 /* NetworkConfiguration.swift */; };
 		F6F8D04C250F527300B6EBCD /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D04B250F527300B6EBCD /* Assembler.swift */; };
 		F6F8D04E250F52BF00B6EBCD /* AssemblerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D04D250F52BF00B6EBCD /* AssemblerAssembly.swift */; };
 		F6F8D050250F532100B6EBCD /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D04F250F532100B6EBCD /* BaseRouter.swift */; };
 		F6F8D056250F5B2A00B6EBCD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D055250F5B2A00B6EBCD /* BaseViewController.swift */; };
 		F6F8D05B250F5DD000B6EBCD /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D05A250F5DD000B6EBCD /* MainTabBarController.swift */; };
 		F6F8D06A250F6E8C00B6EBCD /* RepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D069250F6E8C00B6EBCD /* RepositoriesViewModel.swift */; };
-		F6F8D06C250F6EC100B6EBCD /* RepositoriesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D06B250F6EC100B6EBCD /* RepositoriesAssembly.swift */; };
+		F6F8D06C250F6EC100B6EBCD /* RepositoriesViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D06B250F6EC100B6EBCD /* RepositoriesViewAssembly.swift */; };
 		F6F8D06E250F721F00B6EBCD /* FavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D06D250F721F00B6EBCD /* FavouritesViewModel.swift */; };
-		F6F8D071250F725900B6EBCD /* FavouritesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D070250F725900B6EBCD /* FavouritesAssembly.swift */; };
+		F6F8D071250F725900B6EBCD /* FavouritesViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D070250F725900B6EBCD /* FavouritesViewAssembly.swift */; };
 		F6F8D075250F747F00B6EBCD /* RepositoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6F8D074250F747F00B6EBCD /* RepositoriesViewController.xib */; };
 		F6F8D077250F752200B6EBCD /* FavouritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6F8D076250F752200B6EBCD /* FavouritesViewController.xib */; };
 		F6F8D07D250F871F00B6EBCD /* GitHubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D07C250F871F00B6EBCD /* GitHubRepository.swift */; };
@@ -66,13 +75,19 @@
 		F6226FFE251086230083B400 /* RepositoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsViewController.swift; sourceTree = "<group>"; };
 		F6226FFF251086230083B400 /* RepositoryDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryDetailsViewController.xib; sourceTree = "<group>"; };
 		F62270022510863A0083B400 /* RepositoryDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsViewModel.swift; sourceTree = "<group>"; };
-		F6227004251086710083B400 /* RepositoryDetailsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsAssembly.swift; sourceTree = "<group>"; };
+		F6227004251086710083B400 /* RepositoryDetailsViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsViewAssembly.swift; sourceTree = "<group>"; };
 		F6227006251087B70083B400 /* RepositoriesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesRouter.swift; sourceTree = "<group>"; };
 		F6227009251091390083B400 /* FavouritesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesRouter.swift; sourceTree = "<group>"; };
 		F622700B251091700083B400 /* RepositoryDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsRouter.swift; sourceTree = "<group>"; };
 		F622700D251094170083B400 /* BaseDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDetailsRouter.swift; sourceTree = "<group>"; };
 		F6227012251097550083B400 /* LabeledImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabeledImageView.xib; sourceTree = "<group>"; };
 		F6227014251099640083B400 /* LabeledImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledImageView.swift; sourceTree = "<group>"; };
+		F6BB36272512470700C278B4 /* GetRepositoriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRepositoriesRequest.swift; sourceTree = "<group>"; };
+		F6BB36292512489A00C278B4 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		F6BB362C25124C8300C278B4 /* GetRepositoriesFromLastDayUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRepositoriesFromLastDayUseCase.swift; sourceTree = "<group>"; };
+		F6BB362E25124CBD00C278B4 /* UseCasesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesAssembly.swift; sourceTree = "<group>"; };
+		F6BB363025124D3100C278B4 /* RepositoriesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesAssembly.swift; sourceTree = "<group>"; };
+		F6BB363225124E0500C278B4 /* GitHubRepositoriesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoriesRepository.swift; sourceTree = "<group>"; };
 		F6E281C0250F501000F43B54 /* StanwoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StanwoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E281C3250F501000F43B54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6E281C5250F501000F43B54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,15 +100,18 @@
 		F6E281D8250F501200F43B54 /* StanwoodAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StanwoodAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E281DC250F501200F43B54 /* StanwoodAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StanwoodAppTests.swift; sourceTree = "<group>"; };
 		F6E281DE250F501200F43B54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6F4C7AA2512394800D3C5C0 /* ServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesAssembly.swift; sourceTree = "<group>"; };
+		F6F4C7B025123A4100D3C5C0 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		F6F4C7B52512465600D3C5C0 /* NetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfiguration.swift; sourceTree = "<group>"; };
 		F6F8D04B250F527300B6EBCD /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
 		F6F8D04D250F52BF00B6EBCD /* AssemblerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblerAssembly.swift; sourceTree = "<group>"; };
 		F6F8D04F250F532100B6EBCD /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		F6F8D055250F5B2A00B6EBCD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F6F8D05A250F5DD000B6EBCD /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		F6F8D069250F6E8C00B6EBCD /* RepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModel.swift; sourceTree = "<group>"; };
-		F6F8D06B250F6EC100B6EBCD /* RepositoriesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesAssembly.swift; sourceTree = "<group>"; };
+		F6F8D06B250F6EC100B6EBCD /* RepositoriesViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewAssembly.swift; sourceTree = "<group>"; };
 		F6F8D06D250F721F00B6EBCD /* FavouritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewModel.swift; sourceTree = "<group>"; };
-		F6F8D070250F725900B6EBCD /* FavouritesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesAssembly.swift; sourceTree = "<group>"; };
+		F6F8D070250F725900B6EBCD /* FavouritesViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewAssembly.swift; sourceTree = "<group>"; };
 		F6F8D074250F747F00B6EBCD /* RepositoriesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoriesViewController.xib; sourceTree = "<group>"; };
 		F6F8D076250F752200B6EBCD /* FavouritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouritesViewController.xib; sourceTree = "<group>"; };
 		F6F8D07C250F871F00B6EBCD /* GitHubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepository.swift; sourceTree = "<group>"; };
@@ -185,6 +203,8 @@
 		F6E281C2250F501000F43B54 /* StanwoodApp */ = {
 			isa = PBXGroup;
 			children = (
+				F6F4C7B425123A6600D3C5C0 /* Mappers */,
+				F6F4C7AF25123A3600D3C5C0 /* Network */,
 				F6F8D07E250F8ACA00B6EBCD /* Extensions */,
 				F6F8D078250F835300B6EBCD /* Models */,
 				F6E281ED250F514700F43B54 /* Base */,
@@ -195,6 +215,7 @@
 				F6E281E8250F509200F43B54 /* SupportingFiles */,
 				F6E281CE250F501200F43B54 /* Assets.xcassets */,
 				F6E281D3250F501200F43B54 /* Info.plist */,
+				F6BB36292512489A00C278B4 /* DateHelper.swift */,
 			);
 			path = StanwoodApp;
 			sourceTree = "<group>";
@@ -234,9 +255,12 @@
 			isa = PBXGroup;
 			children = (
 				F6F8D04A250F526200B6EBCD /* Base */,
-				F6F8D06B250F6EC100B6EBCD /* RepositoriesAssembly.swift */,
-				F6F8D070250F725900B6EBCD /* FavouritesAssembly.swift */,
-				F6227004251086710083B400 /* RepositoryDetailsAssembly.swift */,
+				F6F8D06B250F6EC100B6EBCD /* RepositoriesViewAssembly.swift */,
+				F6F8D070250F725900B6EBCD /* FavouritesViewAssembly.swift */,
+				F6227004251086710083B400 /* RepositoryDetailsViewAssembly.swift */,
+				F6F4C7AA2512394800D3C5C0 /* ServicesAssembly.swift */,
+				F6BB362E25124CBD00C278B4 /* UseCasesAssembly.swift */,
+				F6BB363025124D3100C278B4 /* RepositoriesAssembly.swift */,
 			);
 			path = Dependency;
 			sourceTree = "<group>";
@@ -244,6 +268,7 @@
 		F6E281EB250F513200F43B54 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				F6BB362C25124C8300C278B4 /* GetRepositoriesFromLastDayUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -251,6 +276,7 @@
 		F6E281EC250F513700F43B54 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				F6BB363225124E0500C278B4 /* GitHubRepositoriesRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -263,6 +289,39 @@
 				F622700D251094170083B400 /* BaseDetailsRouter.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		F6F4C7AF25123A3600D3C5C0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F6F4C7B325123A5A00D3C5C0 /* Resoponses */,
+				F6F4C7B225123A4D00D3C5C0 /* Requests */,
+				F6F4C7B025123A4100D3C5C0 /* NetworkService.swift */,
+				F6F4C7B52512465600D3C5C0 /* NetworkConfiguration.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F6F4C7B225123A4D00D3C5C0 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				F6BB36272512470700C278B4 /* GetRepositoriesRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		F6F4C7B325123A5A00D3C5C0 /* Resoponses */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resoponses;
+			sourceTree = "<group>";
+		};
+		F6F4C7B425123A6600D3C5C0 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mappers;
 			sourceTree = "<group>";
 		};
 		F6F8D04A250F526200B6EBCD /* Base */ = {
@@ -538,23 +597,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6E281CA250F501000F43B54 /* FavouritesViewController.swift in Sources */,
-				F6F8D06C250F6EC100B6EBCD /* RepositoriesAssembly.swift in Sources */,
+				F6F8D06C250F6EC100B6EBCD /* RepositoriesViewAssembly.swift in Sources */,
 				F6227007251087B70083B400 /* RepositoriesRouter.swift in Sources */,
 				F6E281C8250F501000F43B54 /* RepositoriesViewController.swift in Sources */,
+				F6BB363125124D3100C278B4 /* RepositoriesAssembly.swift in Sources */,
 				F6F8D07D250F871F00B6EBCD /* GitHubRepository.swift in Sources */,
 				F62270032510863A0083B400 /* RepositoryDetailsViewModel.swift in Sources */,
 				F6F8D05B250F5DD000B6EBCD /* MainTabBarController.swift in Sources */,
 				F6F8D06A250F6E8C00B6EBCD /* RepositoriesViewModel.swift in Sources */,
+				F6BB36282512470700C278B4 /* GetRepositoriesRequest.swift in Sources */,
 				F6F8D083250F8F3900B6EBCD /* RepositoryCollectionViewCell.swift in Sources */,
-				F6F8D071250F725900B6EBCD /* FavouritesAssembly.swift in Sources */,
+				F6F4C7AB2512394800D3C5C0 /* ServicesAssembly.swift in Sources */,
+				F6F8D071250F725900B6EBCD /* FavouritesViewAssembly.swift in Sources */,
+				F6F4C7B62512465600D3C5C0 /* NetworkConfiguration.swift in Sources */,
+				F6BB362F25124CBD00C278B4 /* UseCasesAssembly.swift in Sources */,
 				F6226FFC251084640083B400 /* UICollectionViewExtension.swift in Sources */,
 				F6F8D050250F532100B6EBCD /* BaseRouter.swift in Sources */,
+				F6BB362A2512489A00C278B4 /* DateHelper.swift in Sources */,
+				F6BB363325124E0500C278B4 /* GitHubRepositoriesRepository.swift in Sources */,
+				F6F4C7B125123A4100D3C5C0 /* NetworkService.swift in Sources */,
 				F622700A251091390083B400 /* FavouritesRouter.swift in Sources */,
 				F622700C251091700083B400 /* RepositoryDetailsRouter.swift in Sources */,
 				F6F8D04C250F527300B6EBCD /* Assembler.swift in Sources */,
-				F6227005251086710083B400 /* RepositoryDetailsAssembly.swift in Sources */,
+				F6227005251086710083B400 /* RepositoryDetailsViewAssembly.swift in Sources */,
 				F6227000251086230083B400 /* RepositoryDetailsViewController.swift in Sources */,
 				F6227015251099640083B400 /* LabeledImageView.swift in Sources */,
+				F6BB362D25124C8300C278B4 /* GetRepositoriesFromLastDayUseCase.swift in Sources */,
 				F6F8D06E250F721F00B6EBCD /* FavouritesViewModel.swift in Sources */,
 				F6E281C4250F501000F43B54 /* AppDelegate.swift in Sources */,
 				F6F8D056250F5B2A00B6EBCD /* BaseViewController.swift in Sources */,

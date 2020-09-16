@@ -16,9 +16,9 @@ class FavouritesViewModel: FavouritesViewModelable {
     var repositoriesDataSource: BehaviorRelay<[GitHubRepository]> = .init(value: mockDataSource())
     
     private static func mockDataSource() -> [GitHubRepository] {
-        let one = GitHubRepository(name: "Repo First", description: "Repo First description", avatarUrl: "https://avatars3.githubusercontent.com/u/241138?v=4")
-        let two = GitHubRepository(name: "Repo Second", description: "Repo Second description", avatarUrl: "https://avatars3.githubusercontent.com/u/4329421?v=4", isFavourite: true)
-        let three = GitHubRepository(name: "Repo Third", description: "Repo Third description", avatarUrl: "https://avatars3.githubusercontent.com/u/241138?v=4")
+        let one = GitHubRepository("Repo First", "Repo First description", "https://avatars3.githubusercontent.com/u/241138?v=4", false)
+        let two = GitHubRepository("Repo Second", "Repo Second description", "https://avatars3.githubusercontent.com/u/4329421?v=4", true)
+        let three = GitHubRepository("Repo Third", "Repo Third description", "https://avatars3.githubusercontent.com/u/241138?v=4", false)
         return [one, two, three, one, two, three, one, two, three]
     }
 }
