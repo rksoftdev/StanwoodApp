@@ -63,7 +63,8 @@ class RepositoriesViewModel: RepositoriesViewModelable {
         return response.subscribe(onSuccess: { [weak self] result in
             self?.repositoriesDataSource.accept(result)
         }, onError: { error in
-            self.errorHandler.onNext(error)
+            print(error.localizedDescription)
+            self.errorHandler.onNext(Error(type: .cannotFetchData))
         })
     }
 }

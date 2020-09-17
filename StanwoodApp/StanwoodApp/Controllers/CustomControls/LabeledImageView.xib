@@ -43,7 +43,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="bCe-0t-EFw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="3Qt-Pm-T71">
                     <variation key="heightClass=regular-widthClass=regular" constant="25"/>

@@ -71,7 +71,7 @@
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nq9-ri-6Se" customClass="LabeledImageView" customModule="StanwoodApp" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="231" width="414" height="55"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="tintColor" red="0.37629741430000002" green="0.37571913000000001" blue="0.41715139150000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="55" id="7Bg-Nr-N7s">
@@ -84,7 +84,7 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FJR-jn-QoI" customClass="LabeledImageView" customModule="StanwoodApp" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="286" width="414" height="55"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="tintColor" red="0.37629741430000002" green="0.37571913000000001" blue="0.41715139150000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="55" id="H2Y-TM-MzS">
@@ -97,8 +97,8 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ipn-fe-3yh" customClass="LabeledImageView" customModule="StanwoodApp" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="341" width="414" height="55"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    <color key="tintColor" red="0.37629741430000002" green="0.37571913000000001" blue="0.41715139150000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="55" id="4cG-Zf-xvH">
                             <variation key="heightClass=regular-widthClass=regular" constant="80"/>
@@ -110,8 +110,8 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qSr-yk-7O5" customClass="LabeledImageView" customModule="StanwoodApp" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="396" width="414" height="55"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    <color key="tintColor" red="0.37629741430000002" green="0.37571913000000001" blue="0.41715139150000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="55" id="2Di-AZ-s80">
                             <variation key="heightClass=regular-widthClass=regular" constant="80"/>
@@ -146,7 +146,7 @@
                     </variation>
                 </button>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="qSr-yk-7O5" secondAttribute="trailing" id="0It-69-hcg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7IZ-7T-Gna" secondAttribute="trailing" constant="20" id="5tx-2A-lVr"/>

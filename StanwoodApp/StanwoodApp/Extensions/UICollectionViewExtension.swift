@@ -23,4 +23,9 @@ extension UICollectionView {
         let cellView = UINib(nibName: cellIdentifier, bundle: nil)
         self.register(cellView, forCellWithReuseIdentifier: cellIdentifier)
     }
+    
+    func scrollToTop() {
+        let topOffest = CGPoint(x: 0, y: -(self.contentInset.top))
+        self.setContentOffset(topOffest, animated: true)
+    }
 }

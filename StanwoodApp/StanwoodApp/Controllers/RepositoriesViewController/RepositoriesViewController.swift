@@ -43,6 +43,7 @@ class RepositoriesViewController: BaseViewController {
             },
             repositoriesFilterSegmentedControl.rx.selectedSegmentIndex.bind { [weak self] index in
                 self?.viewModel.reloadData(with: FilterPeriod(rawValue: index) ?? .createdLastDay)
+                self?.repositoriesCollectionView.scrollToTop()
             },
             viewModel.errorHandler.bind { [weak self] error in
                 self?.router.showErrorDialog(from: self, with: error.localizedDescription)
@@ -61,6 +62,8 @@ class RepositoriesViewController: BaseViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
     
     private func prepareCollectionView() {
         repositoriesCollectionView.registerCell(collectionViewCellIdentifier)

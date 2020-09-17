@@ -7,11 +7,20 @@
 //
 
 import Swinject
+import RealmSwift
 
 class ServicesAssembly: Assembly {
     func assemble(container: Container) {
         container.register(NetworkServiceable.self) { resolver in
             return NetworkService()
+        }
+        
+        container.register(Realm.self) { _ in
+            return Realm.defaultRealm()
+        }
+        
+        container.register(DatabaseServiceable.self) { resolver in
+            return DatabaseService(resolver.resolve(Realm.self)!)
         }
     }
 }
