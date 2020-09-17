@@ -23,6 +23,7 @@ struct GitHubRepositoryResponse: Codable {
     var stars: Int?
     var createdAt: String?
     var language: String?
+    var gitHubUrl: String?
     
     enum CodingKeys: String, CodingKey {
         case owner, url, description, language
@@ -30,6 +31,7 @@ struct GitHubRepositoryResponse: Codable {
         case forks = "forks_count"
         case stars = "stargazers_count"
         case createdAt = "created_at"
+        case gitHubUrl = "html_url"
     }
 }
 

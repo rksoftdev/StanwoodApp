@@ -23,8 +23,14 @@ class RepositoryCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        setControlsBehaviour()
+    }
 
     private func setControlsBehaviour() {
+        makeRoundedImageView()
     }
     
     func setup(_ repository: GitHubRepository) {
@@ -34,6 +40,11 @@ class RepositoryCollectionViewCell: UICollectionViewCell {
         isFavouriteImageView.image = UIImage(systemName: repository.isFavourite 
             ? "bookmark.fill"
             : "bookmark")
-        setControlsBehaviour()
+    }
+    
+    func makeRoundedImageView() {
+        avatarImageView.layoutIfNeeded()
+        avatarImageView.layer.masksToBounds = true
+        avatarImageView.layer.cornerRadius = avatarImageView.frame.height / 2
     }
 }

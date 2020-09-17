@@ -33,6 +33,7 @@
                         <segment title="Month"/>
                         <segment title="Year"/>
                     </segments>
+                    <color key="selectedSegmentTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </segmentedControl>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A4l-NM-OOl">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
@@ -58,7 +59,7 @@
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="pdc-Fj-mZ2">
                     <rect key="frame" x="0.0" y="215" width="414" height="647"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lpH-sn-Ohu">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -67,7 +68,7 @@
                     </collectionViewFlowLayout>
                 </collectionView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="pdc-Fj-mZ2" firstAttribute="top" secondItem="kiM-tH-Mr1" secondAttribute="bottom" constant="30" id="4BT-ss-8XR"/>
                 <constraint firstItem="kiM-tH-Mr1" firstAttribute="top" secondItem="A4l-NM-OOl" secondAttribute="bottom" constant="30" id="ENB-uU-Not"/>

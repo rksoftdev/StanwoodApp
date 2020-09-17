@@ -17,6 +17,7 @@ struct GitHubRepository {
     var createdAt: String
     var language: String
     var isFavourite: Bool
+    var gitHubUrl: String
     
     init() {
         self.name = ""
@@ -27,9 +28,10 @@ struct GitHubRepository {
         self.starsCount = 0
         self.createdAt = ""
         self.language = ""
+        self.gitHubUrl = ""
     }
     
-    init(_ name: String, _ description: String, _ avatarUrl: String, _ isFavourite: Bool, _ starsCount: Int, _ forksCount: Int, _ createdAt: String, _ language: String) {
+    init(_ name: String, _ description: String, _ avatarUrl: String, _ isFavourite: Bool, _ starsCount: Int, _ forksCount: Int, _ createdAt: String, _ language: String, _ gitHubUrl: String) {
         self.name = name
         self.description = description
         self.avatarUrl = avatarUrl
@@ -38,5 +40,6 @@ struct GitHubRepository {
         self.forksCount = forksCount
         self.createdAt = createdAt
         self.language = language
+        self.gitHubUrl = gitHubUrl
     }
 }

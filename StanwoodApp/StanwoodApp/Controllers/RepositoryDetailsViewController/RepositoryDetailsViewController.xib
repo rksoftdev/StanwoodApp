@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RepositoryDetailsViewController" customModule="StanwoodApp" customModuleProvider="target">
             <connections>
+                <outlet property="favouriteButton" destination="Jhp-HP-xFa" id="w3b-8E-4uU"/>
+                <outlet property="openInGitHubButton" destination="Yca-Tm-zlu" id="RdJ-rC-VJI"/>
                 <outlet property="repositoryCreationDateView" destination="qSr-yk-7O5" id="PKr-39-lVx"/>
                 <outlet property="repositoryDescriptionLabel" destination="7IZ-7T-Gna" id="JdC-nL-0iy"/>
                 <outlet property="repositoryForksView" destination="FJR-jn-QoI" id="AJs-VT-63g"/>
@@ -26,8 +28,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edy-RH-o8V">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PanModal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ltc-Hz-qw9">
-                            <rect key="frame" x="20" y="69" width="374" height="36"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PanModal" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ltc-Hz-qw9">
+                            <rect key="frame" x="20" y="69" width="324" height="36"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
                             <color key="textColor" red="0.1567038" green="0.15604722500000001" blue="0.19748634100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
@@ -35,15 +37,26 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
                             </variation>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jhp-HP-xFa">
+                            <rect key="frame" x="364" y="57" width="30" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Jhp-HP-xFa" secondAttribute="height" multiplier="1:2" id="8Cp-Pd-ea7"/>
+                                <constraint firstAttribute="width" constant="30" id="e83-Xp-def"/>
+                            </constraints>
+                            <color key="tintColor" red="0.1567038" green="0.15604722500000001" blue="0.19748634100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" image="bookmark" catalog="system"/>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.96852236989999996" green="0.96868795159999999" blue="0.96851199870000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Jhp-HP-xFa" secondAttribute="trailing" constant="20" id="6Dh-GJ-Eld"/>
                         <constraint firstAttribute="bottom" secondItem="ltc-Hz-qw9" secondAttribute="bottom" constant="20" id="Ors-Xi-rMB"/>
+                        <constraint firstItem="Jhp-HP-xFa" firstAttribute="centerY" secondItem="ltc-Hz-qw9" secondAttribute="centerY" id="PXM-M9-zHA"/>
                         <constraint firstAttribute="height" constant="125" id="RLd-YG-A2i">
                             <variation key="heightClass=regular-widthClass=regular" constant="145"/>
                         </constraint>
+                        <constraint firstItem="Jhp-HP-xFa" firstAttribute="leading" secondItem="ltc-Hz-qw9" secondAttribute="trailing" constant="20" id="dkG-tc-Kud"/>
                         <constraint firstItem="ltc-Hz-qw9" firstAttribute="leading" secondItem="edy-RH-o8V" secondAttribute="leading" constant="20" id="foS-wy-c75"/>
-                        <constraint firstAttribute="trailing" secondItem="ltc-Hz-qw9" secondAttribute="trailing" constant="20" id="uKj-Ve-7uh"/>
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7IZ-7T-Gna">
@@ -109,11 +122,11 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yca-Tm-zlu">
-                    <rect key="frame" x="137" y="501" width="140" height="35"/>
+                    <rect key="frame" x="117" y="501" width="180" height="35"/>
                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="140" id="PJL-YA-7Jk">
-                            <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                        <constraint firstAttribute="width" constant="180" id="PJL-YA-7Jk">
+                            <variation key="heightClass=regular-widthClass=regular" constant="240"/>
                         </constraint>
                         <constraint firstAttribute="height" constant="35" id="ued-Bx-Q0l">
                             <variation key="heightClass=regular-widthClass=regular" constant="60"/>
@@ -157,11 +170,12 @@
                 <constraint firstItem="Yca-Tm-zlu" firstAttribute="top" secondItem="qSr-yk-7O5" secondAttribute="bottom" constant="50" id="xS0-9s-Htz"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="141" y="94"/>
+            <point key="canvasLocation" x="-145" y="27"/>
         </view>
     </objects>
     <resources>
         <image name="arrow.branch" catalog="system" width="128" height="108"/>
+        <image name="bookmark" catalog="system" width="112" height="128"/>
         <image name="clock" catalog="system" width="128" height="121"/>
         <image name="command" catalog="system" width="128" height="115"/>
         <image name="star" catalog="system" width="128" height="116"/>

@@ -18,7 +18,7 @@ extension Optional where Wrapped == GitHubRepositoryResponse {
             return GitHubRepository()
         }
         
-        return GitHubRepository(repo.name ?? "", repo.description ?? "", repo.owner?.avatarUrl ?? "", false, repo.stars ?? 0, repo.forks ?? 0, repo.createdAt ?? "", repo.language ?? "")
+        return GitHubRepository(repo.name ?? "", repo.description ?? "", repo.owner?.avatarUrl ?? "", false, repo.stars ?? 0, repo.forks ?? 0, repo.createdAt ?? "", repo.language ?? "", repo.gitHubUrl ?? "")
     }
 }
 

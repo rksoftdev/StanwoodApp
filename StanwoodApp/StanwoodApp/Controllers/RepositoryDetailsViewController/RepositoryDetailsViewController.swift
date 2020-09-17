@@ -18,7 +18,8 @@ class RepositoryDetailsViewController: BaseViewController, PanModalPresentable {
     @IBOutlet weak var repositoryForksView: LabeledImageView!
     @IBOutlet weak var repositoryStarsView: LabeledImageView!
     @IBOutlet weak var repositoryCreationDateView: LabeledImageView!
-    
+    @IBOutlet weak var openInGitHubButton: UIButton!
+    @IBOutlet weak var favouriteButton: UIButton!
     
     //MARK: Properties
     private let viewModel: RepositoryDetailsViewModelable
@@ -48,7 +49,17 @@ class RepositoryDetailsViewController: BaseViewController, PanModalPresentable {
             viewModel.forksCountDescription.bind(to: repositoryForksView.label.rx.text),
             viewModel.starsCountDescription.bind(to: repositoryStarsView.label.rx.text),
             viewModel.createdDateDescription.bind(to: repositoryCreationDateView.label.rx.text),
-            viewModel.languageDescription.bind(to: repositoryLanguageView.label.rx.text)
+            viewModel.languageDescription.bind(to: repositoryLanguageView.label.rx.text),
+            openInGitHubButton.rx.tap.bind { [weak self] _ in self?.viewModel.openGitHubUrl() },
+            viewModel.isFafourite.bind { [weak self] isFavourite in
+                self?.handleIsFavourite(isFavourite)
+            }
         )
+    }
+    
+    private func handleIsFavourite(_ value: Bool) {
+        favouriteButton.setImage(UIImage(systemName: value
+            ? "bookmark.fill"
+            : "bookmark"), for: .normal)
     }
 }
