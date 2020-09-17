@@ -20,9 +20,11 @@
 		F622700E251094170083B400 /* BaseDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F622700D251094170083B400 /* BaseDetailsRouter.swift */; };
 		F6227013251097550083B400 /* LabeledImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6227012251097550083B400 /* LabeledImageView.xib */; };
 		F6227015251099640083B400 /* LabeledImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6227014251099640083B400 /* LabeledImageView.swift */; };
-		F6812621251386BA00F342B5 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6812620251386BA00F342B5 /* DatabaseService.swift */; };
 		F6812623251389EF00F342B5 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6812622251389EF00F342B5 /* Error.swift */; };
-		F681262525138C1900F342B5 /* RealmExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681262425138C1900F342B5 /* RealmExtension.swift */; };
+		F681262925138CA900F342B5 /* GitHubRepositoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681262825138CA900F342B5 /* GitHubRepositoryEntity.swift */; };
+		F681262B25138CD700F342B5 /* GitHubRepositoryDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681262A25138CD700F342B5 /* GitHubRepositoryDao.swift */; };
+		F681262D25138D1C00F342B5 /* BaseDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681262C25138D1C00F342B5 /* BaseDao.swift */; };
+		F681262F2513932600F342B5 /* DaosAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681262E2513932600F342B5 /* DaosAssembly.swift */; };
 		F6BB36282512470700C278B4 /* GetRepositoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB36272512470700C278B4 /* GetRepositoriesRequest.swift */; };
 		F6BB362A2512489A00C278B4 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB36292512489A00C278B4 /* DateHelper.swift */; };
 		F6BB362D25124C8300C278B4 /* GetRepositoriesFromLastDayUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB362C25124C8300C278B4 /* GetRepositoriesFromLastDayUseCase.swift */; };
@@ -89,9 +91,11 @@
 		F622700D251094170083B400 /* BaseDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDetailsRouter.swift; sourceTree = "<group>"; };
 		F6227012251097550083B400 /* LabeledImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabeledImageView.xib; sourceTree = "<group>"; };
 		F6227014251099640083B400 /* LabeledImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledImageView.swift; sourceTree = "<group>"; };
-		F6812620251386BA00F342B5 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		F6812622251389EF00F342B5 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
-		F681262425138C1900F342B5 /* RealmExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmExtension.swift; sourceTree = "<group>"; };
+		F681262825138CA900F342B5 /* GitHubRepositoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryEntity.swift; sourceTree = "<group>"; };
+		F681262A25138CD700F342B5 /* GitHubRepositoryDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryDao.swift; sourceTree = "<group>"; };
+		F681262C25138D1C00F342B5 /* BaseDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDao.swift; sourceTree = "<group>"; };
+		F681262E2513932600F342B5 /* DaosAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaosAssembly.swift; sourceTree = "<group>"; };
 		F6BB36272512470700C278B4 /* GetRepositoriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRepositoriesRequest.swift; sourceTree = "<group>"; };
 		F6BB36292512489A00C278B4 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		F6BB362C25124C8300C278B4 /* GetRepositoriesFromLastDayUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRepositoriesFromLastDayUseCase.swift; sourceTree = "<group>"; };
@@ -197,9 +201,27 @@
 		F681261F251386A300F342B5 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				F6812620251386BA00F342B5 /* DatabaseService.swift */,
+				F681262725138C9500F342B5 /* DAOs */,
+				F681262625138C8D00F342B5 /* Entities */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		F681262625138C8D00F342B5 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				F681262825138CA900F342B5 /* GitHubRepositoryEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		F681262725138C9500F342B5 /* DAOs */ = {
+			isa = PBXGroup;
+			children = (
+				F681262C25138D1C00F342B5 /* BaseDao.swift */,
+				F681262A25138CD700F342B5 /* GitHubRepositoryDao.swift */,
+			);
+			path = DAOs;
 			sourceTree = "<group>";
 		};
 		F6C3462525129DD8009C618E /* Helpers */ = {
@@ -292,6 +314,7 @@
 				F6F4C7AA2512394800D3C5C0 /* ServicesAssembly.swift */,
 				F6BB362E25124CBD00C278B4 /* UseCasesAssembly.swift */,
 				F6BB363025124D3100C278B4 /* RepositoriesAssembly.swift */,
+				F681262E2513932600F342B5 /* DaosAssembly.swift */,
 			);
 			path = Dependency;
 			sourceTree = "<group>";
@@ -455,7 +478,6 @@
 			children = (
 				F6F8D07F250F8ADB00B6EBCD /* UIImageViewExtension.swift */,
 				F6226FFB251084640083B400 /* UICollectionViewExtension.swift */,
-				F681262425138C1900F342B5 /* RealmExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -636,22 +658,23 @@
 				F6BB3639251267D100C278B4 /* GitHubRepositoriesResponse.swift in Sources */,
 				F6E281CA250F501000F43B54 /* FavouritesViewController.swift in Sources */,
 				F6BB363B2512680600C278B4 /* GitHubRepositoriesResponseMapper.swift in Sources */,
+				F681262D25138D1C00F342B5 /* BaseDao.swift in Sources */,
 				F6F8D06C250F6EC100B6EBCD /* RepositoriesViewAssembly.swift in Sources */,
 				F6227007251087B70083B400 /* RepositoriesRouter.swift in Sources */,
 				F6E281C8250F501000F43B54 /* RepositoriesViewController.swift in Sources */,
 				F6BB363125124D3100C278B4 /* RepositoriesAssembly.swift in Sources */,
+				F681262F2513932600F342B5 /* DaosAssembly.swift in Sources */,
 				F6F8D07D250F871F00B6EBCD /* GitHubRepository.swift in Sources */,
 				F6812623251389EF00F342B5 /* Error.swift in Sources */,
 				F62270032510863A0083B400 /* RepositoryDetailsViewModel.swift in Sources */,
-				F6812621251386BA00F342B5 /* DatabaseService.swift in Sources */,
 				F6F8D05B250F5DD000B6EBCD /* MainTabBarController.swift in Sources */,
 				F6F8D06A250F6E8C00B6EBCD /* RepositoriesViewModel.swift in Sources */,
 				F6BB36282512470700C278B4 /* GetRepositoriesRequest.swift in Sources */,
 				F6F8D083250F8F3900B6EBCD /* RepositoryCollectionViewCell.swift in Sources */,
 				F6F4C7AB2512394800D3C5C0 /* ServicesAssembly.swift in Sources */,
-				F681262525138C1900F342B5 /* RealmExtension.swift in Sources */,
 				F6F8D071250F725900B6EBCD /* FavouritesViewAssembly.swift in Sources */,
 				F6F4C7B62512465600D3C5C0 /* NetworkConfiguration.swift in Sources */,
+				F681262925138CA900F342B5 /* GitHubRepositoryEntity.swift in Sources */,
 				F6BB362F25124CBD00C278B4 /* UseCasesAssembly.swift in Sources */,
 				F6226FFC251084640083B400 /* UICollectionViewExtension.swift in Sources */,
 				F6F8D050250F532100B6EBCD /* BaseRouter.swift in Sources */,
@@ -666,6 +689,7 @@
 				F6227005251086710083B400 /* RepositoryDetailsViewAssembly.swift in Sources */,
 				F6227000251086230083B400 /* RepositoryDetailsViewController.swift in Sources */,
 				F6227015251099640083B400 /* LabeledImageView.swift in Sources */,
+				F681262B25138CD700F342B5 /* GitHubRepositoryDao.swift in Sources */,
 				F6BB362D25124C8300C278B4 /* GetRepositoriesFromLastDayUseCase.swift in Sources */,
 				F6F8D06E250F721F00B6EBCD /* FavouritesViewModel.swift in Sources */,
 				F6E281C4250F501000F43B54 /* AppDelegate.swift in Sources */,

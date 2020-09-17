@@ -15,6 +15,7 @@ struct GitHubRepositoriesResponse: Codable {
 }
 
 struct GitHubRepositoryResponse: Codable {
+    var id: Int?
     var name: String?
     var description: String?
     var owner: GitHubRepositoryOwner?
@@ -26,7 +27,7 @@ struct GitHubRepositoryResponse: Codable {
     var gitHubUrl: String?
     
     enum CodingKeys: String, CodingKey {
-        case owner, url, description, language
+        case id, owner, url, description, language
         case name = "full_name"
         case forks = "forks_count"
         case stars = "stargazers_count"
