@@ -32,7 +32,11 @@ class BaseDao <T:Object> {
         }
     }
     
-    func alreadyExists(_ id: Any) -> Bool {
-        return self.realm.object(ofType: T.self, forPrimaryKey: id) != nil
+    func getFilteredOrAll(_ predicate: NSPredicate? = nil) -> Results<T> {
+        var objects = self.realm.objects(T.self)
+        guard let filter = predicate else {
+            return objects
+        }
+        return objects.filter(filter)
     }
 }

@@ -14,7 +14,8 @@ class RepositoriesViewAssembly: Assembly {
             let getRepositoriesFromLastDayUseCase = resolver.resolve(GetRepositoriesFromLastDayUseCaseable.self)!
             let getRepositoriesFromLastWeekUseCase = resolver.resolve(GetRepositoriesFromLastWeekUseCaseable.self)!
             let getRepositoriesFromLastMonthUseCase = resolver.resolve(GetRepositoriesFromLastMonthUseCaseable.self)!
-            return RepositoriesViewModel(getRepositoriesFromLastDayUseCase, getRepositoriesFromLastWeekUseCase, getRepositoriesFromLastMonthUseCase)
+            let checkIfIsFavouriteRepositoryUseCase = resolver.resolve(CheckIfIsFavouriteRepositoryUseCaseable.self)!
+            return RepositoriesViewModel(getRepositoriesFromLastDayUseCase, getRepositoriesFromLastWeekUseCase, getRepositoriesFromLastMonthUseCase, checkIfIsFavouriteRepositoryUseCase)
         }
         
         container.register(RepositoriesRoutable.self) { resolver in

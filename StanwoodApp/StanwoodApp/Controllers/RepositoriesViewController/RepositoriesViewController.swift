@@ -20,6 +20,21 @@ class RepositoriesViewController: BaseViewController {
     private let disposeBag: DisposeBag = DisposeBag()
     
     private let collectionViewCellIdentifier = "RepositoryCollectionViewCell"
+    private var currentFilterSegmentedControlIndex = 0
+    
+    init(_ viewModel: RepositoriesViewModelable, _ router: RepositoriesRoutable) {
+        self.viewModel = viewModel
+        self.router = router
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.viewModel.reloadData(with: FilterPeriod(rawValue: self.currentFilterSegmentedControlIndex) ?? .createdLastDay)
+    }
 
     override func setControlsBehaviour() {
         titleLabel.text = "Repositories"
@@ -42,6 +57,7 @@ class RepositoriesViewController: BaseViewController {
                 self?.router.showDetailsViewController(from: self, with: repositoryModel)
             },
             repositoriesFilterSegmentedControl.rx.selectedSegmentIndex.bind { [weak self] index in
+                self?.currentFilterSegmentedControlIndex = index
                 self?.viewModel.reloadData(with: FilterPeriod(rawValue: index) ?? .createdLastDay)
                 self?.repositoriesCollectionView.scrollToTop()
             },
@@ -49,18 +65,6 @@ class RepositoriesViewController: BaseViewController {
                 self?.router.showErrorDialog(from: self, with: error.localizedDescription)
             }
         )
-    }
-    
-    init(_ viewModel: RepositoriesViewModelable, _ router: RepositoriesRoutable) {
-        self.viewModel = viewModel
-        self.router = router
-        super.init(nibName: nil, bundle: nil)
-        
-        viewModel.reloadData(with: .createdLastDay)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     private func prepareCollectionView() {

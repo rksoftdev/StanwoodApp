@@ -25,11 +25,14 @@ class RepositoriesViewModel: RepositoriesViewModelable {
     private let getRepositoriesFromLastDayUseCase: GetRepositoriesFromLastDayUseCaseable
     private let getRepositoriesFromLastWeekUseCase: GetRepositoriesFromLastWeekUseCaseable
     private let getRepositoriesFromLastMonthUseCase: GetRepositoriesFromLastMonthUseCaseable
+    private let checkIfIsFavouriteUseCase: CheckIfIsFavouriteRepositoryUseCaseable
     
-    init(_ getRepositoriesFromLastDayUseCase: GetRepositoriesFromLastDayUseCaseable, _ getRepositoriesFromLastWeekUseCase: GetRepositoriesFromLastWeekUseCaseable, _ getRepositoriesFromLastMonthUseCase: GetRepositoriesFromLastMonthUseCaseable) {
+    init(_ getRepositoriesFromLastDayUseCase: GetRepositoriesFromLastDayUseCaseable, _ getRepositoriesFromLastWeekUseCase: GetRepositoriesFromLastWeekUseCaseable, _ getRepositoriesFromLastMonthUseCase: GetRepositoriesFromLastMonthUseCaseable,
+         _ checkIfIsFavouriteRepositoryUseCase: CheckIfIsFavouriteRepositoryUseCaseable) {
         self.getRepositoriesFromLastDayUseCase = getRepositoriesFromLastDayUseCase
         self.getRepositoriesFromLastWeekUseCase = getRepositoriesFromLastWeekUseCase
         self.getRepositoriesFromLastMonthUseCase = getRepositoriesFromLastMonthUseCase
+        self.checkIfIsFavouriteUseCase = checkIfIsFavouriteRepositoryUseCase
         self.disposeBag = DisposeBag()
     }
     
@@ -61,9 +64,18 @@ class RepositoriesViewModel: RepositoriesViewModelable {
     
     func handleResponse(_ response: PrimitiveSequence<SingleTrait, [GitHubRepository]>) -> Disposable {
         return response.subscribe(onSuccess: { [weak self] result in
-            self?.repositoriesDataSource.accept(result)
+            self?.repositoriesDataSource.accept(self?.checkFavourites(result) ?? [])
         }, onError: { error in
             self.errorHandler.onNext(error)
         })
+    }
+    
+    func checkFavourites(_ result: [GitHubRepository]) -> [GitHubRepository] {
+        var repositories = [GitHubRepository]()
+        for var repository in result {
+            repository.isFavourite = self.checkIfIsFavouriteUseCase.execute(repository)
+            repositories.append(repository)
+        }
+        return repositories
     }
 }

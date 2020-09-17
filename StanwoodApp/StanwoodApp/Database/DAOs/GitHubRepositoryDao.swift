@@ -16,12 +16,21 @@ protocol GitHubRepositoryDaoable {
 }
 
 class GitHubRepositoryDao: BaseDao<GitHubRepositoryEntity>, GitHubRepositoryDaoable {
-    func checkIfIsFavourite(_ id: Int) -> Bool {
-        return alreadyExists(id)
+    func delete(_ object: GitHubRepositoryEntity) {
+        let predicate = NSPredicate(format: "id == %d", object.id)
+        let objects = getFilteredOrAll(predicate)
+        delete(objects)
     }
     
-    func delete(_ object: GitHubRepositoryEntity) {
-        let objects = getAll().filter("id == %d", object.id)
-        delete(objects)
+    func checkIfIsFavourite(_ id: Int) -> Bool {
+        let predicate = NSPredicate(format: "id == %d", id)
+        let objects = getFilteredOrAll(predicate)
+        return !objects.toArray().isEmpty
+    }
+}
+
+extension Results where Element == GitHubRepositoryEntity {
+    func toArray() -> [GitHubRepositoryEntity] {
+        return Array(self)
     }
 }

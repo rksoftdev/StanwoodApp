@@ -15,6 +15,7 @@ protocol GitHubRepositoriesRepositoryProtocol {
     func saveToFavourites(_ repository: GitHubRepository)
     func deleteFromFavourites(_ repository: GitHubRepository)
     func getAllFavourite() -> Single<[GitHubRepository]>
+    func checkIfIsFavourite(_ repository: GitHubRepository) -> Bool
 }
 
 class GitHubRepositoriesRepository: GitHubRepositoriesRepositoryProtocol {
@@ -69,5 +70,9 @@ class GitHubRepositoriesRepository: GitHubRepositoriesRepositoryProtocol {
             observer(.success(favouriteRepositories))
             return Disposables.create()
         }
+    }
+    
+    func checkIfIsFavourite(_ repository: GitHubRepository) -> Bool {
+        return repositoryDao.checkIfIsFavourite(repository.id)
     }
 }

@@ -29,6 +29,7 @@
 		F68126352513993300F342B5 /* DeleteGitHubRepositoryFromFavouritesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68126342513993300F342B5 /* DeleteGitHubRepositoryFromFavouritesUseCase.swift */; };
 		F681263725139BFE00F342B5 /* GetFavouriteRepositoriesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681263625139BFE00F342B5 /* GetFavouriteRepositoriesUseCase.swift */; };
 		F681263925139D4A00F342B5 /* GitHubRepositoryEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681263825139D4A00F342B5 /* GitHubRepositoryEntityMapper.swift */; };
+		F681263B2513A62400F342B5 /* CheckIfIsFavouriteRepositoryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681263A2513A62400F342B5 /* CheckIfIsFavouriteRepositoryUseCase.swift */; };
 		F6BB36282512470700C278B4 /* GetRepositoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB36272512470700C278B4 /* GetRepositoriesRequest.swift */; };
 		F6BB362A2512489A00C278B4 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB36292512489A00C278B4 /* DateHelper.swift */; };
 		F6BB362D25124C8300C278B4 /* GetRepositoriesFromLastDayUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB362C25124C8300C278B4 /* GetRepositoriesFromLastDayUseCase.swift */; };
@@ -104,6 +105,7 @@
 		F68126342513993300F342B5 /* DeleteGitHubRepositoryFromFavouritesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteGitHubRepositoryFromFavouritesUseCase.swift; sourceTree = "<group>"; };
 		F681263625139BFE00F342B5 /* GetFavouriteRepositoriesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFavouriteRepositoriesUseCase.swift; sourceTree = "<group>"; };
 		F681263825139D4A00F342B5 /* GitHubRepositoryEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryEntityMapper.swift; sourceTree = "<group>"; };
+		F681263A2513A62400F342B5 /* CheckIfIsFavouriteRepositoryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckIfIsFavouriteRepositoryUseCase.swift; sourceTree = "<group>"; };
 		F6BB36272512470700C278B4 /* GetRepositoriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRepositoriesRequest.swift; sourceTree = "<group>"; };
 		F6BB36292512489A00C278B4 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		F6BB362C25124C8300C278B4 /* GetRepositoriesFromLastDayUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRepositoriesFromLastDayUseCase.swift; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 				F68126322513992200F342B5 /* SaveGitHubRepositoryToFavouritesUseCase.swift */,
 				F68126342513993300F342B5 /* DeleteGitHubRepositoryFromFavouritesUseCase.swift */,
 				F681263625139BFE00F342B5 /* GetFavouriteRepositoriesUseCase.swift */,
+				F681263A2513A62400F342B5 /* CheckIfIsFavouriteRepositoryUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -678,6 +681,7 @@
 				F681262F2513932600F342B5 /* DaosAssembly.swift in Sources */,
 				F6F8D07D250F871F00B6EBCD /* GitHubRepository.swift in Sources */,
 				F62270032510863A0083B400 /* RepositoryDetailsViewModel.swift in Sources */,
+				F681263B2513A62400F342B5 /* CheckIfIsFavouriteRepositoryUseCase.swift in Sources */,
 				F6F8D05B250F5DD000B6EBCD /* MainTabBarController.swift in Sources */,
 				F681263925139D4A00F342B5 /* GitHubRepositoryEntityMapper.swift in Sources */,
 				F6F8D06A250F6E8C00B6EBCD /* RepositoriesViewModel.swift in Sources */,
