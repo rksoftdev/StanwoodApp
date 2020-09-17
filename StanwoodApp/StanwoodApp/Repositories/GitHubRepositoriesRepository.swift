@@ -14,6 +14,7 @@ protocol GitHubRepositoriesRepositoryProtocol {
     func getFromLastMonth() -> Single<[GitHubRepository]>
     func saveToFavourites(_ repository: GitHubRepository)
     func deleteFromFavourites(_ repository: GitHubRepository)
+    func getAllFavourite() -> Single<[GitHubRepository]>
 }
 
 class GitHubRepositoriesRepository: GitHubRepositoriesRepositoryProtocol {
@@ -60,5 +61,13 @@ class GitHubRepositoriesRepository: GitHubRepositoriesRepositoryProtocol {
     
     func deleteFromFavourites(_ repository: GitHubRepository) {
         repositoryDao.delete(repository.toEntity())
+    }
+    
+    func getAllFavourite() -> Single<[GitHubRepository]> {
+        return Single.create { observer in
+            let favouriteRepositories = Array(self.repositoryDao.getAll()).compactMap { $0.toGitHubRepository() }
+            observer(.success(favouriteRepositories))
+            return Disposables.create()
+        }
     }
 }

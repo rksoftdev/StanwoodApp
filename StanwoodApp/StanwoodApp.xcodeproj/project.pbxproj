@@ -27,6 +27,8 @@
 		F68126312513953900F342B5 /* GitHubRepositoryMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68126302513953900F342B5 /* GitHubRepositoryMapper.swift */; };
 		F68126332513992200F342B5 /* SaveGitHubRepositoryToFavouritesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68126322513992200F342B5 /* SaveGitHubRepositoryToFavouritesUseCase.swift */; };
 		F68126352513993300F342B5 /* DeleteGitHubRepositoryFromFavouritesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68126342513993300F342B5 /* DeleteGitHubRepositoryFromFavouritesUseCase.swift */; };
+		F681263725139BFE00F342B5 /* GetFavouriteRepositoriesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681263625139BFE00F342B5 /* GetFavouriteRepositoriesUseCase.swift */; };
+		F681263925139D4A00F342B5 /* GitHubRepositoryEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681263825139D4A00F342B5 /* GitHubRepositoryEntityMapper.swift */; };
 		F6BB36282512470700C278B4 /* GetRepositoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB36272512470700C278B4 /* GetRepositoriesRequest.swift */; };
 		F6BB362A2512489A00C278B4 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB36292512489A00C278B4 /* DateHelper.swift */; };
 		F6BB362D25124C8300C278B4 /* GetRepositoriesFromLastDayUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB362C25124C8300C278B4 /* GetRepositoriesFromLastDayUseCase.swift */; };
@@ -100,6 +102,8 @@
 		F68126302513953900F342B5 /* GitHubRepositoryMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryMapper.swift; sourceTree = "<group>"; };
 		F68126322513992200F342B5 /* SaveGitHubRepositoryToFavouritesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveGitHubRepositoryToFavouritesUseCase.swift; sourceTree = "<group>"; };
 		F68126342513993300F342B5 /* DeleteGitHubRepositoryFromFavouritesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteGitHubRepositoryFromFavouritesUseCase.swift; sourceTree = "<group>"; };
+		F681263625139BFE00F342B5 /* GetFavouriteRepositoriesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFavouriteRepositoriesUseCase.swift; sourceTree = "<group>"; };
+		F681263825139D4A00F342B5 /* GitHubRepositoryEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryEntityMapper.swift; sourceTree = "<group>"; };
 		F6BB36272512470700C278B4 /* GetRepositoriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRepositoriesRequest.swift; sourceTree = "<group>"; };
 		F6BB36292512489A00C278B4 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		F6BB362C25124C8300C278B4 /* GetRepositoriesFromLastDayUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRepositoriesFromLastDayUseCase.swift; sourceTree = "<group>"; };
@@ -331,6 +335,7 @@
 				F6BB363625124FD500C278B4 /* GetRepositoriesFromLastMonthUseCase.swift */,
 				F68126322513992200F342B5 /* SaveGitHubRepositoryToFavouritesUseCase.swift */,
 				F68126342513993300F342B5 /* DeleteGitHubRepositoryFromFavouritesUseCase.swift */,
+				F681263625139BFE00F342B5 /* GetFavouriteRepositoriesUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -385,6 +390,7 @@
 			children = (
 				F6BB363A2512680600C278B4 /* GitHubRepositoriesResponseMapper.swift */,
 				F68126302513953900F342B5 /* GitHubRepositoryMapper.swift */,
+				F681263825139D4A00F342B5 /* GitHubRepositoryEntityMapper.swift */,
 			);
 			path = Mappers;
 			sourceTree = "<group>";
@@ -673,6 +679,7 @@
 				F6F8D07D250F871F00B6EBCD /* GitHubRepository.swift in Sources */,
 				F62270032510863A0083B400 /* RepositoryDetailsViewModel.swift in Sources */,
 				F6F8D05B250F5DD000B6EBCD /* MainTabBarController.swift in Sources */,
+				F681263925139D4A00F342B5 /* GitHubRepositoryEntityMapper.swift in Sources */,
 				F6F8D06A250F6E8C00B6EBCD /* RepositoriesViewModel.swift in Sources */,
 				F6BB36282512470700C278B4 /* GetRepositoriesRequest.swift in Sources */,
 				F6F8D083250F8F3900B6EBCD /* RepositoryCollectionViewCell.swift in Sources */,
@@ -683,6 +690,7 @@
 				F6BB362F25124CBD00C278B4 /* UseCasesAssembly.swift in Sources */,
 				F6226FFC251084640083B400 /* UICollectionViewExtension.swift in Sources */,
 				F6F8D050250F532100B6EBCD /* BaseRouter.swift in Sources */,
+				F681263725139BFE00F342B5 /* GetFavouriteRepositoriesUseCase.swift in Sources */,
 				F6BB362A2512489A00C278B4 /* DateHelper.swift in Sources */,
 				F6BB363325124E0500C278B4 /* GitHubRepositoriesRepository.swift in Sources */,
 				F6F4C7B125123A4100D3C5C0 /* NetworkService.swift in Sources */,

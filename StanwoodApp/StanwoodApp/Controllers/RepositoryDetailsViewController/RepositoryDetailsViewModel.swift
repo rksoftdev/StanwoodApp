@@ -52,6 +52,7 @@ class RepositoryDetailsViewModel: RepositoryDetailsViewModelable {
         starsCountDescription.accept("\(repositoryModel.starsCount) Stars")
         forksCountDescription.accept("\(repositoryModel.forksCount) Forks")
         createdDateDescription.accept("Created at \(DateHelper().getDateStringFrom(repositoryModel.createdAt, .yyyyMMddTHHmmssZ))")
+        isFafourite.accept(repositoryModel.isFavourite)
     }
     
     func isFavouriteChanged() {

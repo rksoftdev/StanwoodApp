@@ -26,10 +26,9 @@ class BaseDao <T:Object> {
         return elements
     }
     
-    func delete(_ object: T) {
-        let elements = self.realm.objects(T.self)
+    func delete(_ objects: Results<T>) {
         try! self.realm.write {
-            realm.delete(elements)
+            realm.delete(objects)
         }
     }
     

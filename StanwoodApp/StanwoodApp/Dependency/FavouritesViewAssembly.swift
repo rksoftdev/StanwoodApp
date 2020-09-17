@@ -11,7 +11,8 @@ import Swinject
 class FavouritesViewAssembly: Assembly {
     func assemble(container: Container) {
         container.register(FavouritesViewModelable.self) { resolver in
-            return FavouritesViewModel()
+            let getFavouritesUseCase = resolver.resolve(GetFavouriteRepositoriesUseCaseable.self)!
+            return FavouritesViewModel(getFavouritesUseCase)
         }
         
         container.register(FavouritesRoutable.self) { resolver in

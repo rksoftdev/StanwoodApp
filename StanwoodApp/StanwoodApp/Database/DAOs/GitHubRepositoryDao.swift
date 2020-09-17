@@ -19,4 +19,9 @@ class GitHubRepositoryDao: BaseDao<GitHubRepositoryEntity>, GitHubRepositoryDaoa
     func checkIfIsFavourite(_ id: Int) -> Bool {
         return alreadyExists(id)
     }
+    
+    func delete(_ object: GitHubRepositoryEntity) {
+        let objects = getAll().filter("id == %d", object.id)
+        delete(objects)
+    }
 }

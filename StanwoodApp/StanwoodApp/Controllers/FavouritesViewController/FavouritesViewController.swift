@@ -30,6 +30,10 @@ class FavouritesViewController: BaseViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        viewModel.reloadData()
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

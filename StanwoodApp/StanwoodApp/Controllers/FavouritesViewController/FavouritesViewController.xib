@@ -42,8 +42,8 @@
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="vbw-ZH-Q0C">
-                    <rect key="frame" x="0.0" y="155" width="414" height="707"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <rect key="frame" x="0.0" y="125" width="414" height="737"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LgQ-vz-xD1">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -54,7 +54,7 @@
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="vbw-ZH-Q0C" firstAttribute="top" secondItem="anG-tu-6W0" secondAttribute="bottom" constant="30" id="0b0-bh-sOq"/>
+                <constraint firstItem="vbw-ZH-Q0C" firstAttribute="top" secondItem="anG-tu-6W0" secondAttribute="bottom" id="0b0-bh-sOq"/>
                 <constraint firstItem="anG-tu-6W0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0mG-oC-8Qn"/>
                 <constraint firstItem="anG-tu-6W0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="4VU-fM-bhs"/>
                 <constraint firstItem="anG-tu-6W0" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="G5B-Fg-t8Y"/>

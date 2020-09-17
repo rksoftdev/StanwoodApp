@@ -63,8 +63,6 @@ class RepositoriesViewController: BaseViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    
     private func prepareCollectionView() {
         repositoriesCollectionView.registerCell(collectionViewCellIdentifier)
         repositoriesCollectionView.prepareItemSize(120, 80)
