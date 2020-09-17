@@ -17,7 +17,8 @@ class Assembler {
             RepositoryDetailsViewAssembly(),
             ServicesAssembly(),
             UseCasesAssembly(),
-            RepositoriesAssembly()
+            RepositoriesAssembly(),
+            DaosAssembly()
         ])
     }()
 

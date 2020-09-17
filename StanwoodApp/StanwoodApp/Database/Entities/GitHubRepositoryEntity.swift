@@ -18,10 +18,9 @@ class GitHubRepositoryEntity: Object {
     @objc dynamic public var forksCount: Int = 0
     @objc dynamic public var createdAt: String = ""
     @objc dynamic public var language: String = ""
-    @objc dynamic public var isFavourite: Bool = false
     @objc dynamic public var gitHubUrl: String = ""
     
-    init(id: Int, name: String, desc: String, avatarUrl: String, starsCount: Int, forksCount: Int, createdAt: String, language: String, isFavourite: Bool, gitHubUrl: String) {
+    init(id: Int, name: String, desc: String, avatarUrl: String, starsCount: Int, forksCount: Int, createdAt: String, language: String, gitHubUrl: String) {
         self.id = id
         self.name = name
         self.desc = desc
@@ -30,7 +29,6 @@ class GitHubRepositoryEntity: Object {
         self.forksCount = forksCount
         self.createdAt = createdAt
         self.language = language
-        self.isFavourite = isFavourite
         self.gitHubUrl = gitHubUrl
         
         super.init()

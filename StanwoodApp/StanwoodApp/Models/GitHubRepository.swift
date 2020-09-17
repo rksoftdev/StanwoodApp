@@ -9,6 +9,7 @@
 import Foundation
 
 struct GitHubRepository {
+    var id: Int
     var name: String
     var description: String
     var avatarUrl: String
@@ -20,6 +21,7 @@ struct GitHubRepository {
     var gitHubUrl: String
     
     init() {
+        self.id = 0
         self.name = ""
         self.description = ""
         self.avatarUrl = ""
@@ -31,7 +33,8 @@ struct GitHubRepository {
         self.gitHubUrl = ""
     }
     
-    init(_ name: String, _ description: String, _ avatarUrl: String, _ isFavourite: Bool, _ starsCount: Int, _ forksCount: Int, _ createdAt: String, _ language: String, _ gitHubUrl: String) {
+    init(_ id: Int, _ name: String, _ description: String, _ avatarUrl: String, _ isFavourite: Bool, _ starsCount: Int, _ forksCount: Int, _ createdAt: String, _ language: String, _ gitHubUrl: String) {
+        self.id = id
         self.name = name
         self.description = description
         self.avatarUrl = avatarUrl

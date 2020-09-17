@@ -25,6 +25,7 @@
 		F681262B25138CD700F342B5 /* GitHubRepositoryDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681262A25138CD700F342B5 /* GitHubRepositoryDao.swift */; };
 		F681262D25138D1C00F342B5 /* BaseDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681262C25138D1C00F342B5 /* BaseDao.swift */; };
 		F681262F2513932600F342B5 /* DaosAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681262E2513932600F342B5 /* DaosAssembly.swift */; };
+		F68126312513953900F342B5 /* GitHubRepositoryMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68126302513953900F342B5 /* GitHubRepositoryMapper.swift */; };
 		F6BB36282512470700C278B4 /* GetRepositoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB36272512470700C278B4 /* GetRepositoriesRequest.swift */; };
 		F6BB362A2512489A00C278B4 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB36292512489A00C278B4 /* DateHelper.swift */; };
 		F6BB362D25124C8300C278B4 /* GetRepositoriesFromLastDayUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB362C25124C8300C278B4 /* GetRepositoriesFromLastDayUseCase.swift */; };
@@ -96,6 +97,7 @@
 		F681262A25138CD700F342B5 /* GitHubRepositoryDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryDao.swift; sourceTree = "<group>"; };
 		F681262C25138D1C00F342B5 /* BaseDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDao.swift; sourceTree = "<group>"; };
 		F681262E2513932600F342B5 /* DaosAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaosAssembly.swift; sourceTree = "<group>"; };
+		F68126302513953900F342B5 /* GitHubRepositoryMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryMapper.swift; sourceTree = "<group>"; };
 		F6BB36272512470700C278B4 /* GetRepositoriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRepositoriesRequest.swift; sourceTree = "<group>"; };
 		F6BB36292512489A00C278B4 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		F6BB362C25124C8300C278B4 /* GetRepositoriesFromLastDayUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRepositoriesFromLastDayUseCase.swift; sourceTree = "<group>"; };
@@ -378,6 +380,7 @@
 			isa = PBXGroup;
 			children = (
 				F6BB363A2512680600C278B4 /* GitHubRepositoriesResponseMapper.swift */,
+				F68126302513953900F342B5 /* GitHubRepositoryMapper.swift */,
 			);
 			path = Mappers;
 			sourceTree = "<group>";
@@ -698,6 +701,7 @@
 				F6F8D04E250F52BF00B6EBCD /* AssemblerAssembly.swift in Sources */,
 				F6F8D080250F8ADB00B6EBCD /* UIImageViewExtension.swift in Sources */,
 				F6E281C6250F501000F43B54 /* SceneDelegate.swift in Sources */,
+				F68126312513953900F342B5 /* GitHubRepositoryMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

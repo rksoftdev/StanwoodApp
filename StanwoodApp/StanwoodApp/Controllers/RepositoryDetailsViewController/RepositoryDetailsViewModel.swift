@@ -19,6 +19,7 @@ protocol RepositoryDetailsViewModelable {
     var isFafourite: BehaviorRelay<Bool> { get }
     func openGitHubUrl()
     var errorHandler: PublishSubject<String> { get }
+    func isFavouriteChanged()
 }
 
 class RepositoryDetailsViewModel: RepositoryDetailsViewModelable {
@@ -32,18 +33,38 @@ class RepositoryDetailsViewModel: RepositoryDetailsViewModelable {
     var errorHandler: PublishSubject<String> = .init()
     private var gitHubUrl: String?
     
-    init(_ model: GitHubRepository) {
-        handleModel(model)
+    private let repositoryDao: GitHubRepositoryDaoable
+    private let repositoryModel: GitHubRepository
+    
+    init(_ model: GitHubRepository, _ dao: GitHubRepositoryDaoable) {
+        repositoryDao = dao
+        repositoryModel = model
+        handleModel()
     }
     
-    private func handleModel(_ model: GitHubRepository) {
-        gitHubUrl = model.gitHubUrl
-        repositoryName.accept(model.name )
-        repositoryDescription.accept(model.description )
-        languageDescription.accept(model.language)
-        starsCountDescription.accept("\(model.starsCount) Stars")
-        forksCountDescription.accept("\(model.forksCount) Forks")
-        createdDateDescription.accept("Created at \(DateHelper().getDateStringFrom(model.createdAt, .yyyyMMddTHHmmssZ))")
+    private func handleModel() {
+        gitHubUrl = repositoryModel.gitHubUrl
+        repositoryName.accept(repositoryModel.name )
+        repositoryDescription.accept(repositoryModel.description )
+        languageDescription.accept(repositoryModel.language)
+        starsCountDescription.accept("\(repositoryModel.starsCount) Stars")
+        forksCountDescription.accept("\(repositoryModel.forksCount) Forks")
+        createdDateDescription.accept("Created at \(DateHelper().getDateStringFrom(repositoryModel.createdAt, .yyyyMMddTHHmmssZ))")
+    }
+    
+    func isFavouriteChanged() {
+        isFafourite.accept(!isFafourite.value)
+        isFafourite.value
+            ? saveToFavourites()
+            : deleteFromFavourites()
+    }
+    
+    private func saveToFavourites() {
+        repositoryDao.save(repositoryModel.toEntity())
+    }
+    
+    private func deleteFromFavourites() {
+        repositoryDao.delete(repositoryModel.toEntity())
     }
     
     func openGitHubUrl() {

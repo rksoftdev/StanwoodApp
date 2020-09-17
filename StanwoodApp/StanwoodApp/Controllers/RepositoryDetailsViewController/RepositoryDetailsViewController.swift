@@ -53,6 +53,9 @@ class RepositoryDetailsViewController: BaseViewController, PanModalPresentable {
             openInGitHubButton.rx.tap.bind { [weak self] _ in self?.viewModel.openGitHubUrl() },
             viewModel.isFafourite.bind { [weak self] isFavourite in
                 self?.handleIsFavourite(isFavourite)
+            },
+            favouriteButton.rx.tap.bind { [weak self] _ in
+                self?.viewModel.isFavouriteChanged()
             }
         )
     }

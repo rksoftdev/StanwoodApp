@@ -11,7 +11,8 @@ import Swinject
 class RepositoryDetailsViewAssembly: Assembly {
     func assemble(container: Container) {
         container.register(RepositoryDetailsViewModelable.self) { (resolver, model: GitHubRepository) in
-            return RepositoryDetailsViewModel(model)
+            let repositoryDao = resolver.resolve(GitHubRepositoryDaoable.self)!
+            return RepositoryDetailsViewModel(model, repositoryDao)
         }
         
         container.register(RepositoryDetailsRoutable.self) { resolver in
