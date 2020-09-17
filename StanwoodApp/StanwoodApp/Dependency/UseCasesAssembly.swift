@@ -24,5 +24,15 @@ class UseCasesAssembly: Assembly {
             let repositoriesRepository = resolver.resolve(GitHubRepositoriesRepositoryProtocol.self)!
             return GetRepositoriesFromLastMonthUseCase(repositoriesRepository)
         }
+        
+        container.register(SaveGitHubRepositoryToFavouritesUseCaseable.self) { resolver in
+            let repositoriesRepository = resolver.resolve(GitHubRepositoriesRepositoryProtocol.self)!
+            return SaveGitHubRepositoryToFavouritesUseCase(repositoriesRepository)
+        }
+        
+        container.register(DeleteGitHubRepositoryFromFavouritesUseCaseable.self) { resolver in
+            let repositoriesRepository = resolver.resolve(GitHubRepositoriesRepositoryProtocol.self)!
+            return DeleteGitHubRepositoryFromFavouritesUseCase(repositoriesRepository)
+        }
     }
 }

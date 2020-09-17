@@ -12,7 +12,8 @@ class RepositoriesAssembly: Assembly {
     func assemble(container: Container) {
         container.register(GitHubRepositoriesRepositoryProtocol.self) { resolver in
             let networkService = resolver.resolve(NetworkServiceable.self)!
-            return GitHubRepositoriesRepository(networkService)
+            let repositoryDao = resolver.resolve(GitHubRepositoryDaoable.self)!
+            return GitHubRepositoriesRepository(networkService, repositoryDao)
         }
     }
 }

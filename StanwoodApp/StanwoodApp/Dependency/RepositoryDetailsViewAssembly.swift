@@ -11,8 +11,9 @@ import Swinject
 class RepositoryDetailsViewAssembly: Assembly {
     func assemble(container: Container) {
         container.register(RepositoryDetailsViewModelable.self) { (resolver, model: GitHubRepository) in
-            let repositoryDao = resolver.resolve(GitHubRepositoryDaoable.self)!
-            return RepositoryDetailsViewModel(model, repositoryDao)
+            let saveRepositoryUseCase = resolver.resolve(SaveGitHubRepositoryToFavouritesUseCaseable.self)!
+            let deleteRepositoryUseCase = resolver.resolve(DeleteGitHubRepositoryFromFavouritesUseCaseable.self)!
+            return RepositoryDetailsViewModel(model, saveRepositoryUseCase, deleteRepositoryUseCase)
         }
         
         container.register(RepositoryDetailsRoutable.self) { resolver in

@@ -12,13 +12,17 @@ protocol GitHubRepositoriesRepositoryProtocol {
     func getFromLastDay() -> Single<[GitHubRepository]>
     func getFromLastWeek() -> Single<[GitHubRepository]>
     func getFromLastMonth() -> Single<[GitHubRepository]>
+    func saveToFavourites(_ repository: GitHubRepository)
+    func deleteFromFavourites(_ repository: GitHubRepository)
 }
 
 class GitHubRepositoriesRepository: GitHubRepositoriesRepositoryProtocol {
     private let networkService: NetworkServiceable
+    private let repositoryDao: GitHubRepositoryDaoable
     
-    init(_ networkService: NetworkServiceable) {
+    init(_ networkService: NetworkServiceable, _ dao: GitHubRepositoryDaoable) {
         self.networkService = networkService
+        self.repositoryDao = dao
     }
     
     func getFromLastDay() -> Single<[GitHubRepository]> {
@@ -48,5 +52,13 @@ class GitHubRepositoriesRepository: GitHubRepositoriesRepositoryProtocol {
     private func getRepositoriesRequest(_ filterPeriod: FilterPeriod) -> Single<GitHubRepositoriesResponse?> {
         let request = GetRepositoriesRequest(filterPeriod)
         return networkService.executeRequest(url: request.url, method: request.httpMethod, parameters: request.parameters, headers: request.headers)
+    }
+    
+    func saveToFavourites(_ repository: GitHubRepository) {
+        repositoryDao.save(repository.toEntity())
+    }
+    
+    func deleteFromFavourites(_ repository: GitHubRepository) {
+        repositoryDao.delete(repository.toEntity())
     }
 }

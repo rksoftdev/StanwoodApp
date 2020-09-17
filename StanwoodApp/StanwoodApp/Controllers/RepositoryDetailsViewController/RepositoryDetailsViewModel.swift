@@ -33,12 +33,14 @@ class RepositoryDetailsViewModel: RepositoryDetailsViewModelable {
     var errorHandler: PublishSubject<String> = .init()
     private var gitHubUrl: String?
     
-    private let repositoryDao: GitHubRepositoryDaoable
     private let repositoryModel: GitHubRepository
+    private let saveRepositoryUseCase: SaveGitHubRepositoryToFavouritesUseCaseable
+    private let deleteRepositoryUseCase: DeleteGitHubRepositoryFromFavouritesUseCaseable
     
-    init(_ model: GitHubRepository, _ dao: GitHubRepositoryDaoable) {
-        repositoryDao = dao
+    init(_ model: GitHubRepository, _ saveRepositoryToFavouriteUseCase: SaveGitHubRepositoryToFavouritesUseCaseable, _ deleteRepositoryFromFavouritesUseCase: DeleteGitHubRepositoryFromFavouritesUseCaseable) {
         repositoryModel = model
+        saveRepositoryUseCase = saveRepositoryToFavouriteUseCase
+        deleteRepositoryUseCase = deleteRepositoryFromFavouritesUseCase
         handleModel()
     }
     
@@ -60,11 +62,11 @@ class RepositoryDetailsViewModel: RepositoryDetailsViewModelable {
     }
     
     private func saveToFavourites() {
-        repositoryDao.save(repositoryModel.toEntity())
+        saveRepositoryUseCase.execute(repositoryModel)
     }
     
     private func deleteFromFavourites() {
-        repositoryDao.delete(repositoryModel.toEntity())
+        deleteRepositoryUseCase.execute(repositoryModel)
     }
     
     func openGitHubUrl() {

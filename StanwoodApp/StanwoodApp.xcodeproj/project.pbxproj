@@ -20,12 +20,13 @@
 		F622700E251094170083B400 /* BaseDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F622700D251094170083B400 /* BaseDetailsRouter.swift */; };
 		F6227013251097550083B400 /* LabeledImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6227012251097550083B400 /* LabeledImageView.xib */; };
 		F6227015251099640083B400 /* LabeledImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6227014251099640083B400 /* LabeledImageView.swift */; };
-		F6812623251389EF00F342B5 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6812622251389EF00F342B5 /* Error.swift */; };
 		F681262925138CA900F342B5 /* GitHubRepositoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681262825138CA900F342B5 /* GitHubRepositoryEntity.swift */; };
 		F681262B25138CD700F342B5 /* GitHubRepositoryDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681262A25138CD700F342B5 /* GitHubRepositoryDao.swift */; };
 		F681262D25138D1C00F342B5 /* BaseDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681262C25138D1C00F342B5 /* BaseDao.swift */; };
 		F681262F2513932600F342B5 /* DaosAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681262E2513932600F342B5 /* DaosAssembly.swift */; };
 		F68126312513953900F342B5 /* GitHubRepositoryMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68126302513953900F342B5 /* GitHubRepositoryMapper.swift */; };
+		F68126332513992200F342B5 /* SaveGitHubRepositoryToFavouritesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68126322513992200F342B5 /* SaveGitHubRepositoryToFavouritesUseCase.swift */; };
+		F68126352513993300F342B5 /* DeleteGitHubRepositoryFromFavouritesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68126342513993300F342B5 /* DeleteGitHubRepositoryFromFavouritesUseCase.swift */; };
 		F6BB36282512470700C278B4 /* GetRepositoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB36272512470700C278B4 /* GetRepositoriesRequest.swift */; };
 		F6BB362A2512489A00C278B4 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB36292512489A00C278B4 /* DateHelper.swift */; };
 		F6BB362D25124C8300C278B4 /* GetRepositoriesFromLastDayUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB362C25124C8300C278B4 /* GetRepositoriesFromLastDayUseCase.swift */; };
@@ -92,12 +93,13 @@
 		F622700D251094170083B400 /* BaseDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDetailsRouter.swift; sourceTree = "<group>"; };
 		F6227012251097550083B400 /* LabeledImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabeledImageView.xib; sourceTree = "<group>"; };
 		F6227014251099640083B400 /* LabeledImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledImageView.swift; sourceTree = "<group>"; };
-		F6812622251389EF00F342B5 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		F681262825138CA900F342B5 /* GitHubRepositoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryEntity.swift; sourceTree = "<group>"; };
 		F681262A25138CD700F342B5 /* GitHubRepositoryDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryDao.swift; sourceTree = "<group>"; };
 		F681262C25138D1C00F342B5 /* BaseDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDao.swift; sourceTree = "<group>"; };
 		F681262E2513932600F342B5 /* DaosAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaosAssembly.swift; sourceTree = "<group>"; };
 		F68126302513953900F342B5 /* GitHubRepositoryMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryMapper.swift; sourceTree = "<group>"; };
+		F68126322513992200F342B5 /* SaveGitHubRepositoryToFavouritesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveGitHubRepositoryToFavouritesUseCase.swift; sourceTree = "<group>"; };
+		F68126342513993300F342B5 /* DeleteGitHubRepositoryFromFavouritesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteGitHubRepositoryFromFavouritesUseCase.swift; sourceTree = "<group>"; };
 		F6BB36272512470700C278B4 /* GetRepositoriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRepositoriesRequest.swift; sourceTree = "<group>"; };
 		F6BB36292512489A00C278B4 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		F6BB362C25124C8300C278B4 /* GetRepositoriesFromLastDayUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRepositoriesFromLastDayUseCase.swift; sourceTree = "<group>"; };
@@ -327,6 +329,8 @@
 				F6BB362C25124C8300C278B4 /* GetRepositoriesFromLastDayUseCase.swift */,
 				F6BB363425124FB300C278B4 /* GetRepositoriesFromLastWeekUseCase.swift */,
 				F6BB363625124FD500C278B4 /* GetRepositoriesFromLastMonthUseCase.swift */,
+				F68126322513992200F342B5 /* SaveGitHubRepositoryToFavouritesUseCase.swift */,
+				F68126342513993300F342B5 /* DeleteGitHubRepositoryFromFavouritesUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -471,7 +475,6 @@
 			isa = PBXGroup;
 			children = (
 				F6F8D07C250F871F00B6EBCD /* GitHubRepository.swift */,
-				F6812622251389EF00F342B5 /* Error.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -668,7 +671,6 @@
 				F6BB363125124D3100C278B4 /* RepositoriesAssembly.swift in Sources */,
 				F681262F2513932600F342B5 /* DaosAssembly.swift in Sources */,
 				F6F8D07D250F871F00B6EBCD /* GitHubRepository.swift in Sources */,
-				F6812623251389EF00F342B5 /* Error.swift in Sources */,
 				F62270032510863A0083B400 /* RepositoryDetailsViewModel.swift in Sources */,
 				F6F8D05B250F5DD000B6EBCD /* MainTabBarController.swift in Sources */,
 				F6F8D06A250F6E8C00B6EBCD /* RepositoriesViewModel.swift in Sources */,
@@ -687,11 +689,13 @@
 				F6BB363525124FB300C278B4 /* GetRepositoriesFromLastWeekUseCase.swift in Sources */,
 				F622700A251091390083B400 /* FavouritesRouter.swift in Sources */,
 				F622700C251091700083B400 /* RepositoryDetailsRouter.swift in Sources */,
+				F68126352513993300F342B5 /* DeleteGitHubRepositoryFromFavouritesUseCase.swift in Sources */,
 				F6BB363725124FD500C278B4 /* GetRepositoriesFromLastMonthUseCase.swift in Sources */,
 				F6F8D04C250F527300B6EBCD /* Assembler.swift in Sources */,
 				F6227005251086710083B400 /* RepositoryDetailsViewAssembly.swift in Sources */,
 				F6227000251086230083B400 /* RepositoryDetailsViewController.swift in Sources */,
 				F6227015251099640083B400 /* LabeledImageView.swift in Sources */,
+				F68126332513992200F342B5 /* SaveGitHubRepositoryToFavouritesUseCase.swift in Sources */,
 				F681262B25138CD700F342B5 /* GitHubRepositoryDao.swift in Sources */,
 				F6BB362D25124C8300C278B4 /* GetRepositoriesFromLastDayUseCase.swift in Sources */,
 				F6F8D06E250F721F00B6EBCD /* FavouritesViewModel.swift in Sources */,
