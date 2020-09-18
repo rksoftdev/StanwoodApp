@@ -1,0 +1,1001 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9B17BDBE2D4757E6B904D1F2 /* Pods_StanwoodApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E67952801CABBDBA1755517 /* Pods_StanwoodApp.framework */; };
+		D140D7A106F07CB442F77E29 /* Pods_StanwoodAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF89703982B18030A1206ADC /* Pods_StanwoodAppTests.framework */; };
+		F615A4FB2514D42D008C00B8 /* HTTPHeadersExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F615A4FA2514D42D008C00B8 /* HTTPHeadersExtension.swift */; };
+		F615A4FD2514DE10008C00B8 /* PaginationObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F615A4FC2514DE10008C00B8 /* PaginationObject.swift */; };
+		F6226FFC251084640083B400 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6226FFB251084640083B400 /* UICollectionViewExtension.swift */; };
+		F6227000251086230083B400 /* RepositoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6226FFE251086230083B400 /* RepositoryDetailsViewController.swift */; };
+		F6227001251086230083B400 /* RepositoryDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6226FFF251086230083B400 /* RepositoryDetailsViewController.xib */; };
+		F62270032510863A0083B400 /* RepositoryDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62270022510863A0083B400 /* RepositoryDetailsViewModel.swift */; };
+		F6227005251086710083B400 /* RepositoryDetailsViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6227004251086710083B400 /* RepositoryDetailsViewAssembly.swift */; };
+		F6227007251087B70083B400 /* RepositoriesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6227006251087B70083B400 /* RepositoriesRouter.swift */; };
+		F622700A251091390083B400 /* FavouritesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6227009251091390083B400 /* FavouritesRouter.swift */; };
+		F622700C251091700083B400 /* RepositoryDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F622700B251091700083B400 /* RepositoryDetailsRouter.swift */; };
+		F622700E251094170083B400 /* BaseDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F622700D251094170083B400 /* BaseDetailsRouter.swift */; };
+		F6227013251097550083B400 /* LabeledImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6227012251097550083B400 /* LabeledImageView.xib */; };
+		F6227015251099640083B400 /* LabeledImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6227014251099640083B400 /* LabeledImageView.swift */; };
+		F681262925138CA900F342B5 /* GitHubRepositoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681262825138CA900F342B5 /* GitHubRepositoryEntity.swift */; };
+		F681262B25138CD700F342B5 /* GitHubRepositoryDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681262A25138CD700F342B5 /* GitHubRepositoryDao.swift */; };
+		F681262D25138D1C00F342B5 /* BaseDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681262C25138D1C00F342B5 /* BaseDao.swift */; };
+		F681262F2513932600F342B5 /* DaosAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681262E2513932600F342B5 /* DaosAssembly.swift */; };
+		F68126312513953900F342B5 /* GitHubRepositoryMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68126302513953900F342B5 /* GitHubRepositoryMapper.swift */; };
+		F68126332513992200F342B5 /* SaveGitHubRepositoryToFavouritesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68126322513992200F342B5 /* SaveGitHubRepositoryToFavouritesUseCase.swift */; };
+		F68126352513993300F342B5 /* DeleteGitHubRepositoryFromFavouritesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68126342513993300F342B5 /* DeleteGitHubRepositoryFromFavouritesUseCase.swift */; };
+		F681263725139BFE00F342B5 /* GetFavouriteRepositoriesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681263625139BFE00F342B5 /* GetFavouriteRepositoriesUseCase.swift */; };
+		F681263925139D4A00F342B5 /* GitHubRepositoryEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681263825139D4A00F342B5 /* GitHubRepositoryEntityMapper.swift */; };
+		F681263B2513A62400F342B5 /* CheckIfIsFavouriteRepositoryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681263A2513A62400F342B5 /* CheckIfIsFavouriteRepositoryUseCase.swift */; };
+		F6BB36282512470700C278B4 /* GetRepositoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB36272512470700C278B4 /* GetRepositoriesRequest.swift */; };
+		F6BB362A2512489A00C278B4 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB36292512489A00C278B4 /* DateHelper.swift */; };
+		F6BB362D25124C8300C278B4 /* GetRepositoriesFromLastDayUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB362C25124C8300C278B4 /* GetRepositoriesFromLastDayUseCase.swift */; };
+		F6BB362F25124CBD00C278B4 /* UseCasesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB362E25124CBD00C278B4 /* UseCasesAssembly.swift */; };
+		F6BB363125124D3100C278B4 /* RepositoriesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB363025124D3100C278B4 /* RepositoriesAssembly.swift */; };
+		F6BB363325124E0500C278B4 /* GitHubRepositoriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB363225124E0500C278B4 /* GitHubRepositoriesRepository.swift */; };
+		F6BB363525124FB300C278B4 /* GetRepositoriesFromLastWeekUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB363425124FB300C278B4 /* GetRepositoriesFromLastWeekUseCase.swift */; };
+		F6BB363725124FD500C278B4 /* GetRepositoriesFromLastMonthUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB363625124FD500C278B4 /* GetRepositoriesFromLastMonthUseCase.swift */; };
+		F6BB3639251267D100C278B4 /* GitHubRepositoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB3638251267D100C278B4 /* GitHubRepositoriesResponse.swift */; };
+		F6BB363B2512680600C278B4 /* GitHubRepositoriesResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB363A2512680600C278B4 /* GitHubRepositoriesResponseMapper.swift */; };
+		F6E281C4250F501000F43B54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281C3250F501000F43B54 /* AppDelegate.swift */; };
+		F6E281C6250F501000F43B54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281C5250F501000F43B54 /* SceneDelegate.swift */; };
+		F6E281C8250F501000F43B54 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281C7250F501000F43B54 /* RepositoriesViewController.swift */; };
+		F6E281CA250F501000F43B54 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281C9250F501000F43B54 /* FavouritesViewController.swift */; };
+		F6E281CD250F501000F43B54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E281CB250F501000F43B54 /* Main.storyboard */; };
+		F6E281CF250F501200F43B54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6E281CE250F501200F43B54 /* Assets.xcassets */; };
+		F6E281D2250F501200F43B54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E281D0250F501200F43B54 /* LaunchScreen.storyboard */; };
+		F6E281DD250F501200F43B54 /* StanwoodAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E281DC250F501200F43B54 /* StanwoodAppTests.swift */; };
+		F6F4C7AB2512394800D3C5C0 /* ServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F4C7AA2512394800D3C5C0 /* ServicesAssembly.swift */; };
+		F6F4C7B125123A4100D3C5C0 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F4C7B025123A4100D3C5C0 /* NetworkService.swift */; };
+		F6F4C7B62512465600D3C5C0 /* NetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F4C7B52512465600D3C5C0 /* NetworkConfiguration.swift */; };
+		F6F8D04C250F527300B6EBCD /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D04B250F527300B6EBCD /* Assembler.swift */; };
+		F6F8D04E250F52BF00B6EBCD /* AssemblerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D04D250F52BF00B6EBCD /* AssemblerAssembly.swift */; };
+		F6F8D050250F532100B6EBCD /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D04F250F532100B6EBCD /* BaseRouter.swift */; };
+		F6F8D056250F5B2A00B6EBCD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D055250F5B2A00B6EBCD /* BaseViewController.swift */; };
+		F6F8D05B250F5DD000B6EBCD /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D05A250F5DD000B6EBCD /* MainTabBarController.swift */; };
+		F6F8D06A250F6E8C00B6EBCD /* RepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D069250F6E8C00B6EBCD /* RepositoriesViewModel.swift */; };
+		F6F8D06C250F6EC100B6EBCD /* RepositoriesViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D06B250F6EC100B6EBCD /* RepositoriesViewAssembly.swift */; };
+		F6F8D06E250F721F00B6EBCD /* FavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D06D250F721F00B6EBCD /* FavouritesViewModel.swift */; };
+		F6F8D071250F725900B6EBCD /* FavouritesViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D070250F725900B6EBCD /* FavouritesViewAssembly.swift */; };
+		F6F8D075250F747F00B6EBCD /* RepositoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6F8D074250F747F00B6EBCD /* RepositoriesViewController.xib */; };
+		F6F8D077250F752200B6EBCD /* FavouritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6F8D076250F752200B6EBCD /* FavouritesViewController.xib */; };
+		F6F8D07D250F871F00B6EBCD /* GitHubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D07C250F871F00B6EBCD /* GitHubRepository.swift */; };
+		F6F8D080250F8ADB00B6EBCD /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D07F250F8ADB00B6EBCD /* UIImageViewExtension.swift */; };
+		F6F8D083250F8F3900B6EBCD /* RepositoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8D081250F8F3900B6EBCD /* RepositoryCollectionViewCell.swift */; };
+		F6F8D084250F8F3900B6EBCD /* RepositoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6F8D082250F8F3900B6EBCD /* RepositoryCollectionViewCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F6E281D9250F501200F43B54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6E281B8250F501000F43B54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6E281BF250F501000F43B54;
+			remoteInfo = StanwoodApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2E67952801CABBDBA1755517 /* Pods_StanwoodApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StanwoodApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BFA0694D4F1E87D06FB7A44 /* Pods-StanwoodApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StanwoodApp.debug.xcconfig"; path = "Target Support Files/Pods-StanwoodApp/Pods-StanwoodApp.debug.xcconfig"; sourceTree = "<group>"; };
+		62A2B36A25B6D2DA0EFD4345 /* Pods-StanwoodApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StanwoodApp.release.xcconfig"; path = "Target Support Files/Pods-StanwoodApp/Pods-StanwoodApp.release.xcconfig"; sourceTree = "<group>"; };
+		759477D245257C2B146BB4D8 /* Pods-StanwoodAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StanwoodAppTests.debug.xcconfig"; path = "Target Support Files/Pods-StanwoodAppTests/Pods-StanwoodAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF89703982B18030A1206ADC /* Pods_StanwoodAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StanwoodAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C26953DF407DD58BFF069FD3 /* Pods-StanwoodAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StanwoodAppTests.release.xcconfig"; path = "Target Support Files/Pods-StanwoodAppTests/Pods-StanwoodAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		F615A4FA2514D42D008C00B8 /* HTTPHeadersExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeadersExtension.swift; sourceTree = "<group>"; };
+		F615A4FC2514DE10008C00B8 /* PaginationObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationObject.swift; sourceTree = "<group>"; };
+		F6226FFB251084640083B400 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
+		F6226FFE251086230083B400 /* RepositoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsViewController.swift; sourceTree = "<group>"; };
+		F6226FFF251086230083B400 /* RepositoryDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryDetailsViewController.xib; sourceTree = "<group>"; };
+		F62270022510863A0083B400 /* RepositoryDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsViewModel.swift; sourceTree = "<group>"; };
+		F6227004251086710083B400 /* RepositoryDetailsViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsViewAssembly.swift; sourceTree = "<group>"; };
+		F6227006251087B70083B400 /* RepositoriesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesRouter.swift; sourceTree = "<group>"; };
+		F6227009251091390083B400 /* FavouritesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesRouter.swift; sourceTree = "<group>"; };
+		F622700B251091700083B400 /* RepositoryDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsRouter.swift; sourceTree = "<group>"; };
+		F622700D251094170083B400 /* BaseDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDetailsRouter.swift; sourceTree = "<group>"; };
+		F6227012251097550083B400 /* LabeledImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabeledImageView.xib; sourceTree = "<group>"; };
+		F6227014251099640083B400 /* LabeledImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledImageView.swift; sourceTree = "<group>"; };
+		F681262825138CA900F342B5 /* GitHubRepositoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryEntity.swift; sourceTree = "<group>"; };
+		F681262A25138CD700F342B5 /* GitHubRepositoryDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryDao.swift; sourceTree = "<group>"; };
+		F681262C25138D1C00F342B5 /* BaseDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDao.swift; sourceTree = "<group>"; };
+		F681262E2513932600F342B5 /* DaosAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaosAssembly.swift; sourceTree = "<group>"; };
+		F68126302513953900F342B5 /* GitHubRepositoryMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryMapper.swift; sourceTree = "<group>"; };
+		F68126322513992200F342B5 /* SaveGitHubRepositoryToFavouritesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveGitHubRepositoryToFavouritesUseCase.swift; sourceTree = "<group>"; };
+		F68126342513993300F342B5 /* DeleteGitHubRepositoryFromFavouritesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteGitHubRepositoryFromFavouritesUseCase.swift; sourceTree = "<group>"; };
+		F681263625139BFE00F342B5 /* GetFavouriteRepositoriesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFavouriteRepositoriesUseCase.swift; sourceTree = "<group>"; };
+		F681263825139D4A00F342B5 /* GitHubRepositoryEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryEntityMapper.swift; sourceTree = "<group>"; };
+		F681263A2513A62400F342B5 /* CheckIfIsFavouriteRepositoryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckIfIsFavouriteRepositoryUseCase.swift; sourceTree = "<group>"; };
+		F6BB36272512470700C278B4 /* GetRepositoriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRepositoriesRequest.swift; sourceTree = "<group>"; };
+		F6BB36292512489A00C278B4 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		F6BB362C25124C8300C278B4 /* GetRepositoriesFromLastDayUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRepositoriesFromLastDayUseCase.swift; sourceTree = "<group>"; };
+		F6BB362E25124CBD00C278B4 /* UseCasesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesAssembly.swift; sourceTree = "<group>"; };
+		F6BB363025124D3100C278B4 /* RepositoriesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesAssembly.swift; sourceTree = "<group>"; };
+		F6BB363225124E0500C278B4 /* GitHubRepositoriesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoriesRepository.swift; sourceTree = "<group>"; };
+		F6BB363425124FB300C278B4 /* GetRepositoriesFromLastWeekUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRepositoriesFromLastWeekUseCase.swift; sourceTree = "<group>"; };
+		F6BB363625124FD500C278B4 /* GetRepositoriesFromLastMonthUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRepositoriesFromLastMonthUseCase.swift; sourceTree = "<group>"; };
+		F6BB3638251267D100C278B4 /* GitHubRepositoriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoriesResponse.swift; sourceTree = "<group>"; };
+		F6BB363A2512680600C278B4 /* GitHubRepositoriesResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoriesResponseMapper.swift; sourceTree = "<group>"; };
+		F6E281C0250F501000F43B54 /* StanwoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StanwoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6E281C3250F501000F43B54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F6E281C5250F501000F43B54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F6E281C7250F501000F43B54 /* RepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
+		F6E281C9250F501000F43B54 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		F6E281CC250F501000F43B54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F6E281CE250F501200F43B54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F6E281D1250F501200F43B54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F6E281D3250F501200F43B54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6E281D8250F501200F43B54 /* StanwoodAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StanwoodAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6E281DC250F501200F43B54 /* StanwoodAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StanwoodAppTests.swift; sourceTree = "<group>"; };
+		F6E281DE250F501200F43B54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6F4C7AA2512394800D3C5C0 /* ServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesAssembly.swift; sourceTree = "<group>"; };
+		F6F4C7B025123A4100D3C5C0 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		F6F4C7B52512465600D3C5C0 /* NetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfiguration.swift; sourceTree = "<group>"; };
+		F6F8D04B250F527300B6EBCD /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
+		F6F8D04D250F52BF00B6EBCD /* AssemblerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblerAssembly.swift; sourceTree = "<group>"; };
+		F6F8D04F250F532100B6EBCD /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		F6F8D055250F5B2A00B6EBCD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		F6F8D05A250F5DD000B6EBCD /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		F6F8D069250F6E8C00B6EBCD /* RepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModel.swift; sourceTree = "<group>"; };
+		F6F8D06B250F6EC100B6EBCD /* RepositoriesViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewAssembly.swift; sourceTree = "<group>"; };
+		F6F8D06D250F721F00B6EBCD /* FavouritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewModel.swift; sourceTree = "<group>"; };
+		F6F8D070250F725900B6EBCD /* FavouritesViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewAssembly.swift; sourceTree = "<group>"; };
+		F6F8D074250F747F00B6EBCD /* RepositoriesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoriesViewController.xib; sourceTree = "<group>"; };
+		F6F8D076250F752200B6EBCD /* FavouritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouritesViewController.xib; sourceTree = "<group>"; };
+		F6F8D07C250F871F00B6EBCD /* GitHubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepository.swift; sourceTree = "<group>"; };
+		F6F8D07F250F8ADB00B6EBCD /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		F6F8D081250F8F3900B6EBCD /* RepositoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		F6F8D082250F8F3900B6EBCD /* RepositoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryCollectionViewCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F6E281BD250F501000F43B54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B17BDBE2D4757E6B904D1F2 /* Pods_StanwoodApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6E281D5250F501200F43B54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D140D7A106F07CB442F77E29 /* Pods_StanwoodAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		80A0B56B12D0BF8B34C318B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E67952801CABBDBA1755517 /* Pods_StanwoodApp.framework */,
+				BF89703982B18030A1206ADC /* Pods_StanwoodAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5B418F1BCD8821678354508 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4BFA0694D4F1E87D06FB7A44 /* Pods-StanwoodApp.debug.xcconfig */,
+				62A2B36A25B6D2DA0EFD4345 /* Pods-StanwoodApp.release.xcconfig */,
+				759477D245257C2B146BB4D8 /* Pods-StanwoodAppTests.debug.xcconfig */,
+				C26953DF407DD58BFF069FD3 /* Pods-StanwoodAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F6226FFD251085FB0083B400 /* RepositoryDetailsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F6226FFE251086230083B400 /* RepositoryDetailsViewController.swift */,
+				F6226FFF251086230083B400 /* RepositoryDetailsViewController.xib */,
+				F62270022510863A0083B400 /* RepositoryDetailsViewModel.swift */,
+				F622700B251091700083B400 /* RepositoryDetailsRouter.swift */,
+			);
+			path = RepositoryDetailsViewController;
+			sourceTree = "<group>";
+		};
+		F62270112510973E0083B400 /* CustomControls */ = {
+			isa = PBXGroup;
+			children = (
+				F6227012251097550083B400 /* LabeledImageView.xib */,
+				F6227014251099640083B400 /* LabeledImageView.swift */,
+			);
+			path = CustomControls;
+			sourceTree = "<group>";
+		};
+		F681261F251386A300F342B5 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				F681262725138C9500F342B5 /* DAOs */,
+				F681262625138C8D00F342B5 /* Entities */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		F681262625138C8D00F342B5 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				F681262825138CA900F342B5 /* GitHubRepositoryEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		F681262725138C9500F342B5 /* DAOs */ = {
+			isa = PBXGroup;
+			children = (
+				F681262C25138D1C00F342B5 /* BaseDao.swift */,
+				F681262A25138CD700F342B5 /* GitHubRepositoryDao.swift */,
+			);
+			path = DAOs;
+			sourceTree = "<group>";
+		};
+		F6C3462525129DD8009C618E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F6BB36292512489A00C278B4 /* DateHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F6E281B7250F501000F43B54 = {
+			isa = PBXGroup;
+			children = (
+				F6E281C2250F501000F43B54 /* StanwoodApp */,
+				F6E281DB250F501200F43B54 /* StanwoodAppTests */,
+				F6E281C1250F501000F43B54 /* Products */,
+				F5B418F1BCD8821678354508 /* Pods */,
+				80A0B56B12D0BF8B34C318B5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F6E281C1250F501000F43B54 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6E281C0250F501000F43B54 /* StanwoodApp.app */,
+				F6E281D8250F501200F43B54 /* StanwoodAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F6E281C2250F501000F43B54 /* StanwoodApp */ = {
+			isa = PBXGroup;
+			children = (
+				F681261F251386A300F342B5 /* Database */,
+				F6C3462525129DD8009C618E /* Helpers */,
+				F6F4C7B425123A6600D3C5C0 /* Mappers */,
+				F6F4C7AF25123A3600D3C5C0 /* Network */,
+				F6F8D07E250F8ACA00B6EBCD /* Extensions */,
+				F6F8D078250F835300B6EBCD /* Models */,
+				F6E281ED250F514700F43B54 /* Base */,
+				F6E281EC250F513700F43B54 /* Repositories */,
+				F6E281EB250F513200F43B54 /* UseCases */,
+				F6E281EA250F512A00F43B54 /* Dependency */,
+				F6E281E9250F512200F43B54 /* Controllers */,
+				F6E281E8250F509200F43B54 /* SupportingFiles */,
+				F6E281CE250F501200F43B54 /* Assets.xcassets */,
+				F6E281D3250F501200F43B54 /* Info.plist */,
+			);
+			path = StanwoodApp;
+			sourceTree = "<group>";
+		};
+		F6E281DB250F501200F43B54 /* StanwoodAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				F6E281DC250F501200F43B54 /* StanwoodAppTests.swift */,
+				F6E281DE250F501200F43B54 /* Info.plist */,
+			);
+			path = StanwoodAppTests;
+			sourceTree = "<group>";
+		};
+		F6E281E8250F509200F43B54 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				F6F8D051250F53A000B6EBCD /* Delegates */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		F6E281E9250F512200F43B54 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F62270112510973E0083B400 /* CustomControls */,
+				F6226FFD251085FB0083B400 /* RepositoryDetailsViewController */,
+				F6F8D058250F5D9E00B6EBCD /* Main */,
+				F6F8D05D250F69E100B6EBCD /* Cells */,
+				F6F8D053250F564000B6EBCD /* SplashScreen */,
+				F6F8D052250F55AC00B6EBCD /* RepositoriesViewController */,
+				F6F8D05C250F689F00B6EBCD /* FavouritesViewController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F6E281EA250F512A00F43B54 /* Dependency */ = {
+			isa = PBXGroup;
+			children = (
+				F6F8D04A250F526200B6EBCD /* Base */,
+				F6F8D06B250F6EC100B6EBCD /* RepositoriesViewAssembly.swift */,
+				F6F8D070250F725900B6EBCD /* FavouritesViewAssembly.swift */,
+				F6227004251086710083B400 /* RepositoryDetailsViewAssembly.swift */,
+				F6F4C7AA2512394800D3C5C0 /* ServicesAssembly.swift */,
+				F6BB362E25124CBD00C278B4 /* UseCasesAssembly.swift */,
+				F6BB363025124D3100C278B4 /* RepositoriesAssembly.swift */,
+				F681262E2513932600F342B5 /* DaosAssembly.swift */,
+			);
+			path = Dependency;
+			sourceTree = "<group>";
+		};
+		F6E281EB250F513200F43B54 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				F6BB362C25124C8300C278B4 /* GetRepositoriesFromLastDayUseCase.swift */,
+				F6BB363425124FB300C278B4 /* GetRepositoriesFromLastWeekUseCase.swift */,
+				F6BB363625124FD500C278B4 /* GetRepositoriesFromLastMonthUseCase.swift */,
+				F68126322513992200F342B5 /* SaveGitHubRepositoryToFavouritesUseCase.swift */,
+				F68126342513993300F342B5 /* DeleteGitHubRepositoryFromFavouritesUseCase.swift */,
+				F681263625139BFE00F342B5 /* GetFavouriteRepositoriesUseCase.swift */,
+				F681263A2513A62400F342B5 /* CheckIfIsFavouriteRepositoryUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		F6E281EC250F513700F43B54 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				F6BB363225124E0500C278B4 /* GitHubRepositoriesRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		F6E281ED250F514700F43B54 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F6F8D04F250F532100B6EBCD /* BaseRouter.swift */,
+				F6F8D055250F5B2A00B6EBCD /* BaseViewController.swift */,
+				F622700D251094170083B400 /* BaseDetailsRouter.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F6F4C7AF25123A3600D3C5C0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F6F4C7B325123A5A00D3C5C0 /* Resoponses */,
+				F6F4C7B225123A4D00D3C5C0 /* Requests */,
+				F6F4C7B025123A4100D3C5C0 /* NetworkService.swift */,
+				F6F4C7B52512465600D3C5C0 /* NetworkConfiguration.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F6F4C7B225123A4D00D3C5C0 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				F6BB36272512470700C278B4 /* GetRepositoriesRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		F6F4C7B325123A5A00D3C5C0 /* Resoponses */ = {
+			isa = PBXGroup;
+			children = (
+				F6BB3638251267D100C278B4 /* GitHubRepositoriesResponse.swift */,
+			);
+			path = Resoponses;
+			sourceTree = "<group>";
+		};
+		F6F4C7B425123A6600D3C5C0 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				F6BB363A2512680600C278B4 /* GitHubRepositoriesResponseMapper.swift */,
+				F68126302513953900F342B5 /* GitHubRepositoryMapper.swift */,
+				F681263825139D4A00F342B5 /* GitHubRepositoryEntityMapper.swift */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		F6F8D04A250F526200B6EBCD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F6F8D04B250F527300B6EBCD /* Assembler.swift */,
+				F6F8D04D250F52BF00B6EBCD /* AssemblerAssembly.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F6F8D051250F53A000B6EBCD /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				F6E281C3250F501000F43B54 /* AppDelegate.swift */,
+				F6E281C5250F501000F43B54 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		F6F8D052250F55AC00B6EBCD /* RepositoriesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F6E281C7250F501000F43B54 /* RepositoriesViewController.swift */,
+				F6F8D069250F6E8C00B6EBCD /* RepositoriesViewModel.swift */,
+				F6F8D074250F747F00B6EBCD /* RepositoriesViewController.xib */,
+				F6227006251087B70083B400 /* RepositoriesRouter.swift */,
+			);
+			path = RepositoriesViewController;
+			sourceTree = "<group>";
+		};
+		F6F8D053250F564000B6EBCD /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F6E281D0250F501200F43B54 /* LaunchScreen.storyboard */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		F6F8D058250F5D9E00B6EBCD /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F6F8D059250F5DAF00B6EBCD /* MainTabBarController */,
+				F6E281CB250F501000F43B54 /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F6F8D059250F5DAF00B6EBCD /* MainTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				F6F8D05A250F5DD000B6EBCD /* MainTabBarController.swift */,
+			);
+			path = MainTabBarController;
+			sourceTree = "<group>";
+		};
+		F6F8D05C250F689F00B6EBCD /* FavouritesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F6E281C9250F501000F43B54 /* FavouritesViewController.swift */,
+				F6F8D06D250F721F00B6EBCD /* FavouritesViewModel.swift */,
+				F6F8D076250F752200B6EBCD /* FavouritesViewController.xib */,
+				F6227009251091390083B400 /* FavouritesRouter.swift */,
+			);
+			path = FavouritesViewController;
+			sourceTree = "<group>";
+		};
+		F6F8D05D250F69E100B6EBCD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F6F8D064250F6C1800B6EBCD /* RepositoryCollectionViewCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F6F8D064250F6C1800B6EBCD /* RepositoryCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F6F8D081250F8F3900B6EBCD /* RepositoryCollectionViewCell.swift */,
+				F6F8D082250F8F3900B6EBCD /* RepositoryCollectionViewCell.xib */,
+			);
+			path = RepositoryCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		F6F8D078250F835300B6EBCD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F6F8D07C250F871F00B6EBCD /* GitHubRepository.swift */,
+				F615A4FC2514DE10008C00B8 /* PaginationObject.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F6F8D07E250F8ACA00B6EBCD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F6F8D07F250F8ADB00B6EBCD /* UIImageViewExtension.swift */,
+				F6226FFB251084640083B400 /* UICollectionViewExtension.swift */,
+				F615A4FA2514D42D008C00B8 /* HTTPHeadersExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F6E281BF250F501000F43B54 /* StanwoodApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6E281E1250F501200F43B54 /* Build configuration list for PBXNativeTarget "StanwoodApp" */;
+			buildPhases = (
+				3A31E4B2A18FA896600E90E9 /* [CP] Check Pods Manifest.lock */,
+				F6E281BC250F501000F43B54 /* Sources */,
+				F6E281BD250F501000F43B54 /* Frameworks */,
+				F6E281BE250F501000F43B54 /* Resources */,
+				0AA9EC19B30F57DC4E5B0474 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StanwoodApp;
+			productName = StanwoodApp;
+			productReference = F6E281C0250F501000F43B54 /* StanwoodApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F6E281D7250F501200F43B54 /* StanwoodAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6E281E4250F501200F43B54 /* Build configuration list for PBXNativeTarget "StanwoodAppTests" */;
+			buildPhases = (
+				0D40FC3A4E02CB9BA6151DD5 /* [CP] Check Pods Manifest.lock */,
+				F6E281D4250F501200F43B54 /* Sources */,
+				F6E281D5250F501200F43B54 /* Frameworks */,
+				F6E281D6250F501200F43B54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F6E281DA250F501200F43B54 /* PBXTargetDependency */,
+			);
+			name = StanwoodAppTests;
+			productName = StanwoodAppTests;
+			productReference = F6E281D8250F501200F43B54 /* StanwoodAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F6E281B8250F501000F43B54 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Robert Kuraj";
+				TargetAttributes = {
+					F6E281BF250F501000F43B54 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					F6E281D7250F501200F43B54 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = F6E281BF250F501000F43B54;
+					};
+				};
+			};
+			buildConfigurationList = F6E281BB250F501000F43B54 /* Build configuration list for PBXProject "StanwoodApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F6E281B7250F501000F43B54;
+			productRefGroup = F6E281C1250F501000F43B54 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F6E281BF250F501000F43B54 /* StanwoodApp */,
+				F6E281D7250F501200F43B54 /* StanwoodAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F6E281BE250F501000F43B54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6F8D084250F8F3900B6EBCD /* RepositoryCollectionViewCell.xib in Resources */,
+				F6E281D2250F501200F43B54 /* LaunchScreen.storyboard in Resources */,
+				F6E281CF250F501200F43B54 /* Assets.xcassets in Resources */,
+				F6227001251086230083B400 /* RepositoryDetailsViewController.xib in Resources */,
+				F6227013251097550083B400 /* LabeledImageView.xib in Resources */,
+				F6F8D077250F752200B6EBCD /* FavouritesViewController.xib in Resources */,
+				F6F8D075250F747F00B6EBCD /* RepositoriesViewController.xib in Resources */,
+				F6E281CD250F501000F43B54 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6E281D6250F501200F43B54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0AA9EC19B30F57DC4E5B0474 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StanwoodApp/Pods-StanwoodApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StanwoodApp/Pods-StanwoodApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StanwoodApp/Pods-StanwoodApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0D40FC3A4E02CB9BA6151DD5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StanwoodAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A31E4B2A18FA896600E90E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StanwoodApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F6E281BC250F501000F43B54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F615A4FB2514D42D008C00B8 /* HTTPHeadersExtension.swift in Sources */,
+				F6BB3639251267D100C278B4 /* GitHubRepositoriesResponse.swift in Sources */,
+				F6E281CA250F501000F43B54 /* FavouritesViewController.swift in Sources */,
+				F6BB363B2512680600C278B4 /* GitHubRepositoriesResponseMapper.swift in Sources */,
+				F681262D25138D1C00F342B5 /* BaseDao.swift in Sources */,
+				F6F8D06C250F6EC100B6EBCD /* RepositoriesViewAssembly.swift in Sources */,
+				F6227007251087B70083B400 /* RepositoriesRouter.swift in Sources */,
+				F6E281C8250F501000F43B54 /* RepositoriesViewController.swift in Sources */,
+				F6BB363125124D3100C278B4 /* RepositoriesAssembly.swift in Sources */,
+				F681262F2513932600F342B5 /* DaosAssembly.swift in Sources */,
+				F6F8D07D250F871F00B6EBCD /* GitHubRepository.swift in Sources */,
+				F62270032510863A0083B400 /* RepositoryDetailsViewModel.swift in Sources */,
+				F681263B2513A62400F342B5 /* CheckIfIsFavouriteRepositoryUseCase.swift in Sources */,
+				F6F8D05B250F5DD000B6EBCD /* MainTabBarController.swift in Sources */,
+				F681263925139D4A00F342B5 /* GitHubRepositoryEntityMapper.swift in Sources */,
+				F6F8D06A250F6E8C00B6EBCD /* RepositoriesViewModel.swift in Sources */,
+				F6BB36282512470700C278B4 /* GetRepositoriesRequest.swift in Sources */,
+				F6F8D083250F8F3900B6EBCD /* RepositoryCollectionViewCell.swift in Sources */,
+				F6F4C7AB2512394800D3C5C0 /* ServicesAssembly.swift in Sources */,
+				F6F8D071250F725900B6EBCD /* FavouritesViewAssembly.swift in Sources */,
+				F6F4C7B62512465600D3C5C0 /* NetworkConfiguration.swift in Sources */,
+				F681262925138CA900F342B5 /* GitHubRepositoryEntity.swift in Sources */,
+				F6BB362F25124CBD00C278B4 /* UseCasesAssembly.swift in Sources */,
+				F6226FFC251084640083B400 /* UICollectionViewExtension.swift in Sources */,
+				F6F8D050250F532100B6EBCD /* BaseRouter.swift in Sources */,
+				F681263725139BFE00F342B5 /* GetFavouriteRepositoriesUseCase.swift in Sources */,
+				F6BB362A2512489A00C278B4 /* DateHelper.swift in Sources */,
+				F6BB363325124E0500C278B4 /* GitHubRepositoriesRepository.swift in Sources */,
+				F6F4C7B125123A4100D3C5C0 /* NetworkService.swift in Sources */,
+				F6BB363525124FB300C278B4 /* GetRepositoriesFromLastWeekUseCase.swift in Sources */,
+				F615A4FD2514DE10008C00B8 /* PaginationObject.swift in Sources */,
+				F622700A251091390083B400 /* FavouritesRouter.swift in Sources */,
+				F622700C251091700083B400 /* RepositoryDetailsRouter.swift in Sources */,
+				F68126352513993300F342B5 /* DeleteGitHubRepositoryFromFavouritesUseCase.swift in Sources */,
+				F6BB363725124FD500C278B4 /* GetRepositoriesFromLastMonthUseCase.swift in Sources */,
+				F6F8D04C250F527300B6EBCD /* Assembler.swift in Sources */,
+				F6227005251086710083B400 /* RepositoryDetailsViewAssembly.swift in Sources */,
+				F6227000251086230083B400 /* RepositoryDetailsViewController.swift in Sources */,
+				F6227015251099640083B400 /* LabeledImageView.swift in Sources */,
+				F68126332513992200F342B5 /* SaveGitHubRepositoryToFavouritesUseCase.swift in Sources */,
+				F681262B25138CD700F342B5 /* GitHubRepositoryDao.swift in Sources */,
+				F6BB362D25124C8300C278B4 /* GetRepositoriesFromLastDayUseCase.swift in Sources */,
+				F6F8D06E250F721F00B6EBCD /* FavouritesViewModel.swift in Sources */,
+				F6E281C4250F501000F43B54 /* AppDelegate.swift in Sources */,
+				F6F8D056250F5B2A00B6EBCD /* BaseViewController.swift in Sources */,
+				F622700E251094170083B400 /* BaseDetailsRouter.swift in Sources */,
+				F6F8D04E250F52BF00B6EBCD /* AssemblerAssembly.swift in Sources */,
+				F6F8D080250F8ADB00B6EBCD /* UIImageViewExtension.swift in Sources */,
+				F6E281C6250F501000F43B54 /* SceneDelegate.swift in Sources */,
+				F68126312513953900F342B5 /* GitHubRepositoryMapper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6E281D4250F501200F43B54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6E281DD250F501200F43B54 /* StanwoodAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F6E281DA250F501200F43B54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F6E281BF250F501000F43B54 /* StanwoodApp */;
+			targetProxy = F6E281D9250F501200F43B54 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F6E281CB250F501000F43B54 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6E281CC250F501000F43B54 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F6E281D0250F501200F43B54 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6E281D1250F501200F43B54 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F6E281DF250F501200F43B54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F6E281E0250F501200F43B54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F6E281E2250F501200F43B54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BFA0694D4F1E87D06FB7A44 /* Pods-StanwoodApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YZBZK7PS8D;
+				INFOPLIST_FILE = StanwoodApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.robertkuraj.StanwoodApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F6E281E3250F501200F43B54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62A2B36A25B6D2DA0EFD4345 /* Pods-StanwoodApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YZBZK7PS8D;
+				INFOPLIST_FILE = StanwoodApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.robertkuraj.StanwoodApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F6E281E5250F501200F43B54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 759477D245257C2B146BB4D8 /* Pods-StanwoodAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YZBZK7PS8D;
+				INFOPLIST_FILE = StanwoodAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.robertkuraj.StanwoodAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StanwoodApp.app/StanwoodApp";
+			};
+			name = Debug;
+		};
+		F6E281E6250F501200F43B54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C26953DF407DD58BFF069FD3 /* Pods-StanwoodAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YZBZK7PS8D;
+				INFOPLIST_FILE = StanwoodAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.robertkuraj.StanwoodAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StanwoodApp.app/StanwoodApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F6E281BB250F501000F43B54 /* Build configuration list for PBXProject "StanwoodApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6E281DF250F501200F43B54 /* Debug */,
+				F6E281E0250F501200F43B54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6E281E1250F501200F43B54 /* Build configuration list for PBXNativeTarget "StanwoodApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6E281E2250F501200F43B54 /* Debug */,
+				F6E281E3250F501200F43B54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6E281E4250F501200F43B54 /* Build configuration list for PBXNativeTarget "StanwoodAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6E281E5250F501200F43B54 /* Debug */,
+				F6E281E6250F501200F43B54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F6E281B8250F501000F43B54 /* Project object */;
+}

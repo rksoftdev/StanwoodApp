@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RepositoriesViewController" customModule="StanwoodApp" customModuleProvider="target">
+            <connections>
+                <outlet property="repositoriesCollectionView" destination="pdc-Fj-mZ2" id="Oxa-Op-xLQ"/>
+                <outlet property="repositoriesFilterSegmentedControl" destination="kiM-tH-Mr1" id="jjM-xS-8je"/>
+                <outlet property="titleLabel" destination="Wlr-3f-TUf" id="9Wx-Uh-dtm"/>
+                <outlet property="view" destination="iN0-l3-epB" id="D2h-Uj-o6S"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kiM-tH-Mr1">
+                    <rect key="frame" x="30" y="155" width="354" height="31"/>
+                    <color key="backgroundColor" red="0.97279256579999995" green="0.97293192149999996" blue="0.97276204820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="cwx-iI-N23">
+                            <variation key="heightClass=regular-widthClass=regular" constant="45"/>
+                        </constraint>
+                    </constraints>
+                    <segments>
+                        <segment title="Day"/>
+                        <segment title="Month"/>
+                        <segment title="Year"/>
+                    </segments>
+                    <color key="selectedSegmentTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </segmentedControl>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A4l-NM-OOl">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wlr-3f-TUf">
+                            <rect key="frame" x="20" y="69" width="78.5" height="36"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                            <color key="textColor" red="0.1567038" green="0.15604722500000001" blue="0.19748634100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                            </variation>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96852236989999996" green="0.96868795159999999" blue="0.96851199870000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="125" id="5wi-Ng-k5s">
+                            <variation key="heightClass=regular-widthClass=regular" constant="145"/>
+                        </constraint>
+                        <constraint firstAttribute="bottom" secondItem="Wlr-3f-TUf" secondAttribute="bottom" constant="20" id="bjc-VB-CRG"/>
+                        <constraint firstItem="Wlr-3f-TUf" firstAttribute="leading" secondItem="A4l-NM-OOl" secondAttribute="leading" constant="20" id="mIh-An-x3l"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="pdc-Fj-mZ2">
+                    <rect key="frame" x="0.0" y="215" width="414" height="647"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lpH-sn-Ohu">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="pdc-Fj-mZ2" firstAttribute="top" secondItem="kiM-tH-Mr1" secondAttribute="bottom" constant="30" id="4BT-ss-8XR"/>
+                <constraint firstItem="kiM-tH-Mr1" firstAttribute="top" secondItem="A4l-NM-OOl" secondAttribute="bottom" constant="30" id="ENB-uU-Not"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="pdc-Fj-mZ2" secondAttribute="bottom" id="Fh2-cp-fOF"/>
+                <constraint firstItem="A4l-NM-OOl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="HUD-RM-58S"/>
+                <constraint firstItem="kiM-tH-Mr1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="Ona-SQ-qXS"/>
+                <constraint firstItem="A4l-NM-OOl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="UoH-rM-hwa"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="kiM-tH-Mr1" secondAttribute="trailing" constant="30" id="WE4-Jv-rkX"/>
+                <constraint firstItem="pdc-Fj-mZ2" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="as8-0I-spr"/>
+                <constraint firstItem="A4l-NM-OOl" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="rVn-Rd-2Ne"/>
+                <constraint firstItem="pdc-Fj-mZ2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="vcz-yn-GDi"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="140.57971014492756" y="153.34821428571428"/>
+        </view>
+    </objects>
+</document>

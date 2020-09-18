@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RepositoryDetailsViewController" customModule="StanwoodApp" customModuleProvider="target">
+            <connections>
+                <outlet property="favouriteButton" destination="Jhp-HP-xFa" id="w3b-8E-4uU"/>
+                <outlet property="openInGitHubButton" destination="Yca-Tm-zlu" id="RdJ-rC-VJI"/>
+                <outlet property="repositoryCreationDateView" destination="qSr-yk-7O5" id="PKr-39-lVx"/>
+                <outlet property="repositoryDescriptionLabel" destination="7IZ-7T-Gna" id="JdC-nL-0iy"/>
+                <outlet property="repositoryForksView" destination="FJR-jn-QoI" id="AJs-VT-63g"/>
+                <outlet property="repositoryLanguageView" destination="nq9-ri-6Se" id="XJI-cW-RYk"/>
+                <outlet property="repositoryNameLabel" destination="ltc-Hz-qw9" id="T6R-bz-ah6"/>
+                <outlet property="repositoryStarsView" destination="ipn-fe-3yh" id="kE7-m9-Z2C"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edy-RH-o8V">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PanModal" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ltc-Hz-qw9">
+                            <rect key="frame" x="20" y="69" width="324" height="36"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                            <color key="textColor" red="0.1567038" green="0.15604722500000001" blue="0.19748634100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                            </variation>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jhp-HP-xFa">
+                            <rect key="frame" x="364" y="57" width="30" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Jhp-HP-xFa" secondAttribute="height" multiplier="1:2" id="8Cp-Pd-ea7"/>
+                                <constraint firstAttribute="width" constant="30" id="e83-Xp-def"/>
+                            </constraints>
+                            <color key="tintColor" red="0.1567038" green="0.15604722500000001" blue="0.19748634100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" image="bookmark" catalog="system"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96852236989999996" green="0.96868795159999999" blue="0.96851199870000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Jhp-HP-xFa" secondAttribute="trailing" constant="20" id="6Dh-GJ-Eld"/>
+                        <constraint firstAttribute="bottom" secondItem="ltc-Hz-qw9" secondAttribute="bottom" constant="20" id="Ors-Xi-rMB"/>
+                        <constraint firstItem="Jhp-HP-xFa" firstAttribute="centerY" secondItem="ltc-Hz-qw9" secondAttribute="centerY" id="PXM-M9-zHA"/>
+                        <constraint firstAttribute="height" constant="125" id="RLd-YG-A2i">
+                            <variation key="heightClass=regular-widthClass=regular" constant="145"/>
+                        </constraint>
+                        <constraint firstItem="Jhp-HP-xFa" firstAttribute="leading" secondItem="ltc-Hz-qw9" secondAttribute="trailing" constant="20" id="dkG-tc-Kud"/>
+                        <constraint firstItem="ltc-Hz-qw9" firstAttribute="leading" secondItem="edy-RH-o8V" secondAttribute="leading" constant="20" id="foS-wy-c75"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7IZ-7T-Gna">
+                    <rect key="frame" x="20" y="155" width="374" height="56"/>
+                    <string key="text">PanModal was designed to be used effortlessly. Simply call presentPanModal in the same way you would expect to present a UIViewController</string>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                    <color key="textColor" red="0.1567038" green="0.15604722500000001" blue="0.19748634100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                    </variation>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nq9-ri-6Se" customClass="LabeledImageView" customModule="StanwoodApp" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="231" width="414" height="55"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" red="0.37629741430000002" green="0.37571913000000001" blue="0.41715139150000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="7Bg-Nr-N7s">
+                            <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                        </constraint>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="command" catalog="system"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FJR-jn-QoI" customClass="LabeledImageView" customModule="StanwoodApp" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="286" width="414" height="55"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" red="0.37629741430000002" green="0.37571913000000001" blue="0.41715139150000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="H2Y-TM-MzS">
+                            <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                        </constraint>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="arrow.branch" catalog="system"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ipn-fe-3yh" customClass="LabeledImageView" customModule="StanwoodApp" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="341" width="414" height="55"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="4cG-Zf-xvH">
+                            <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                        </constraint>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="star" catalog="system"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qSr-yk-7O5" customClass="LabeledImageView" customModule="StanwoodApp" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="396" width="414" height="55"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="2Di-AZ-s80">
+                            <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                        </constraint>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="clock" catalog="system"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yca-Tm-zlu">
+                    <rect key="frame" x="117" y="501" width="180" height="35"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="180" id="PJL-YA-7Jk">
+                            <variation key="heightClass=regular-widthClass=regular" constant="240"/>
+                        </constraint>
+                        <constraint firstAttribute="height" constant="35" id="ued-Bx-Q0l">
+                            <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                        </constraint>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                    <state key="normal" title="Open in GitHub">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                    </variation>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="qSr-yk-7O5" secondAttribute="trailing" id="0It-69-hcg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7IZ-7T-Gna" secondAttribute="trailing" constant="20" id="5tx-2A-lVr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nq9-ri-6Se" secondAttribute="trailing" id="Acf-8H-wdp"/>
+                <constraint firstItem="7IZ-7T-Gna" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="BYt-m3-XMW"/>
+                <constraint firstItem="FJR-jn-QoI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Hux-lf-reu"/>
+                <constraint firstItem="Yca-Tm-zlu" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="QsC-BV-xSE"/>
+                <constraint firstItem="7IZ-7T-Gna" firstAttribute="top" secondItem="edy-RH-o8V" secondAttribute="bottom" constant="30" id="SVl-2N-amA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="edy-RH-o8V" secondAttribute="trailing" id="Wkx-mY-ucO"/>
+                <constraint firstItem="edy-RH-o8V" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="X1g-XP-R7Z"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FJR-jn-QoI" secondAttribute="trailing" id="Xqb-Sm-IYb"/>
+                <constraint firstItem="qSr-yk-7O5" firstAttribute="top" secondItem="ipn-fe-3yh" secondAttribute="bottom" id="YpQ-VN-8cs"/>
+                <constraint firstItem="qSr-yk-7O5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZxC-gW-8or"/>
+                <constraint firstItem="ipn-fe-3yh" firstAttribute="top" secondItem="FJR-jn-QoI" secondAttribute="bottom" id="csi-2c-8fP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ipn-fe-3yh" secondAttribute="trailing" id="gNf-jD-EPM"/>
+                <constraint firstItem="nq9-ri-6Se" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nVP-6y-wuX"/>
+                <constraint firstItem="ipn-fe-3yh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oBa-Zh-qgy"/>
+                <constraint firstItem="edy-RH-o8V" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pWp-ZZ-tNP"/>
+                <constraint firstItem="nq9-ri-6Se" firstAttribute="top" secondItem="7IZ-7T-Gna" secondAttribute="bottom" constant="20" id="tD7-WS-z0v"/>
+                <constraint firstItem="FJR-jn-QoI" firstAttribute="top" secondItem="nq9-ri-6Se" secondAttribute="bottom" id="vXg-Ph-stw"/>
+                <constraint firstItem="Yca-Tm-zlu" firstAttribute="top" secondItem="qSr-yk-7O5" secondAttribute="bottom" constant="50" id="xS0-9s-Htz"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-145" y="27"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.branch" catalog="system" width="128" height="108"/>
+        <image name="bookmark" catalog="system" width="112" height="128"/>
+        <image name="clock" catalog="system" width="128" height="121"/>
+        <image name="command" catalog="system" width="128" height="115"/>
+        <image name="star" catalog="system" width="128" height="116"/>
+    </resources>
+</document>
