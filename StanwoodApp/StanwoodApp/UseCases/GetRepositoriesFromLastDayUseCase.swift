@@ -9,7 +9,7 @@
 import RxSwift
 
 protocol GetRepositoriesFromLastDayUseCaseable {
-    func execute() -> Single<[GitHubRepository]>
+    func execute(_ page: Int?) -> Single<([GitHubRepository], PaginationObject?)>
 }
 
 class GetRepositoriesFromLastDayUseCase: GetRepositoriesFromLastDayUseCaseable {
@@ -19,7 +19,7 @@ class GetRepositoriesFromLastDayUseCase: GetRepositoriesFromLastDayUseCaseable {
         self.repositoriesRepository = repositoriesRepository
     }
     
-    func execute() -> Single<[GitHubRepository]> {
-        self.repositoriesRepository.getFromLastDay()
+    func execute(_ page: Int?) -> Single<([GitHubRepository], PaginationObject?)> {
+        self.repositoriesRepository.getFromLastDay(page ?? 0)
     }
 }

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9B17BDBE2D4757E6B904D1F2 /* Pods_StanwoodApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E67952801CABBDBA1755517 /* Pods_StanwoodApp.framework */; };
 		D140D7A106F07CB442F77E29 /* Pods_StanwoodAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF89703982B18030A1206ADC /* Pods_StanwoodAppTests.framework */; };
+		F615A4FB2514D42D008C00B8 /* HTTPHeadersExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F615A4FA2514D42D008C00B8 /* HTTPHeadersExtension.swift */; };
+		F615A4FD2514DE10008C00B8 /* PaginationObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F615A4FC2514DE10008C00B8 /* PaginationObject.swift */; };
 		F6226FFC251084640083B400 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6226FFB251084640083B400 /* UICollectionViewExtension.swift */; };
 		F6227000251086230083B400 /* RepositoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6226FFE251086230083B400 /* RepositoryDetailsViewController.swift */; };
 		F6227001251086230083B400 /* RepositoryDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6226FFF251086230083B400 /* RepositoryDetailsViewController.xib */; };
@@ -85,6 +87,8 @@
 		759477D245257C2B146BB4D8 /* Pods-StanwoodAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StanwoodAppTests.debug.xcconfig"; path = "Target Support Files/Pods-StanwoodAppTests/Pods-StanwoodAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF89703982B18030A1206ADC /* Pods_StanwoodAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StanwoodAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C26953DF407DD58BFF069FD3 /* Pods-StanwoodAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StanwoodAppTests.release.xcconfig"; path = "Target Support Files/Pods-StanwoodAppTests/Pods-StanwoodAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		F615A4FA2514D42D008C00B8 /* HTTPHeadersExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeadersExtension.swift; sourceTree = "<group>"; };
+		F615A4FC2514DE10008C00B8 /* PaginationObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationObject.swift; sourceTree = "<group>"; };
 		F6226FFB251084640083B400 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
 		F6226FFE251086230083B400 /* RepositoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsViewController.swift; sourceTree = "<group>"; };
 		F6226FFF251086230083B400 /* RepositoryDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryDetailsViewController.xib; sourceTree = "<group>"; };
@@ -484,6 +488,7 @@
 			isa = PBXGroup;
 			children = (
 				F6F8D07C250F871F00B6EBCD /* GitHubRepository.swift */,
+				F615A4FC2514DE10008C00B8 /* PaginationObject.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -493,6 +498,7 @@
 			children = (
 				F6F8D07F250F8ADB00B6EBCD /* UIImageViewExtension.swift */,
 				F6226FFB251084640083B400 /* UICollectionViewExtension.swift */,
+				F615A4FA2514D42D008C00B8 /* HTTPHeadersExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -670,6 +676,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F615A4FB2514D42D008C00B8 /* HTTPHeadersExtension.swift in Sources */,
 				F6BB3639251267D100C278B4 /* GitHubRepositoriesResponse.swift in Sources */,
 				F6E281CA250F501000F43B54 /* FavouritesViewController.swift in Sources */,
 				F6BB363B2512680600C278B4 /* GitHubRepositoriesResponseMapper.swift in Sources */,
@@ -699,6 +706,7 @@
 				F6BB363325124E0500C278B4 /* GitHubRepositoriesRepository.swift in Sources */,
 				F6F4C7B125123A4100D3C5C0 /* NetworkService.swift in Sources */,
 				F6BB363525124FB300C278B4 /* GetRepositoriesFromLastWeekUseCase.swift in Sources */,
+				F615A4FD2514DE10008C00B8 /* PaginationObject.swift in Sources */,
 				F622700A251091390083B400 /* FavouritesRouter.swift in Sources */,
 				F622700C251091700083B400 /* RepositoryDetailsRouter.swift in Sources */,
 				F68126352513993300F342B5 /* DeleteGitHubRepositoryFromFavouritesUseCase.swift in Sources */,

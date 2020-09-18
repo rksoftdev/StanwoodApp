@@ -16,12 +16,14 @@ enum FilterPeriod: Int {
 
 class GetRepositoriesRequest {
     private let filterPeriod: FilterPeriod
+    private let page: Int
     
     var parameters: [String: Any]? {
         return [
             "q": "created:>\(getFilterQuery())" ,
             "sort": "stars",
-            "order": "desc"
+            "order": "desc",
+            "page": "\(page)"
         ]
     }
     
@@ -50,7 +52,8 @@ class GetRepositoriesRequest {
     
     let httpMethod: HTTPMethod = .get
     
-    init(_ filterPeriod: FilterPeriod) {
+    init(_ filterPeriod: FilterPeriod, _ page: Int) {
         self.filterPeriod = filterPeriod
+        self.page = page
     }
 }

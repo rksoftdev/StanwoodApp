@@ -12,6 +12,7 @@ import RxSwift
 protocol RepositoriesViewModelable {
     var repositoriesDataSource: BehaviorRelay<[GitHubRepository]> { get }
     func reloadData(with filterPeriod: FilterPeriod)
+    func loadNextPage(for filterPeriod: FilterPeriod)
     var errorHandler: PublishSubject<Error> { get }
 }
 
@@ -21,6 +22,7 @@ class RepositoriesViewModel: RepositoriesViewModelable {
     var isLoading: BehaviorRelay<Bool> = .init(value: false)
     
     private let disposeBag: DisposeBag
+    private var paginationObject: PaginationObject?
     
     private let getRepositoriesFromLastDayUseCase: GetRepositoriesFromLastDayUseCaseable
     private let getRepositoriesFromLastWeekUseCase: GetRepositoriesFromLastWeekUseCaseable
@@ -36,38 +38,60 @@ class RepositoriesViewModel: RepositoriesViewModelable {
         self.disposeBag = DisposeBag()
     }
     
+    func loadNextPage(for filterPeriod: FilterPeriod) {
+        guard paginationObject?.canLoadNextPage ?? false else {
+            return
+        }
+        loadData(for: filterPeriod, false)
+    }
+    
     func reloadData(with filterPeriod: FilterPeriod) {
+        repositoriesDataSource.accept([])
+        paginationObject = nil
+        loadData(for: filterPeriod, true)
+    }
+    
+    private func loadData(for filterPeriod: FilterPeriod, _ shouldReload: Bool) {
         switch filterPeriod {
         case .createdLastDay:
-            getRepositoriesFromLastDay()
+            getRepositoriesFromLastDay(shouldReload)
         case .createdLastWeek:
-            getRepositoriesFromLastWeek()
+            getRepositoriesFromLastWeek(shouldReload)
         case .createdLastMonth:
-            getRepositoriesFromLastMonth()
+            getRepositoriesFromLastMonth(shouldReload)
         }
     }
     
-    private func getRepositoriesFromLastDay() {
-        self.handleResponse(self.getRepositoriesFromLastDayUseCase.execute())
+    private func getRepositoriesFromLastDay(_ shouldReload: Bool) {
+        self.handleResponse(shouldReload, self.getRepositoriesFromLastDayUseCase.execute(paginationObject?.nextPage))
             .disposed(by: self.disposeBag)
     }
     
-    private func getRepositoriesFromLastWeek() {
-        self.handleResponse(self.getRepositoriesFromLastWeekUseCase.execute())
+    private func getRepositoriesFromLastWeek(_ shouldReload: Bool) {
+        self.handleResponse(shouldReload, self.getRepositoriesFromLastWeekUseCase.execute(paginationObject?.nextPage))
             .disposed(by: self.disposeBag)
     }
     
-    private func getRepositoriesFromLastMonth() {
-        self.handleResponse(self.getRepositoriesFromLastMonthUseCase.execute())
+    private func getRepositoriesFromLastMonth(_ shouldReload: Bool) {
+        self.handleResponse(shouldReload, self.getRepositoriesFromLastMonthUseCase.execute(paginationObject?.nextPage))
             .disposed(by: self.disposeBag)
     }
     
-    func handleResponse(_ response: PrimitiveSequence<SingleTrait, [GitHubRepository]>) -> Disposable {
-        return response.subscribe(onSuccess: { [weak self] result in
-            self?.repositoriesDataSource.accept(self?.checkFavourites(result) ?? [])
+    private func handleResponse(_ shouldReload: Bool, _ response: PrimitiveSequence<SingleTrait, ([GitHubRepository], PaginationObject?)>) -> Disposable {
+        return response.subscribe(onSuccess: { [weak self] (result, paginationObject) in
+            self?.paginationObject = paginationObject
+            shouldReload
+                ? self?.repositoriesDataSource.accept(self?.checkFavourites(result) ?? [])
+                : self?.appendToDataSource(self?.checkFavourites(result) ?? [])
         }, onError: { error in
             self.errorHandler.onNext(error)
         })
+    }
+    
+    private func appendToDataSource(_ data: [GitHubRepository]) {
+        var dataSource = self.repositoriesDataSource.value
+        dataSource.append(contentsOf: data)
+        self.repositoriesDataSource.accept(dataSource)
     }
     
     func checkFavourites(_ result: [GitHubRepository]) -> [GitHubRepository] {

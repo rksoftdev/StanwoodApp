@@ -9,9 +9,9 @@
 import RxSwift
 
 protocol GitHubRepositoriesRepositoryProtocol {
-    func getFromLastDay() -> Single<[GitHubRepository]>
-    func getFromLastWeek() -> Single<[GitHubRepository]>
-    func getFromLastMonth() -> Single<[GitHubRepository]>
+    func getFromLastDay(_ page: Int) -> Single<([GitHubRepository], PaginationObject?)>
+    func getFromLastWeek(_ page: Int) -> Single<([GitHubRepository], PaginationObject?)>
+    func getFromLastMonth(_ page: Int) -> Single<([GitHubRepository], PaginationObject?)>
     func saveToFavourites(_ repository: GitHubRepository)
     func deleteFromFavourites(_ repository: GitHubRepository)
     func getAllFavourite() -> Single<[GitHubRepository]>
@@ -27,32 +27,32 @@ class GitHubRepositoriesRepository: GitHubRepositoriesRepositoryProtocol {
         self.repositoryDao = dao
     }
     
-    func getFromLastDay() -> Single<[GitHubRepository]> {
-        return self.getRepositoriesRequest(.createdLastDay).flatMap {
+    func getFromLastDay(_ page: Int) -> Single<([GitHubRepository], PaginationObject?)> {
+        return self.getRepositoriesRequest(.createdLastDay, page).flatMap {
             self.handleResponse(response: $0)
         }
     }
     
-    func getFromLastWeek() -> Single<[GitHubRepository]> {
-        return self.getRepositoriesRequest(.createdLastWeek).flatMap {
+    func getFromLastWeek(_ page: Int) -> Single<([GitHubRepository], PaginationObject?)> {
+        return self.getRepositoriesRequest(.createdLastWeek, page).flatMap {
             self.handleResponse(response: $0)
         }
     }
     
-    func getFromLastMonth() -> Single<[GitHubRepository]> {
-        return self.getRepositoriesRequest(.createdLastMonth).flatMap { self.handleResponse(response: $0)
+    func getFromLastMonth(_ page: Int) -> Single<([GitHubRepository], PaginationObject?)> {
+        return self.getRepositoriesRequest(.createdLastMonth, page).flatMap { self.handleResponse(response: $0)
         }
     }
     
-    private func handleResponse(response: GitHubRepositoriesResponse?) -> Single<[GitHubRepository]> {
-        if let result = response {
-            return .just(result.toGitHubRepositories())
+    private func handleResponse(response: (response: GitHubRepositoriesResponse?, paginationObject: PaginationObject?)) -> Single<([GitHubRepository], PaginationObject?)> {
+        if let result = response.response {
+            return .just((result.toGitHubRepositories(), response.paginationObject))
         }
-        return .just([])
+        return .just(([], nil))
     }
     
-    private func getRepositoriesRequest(_ filterPeriod: FilterPeriod) -> Single<GitHubRepositoriesResponse?> {
-        let request = GetRepositoriesRequest(filterPeriod)
+    private func getRepositoriesRequest(_ filterPeriod: FilterPeriod, _ page: Int) -> Single<(GitHubRepositoriesResponse?, PaginationObject?)> {
+        let request = GetRepositoriesRequest(filterPeriod, page)
         return networkService.executeRequest(url: request.url, method: request.httpMethod, parameters: request.parameters, headers: request.headers)
     }
     

@@ -21,6 +21,11 @@ class RepositoriesViewController: BaseViewController {
     
     private let collectionViewCellIdentifier = "RepositoryCollectionViewCell"
     private var currentFilterSegmentedControlIndex = 0
+    private var currentFilter: FilterPeriod {
+        get {
+            return FilterPeriod(rawValue: self.currentFilterSegmentedControlIndex) ?? .createdLastDay
+        }
+    }
     
     init(_ viewModel: RepositoriesViewModelable, _ router: RepositoriesRoutable) {
         self.viewModel = viewModel
@@ -33,7 +38,7 @@ class RepositoriesViewController: BaseViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.viewModel.reloadData(with: FilterPeriod(rawValue: self.currentFilterSegmentedControlIndex) ?? .createdLastDay)
+        self.viewModel.reloadData(with: self.currentFilter)
     }
 
     override func setControlsBehaviour() {
@@ -63,6 +68,11 @@ class RepositoriesViewController: BaseViewController {
             },
             viewModel.errorHandler.bind { [weak self] error in
                 self?.router.showErrorDialog(from: self, with: error.localizedDescription)
+            },
+            repositoriesCollectionView.rx.willDisplayCell.bind { [weak self] (cell, indexPath) in
+                if indexPath.row + 1 == self?.viewModel.repositoriesDataSource.value.count {
+                    self?.viewModel.loadNextPage(for: self?.currentFilter ?? .createdLastDay)
+                }
             }
         )
     }

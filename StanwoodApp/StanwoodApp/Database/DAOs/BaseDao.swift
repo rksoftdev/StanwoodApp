@@ -33,7 +33,7 @@ class BaseDao <T:Object> {
     }
     
     func getFilteredOrAll(_ predicate: NSPredicate? = nil) -> Results<T> {
-        var objects = self.realm.objects(T.self)
+        let objects = self.realm.objects(T.self)
         guard let filter = predicate else {
             return objects
         }
