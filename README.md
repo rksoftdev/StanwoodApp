@@ -6,12 +6,12 @@ MVVM + UseCases + RepositoryPattern
 # Used Pods
 | Pod | Website | Used for |
 | ------ | ------ | ------ |
-| Swinject | [https://github.com/Swinject/Swinject][PlDb] | DI |
-| RxSwift + RxCocoa | [https://github.com/ReactiveX/RxSwift][PlGh] | Core + Bindings |
-| Alamofire | [https://github.com/Alamofire/Alamofire][PlOd] | Networking |
-| Kingfisher | [https://github.com/onevcat/Kingfisher][PlMe] | Images fetching |
-| PanModal | [https://github.com/slackhq/PanModal][PlGa] | Presentation |
-| RealmSwift | [https://github.com/realm/realm-cocoa][PlGa] | DataBase |
+| Swinject | [https://github.com/Swinject/Swinject] | DI |
+| RxSwift + RxCocoa | [https://github.com/ReactiveX/RxSwift] | Core + Bindings |
+| Alamofire | [https://github.com/Alamofire/Alamofire] | Networking |
+| Kingfisher | [https://github.com/onevcat/Kingfisher]| Images fetching |
+| PanModal | [https://github.com/slackhq/PanModal] | Presentation |
+| RealmSwift | [https://github.com/realm/realm-cocoa] | DataBase |
 
 # Implemented features
 * TabViewController with two pages for *Repositories* and *Favourites* lists
